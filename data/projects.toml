@@ -1,0 +1,37 @@
+[[featured]]
+title = "OpsPilot"
+
+description = "A DevOps operations toolkit focused on automation, observability, and infrastructure workflows."
+
+tech = [
+  "Go",
+  "Python",
+  "Docker",
+  "Linux"
+]
+
+url = "/projects/opspilot/"
+
+[[featured]]
+title = "AI Coding Agent"
+
+description = "A terminal-first coding assistant powered by OpenRouter and modern LLM APIs."
+
+tech = [
+  "Python",
+  "OpenRouter",
+  "CLI"
+]
+
+url = "/projects/ai-coding-agent/"
+
+[[featured]]
+title = "Static Site Generator"
+
+description = "A markdown parser and static site generator built from scratch."
+
+tech = [
+  "Python"
+]
+
+url = "/projects/static-site-generator/"
