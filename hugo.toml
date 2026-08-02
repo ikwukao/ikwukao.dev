@@ -1,3 +1,44 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://ikwukao.dev/"
+languageCode = "en-us"
+title = "ikwukao"
+
+enableRobotsTXT = true
+
+disabledKinds = ["taxonomy", "taxonomyTerm"]
+
+[params]
+description = "Distributed Systems Engineer | Backend Engineer |  Go • Python • SQL • Linux"
+author = "Ikwuka Okoye"
+github = "https://github.com/ikwukao"
+
+[markup]
+[markup.highlight]
+style = "github-dark"
+lineNos = false
+
+[menu]
+
+[[menu.main]]
+name = "Projects"
+url = "/projects/"
+weight = 10
+
+[[menu.main]]
+name = "Articles"
+url = "/articles/"
+weight = 20
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 30
+
+[[menu.main]]
+name = "Resume"
+url = "/resume/"
+weight = 40
+
+[[menu.main]]
+name = "Contact"
+url = "/contact/"
+weight = 50
