@@ -4,17 +4,19 @@ title = "ikwukao"
 
 enableRobotsTXT = true
 
-disabledKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "term"]
 
 [params]
 description = "Distributed Systems Engineer | Backend Engineer |  Go • Python • SQL • Linux"
 author = "Ikwuka Okoye"
+tagline = "Building reliable distributed systems and backend services."
 github = "https://github.com/ikwukao"
 
 [markup]
-[markup.highlight]
-style = "github-dark"
-lineNos = false
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+    noClasses = false
 
 [menu]
 
