@@ -1,18 +1,24 @@
 @import "tailwindcss";
 
-/* ==========
- * Theme
- * ============ */
+/* -----------------------------
+   Theme
+------------------------------ */
 
 :root {
-  --bg: #000000;
-  --fg: #E5E7EB;
+  --bg: #050505;
+  --surface: #0b0b0b;
+  --border: #1f2937;
 
-  --green: #10B981;
-  --green-light: #6EE7B7;
+  --text: #f3f4f6;
+  --muted: #9ca3af;
 
-  --muted: #6B7280;
+  --accent: #10b981;
+  --accent-hover: #34d399;
 }
+
+/* -----------------------------
+   Base
+------------------------------ */
 
 html {
   scroll-behavior: smooth;
@@ -20,11 +26,22 @@ html {
 
 body {
   background: var(--bg);
-  color: var(--fg);
-  font-family: "JetBrains Mono", monospace;
+  color: var(--text);
+  font-family: Inter, system-ui, sans-serif;
+  line-height: 1.7;
 }
 
 ::selection {
-  background: var(--green);
+  background: var(--accent);
   color: black;
+}
+
+a {
+  transition: color 180ms ease;
+}
+
+code,
+pre,
+.logo {
+  font-family: "JetBrains Mono", monospace;
 }
