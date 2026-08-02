@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+/* ==========
+ * Theme
+ * ============ */
+
+:root {
+  --bg: #000000;
+  --fg: #E5E7EB;
+
+  --green: #10B981;
+  --green-light: #6EE7B7;
+
+  --muted: #6B7280;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "JetBrains Mono", monospace;
+}
+
+::selection {
+  background: var(--green);
+  color: black;
+}
