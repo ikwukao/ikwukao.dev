@@ -1,0 +1,25 @@
+# Hugo
+public/
+resources/
+
+# Node
+node_modules
+
+# Environment
+.env
+.env.*
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+
+# JetBrains
+.idea/
