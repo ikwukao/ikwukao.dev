@@ -1,0 +1,64 @@
+.prose {
+  max-width: 72ch;
+  color: rgb(212 212 216);
+  line-height: 1.9;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: white;
+  font-weight: 700;
+  scroll-margin-top: 6rem;
+}
+
+.prose h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.prose h3 {
+  margin-top: 2rem;
+  margin-bottom: .75rem;
+  font-size: 1.5rem;
+}
+
+.prose p {
+  margin: 1.4rem 0;
+}
+
+.prose a {
+  color: #10B981;
+  text-decoration: none;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+.prose strong {
+  color: white;
+}
+
+.prose ul,
+.prose ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin: .5rem 0;
+}
+
+.prose hr {
+  margin: 3rem 0;
+  border-color: rgb(39 39 42);
+}
+
+.prose img {
+  margin: 2rem 0;
+  border-radius: .75rem;
+  border: 1px solid rgb(39 39 42);
+}
