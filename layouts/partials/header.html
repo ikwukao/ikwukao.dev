@@ -21,13 +21,8 @@
         {{ range site.Menus.main }}
 
         <li>
-
-          <a
-            href="{{ .URL }}"
-            class="text-sm text-zinc-300 hover:text-emerald-400">
-
+          <a href="{{ .URL }}" class="text-sm transition {{ if $.IsMenuCurrent "main" . }}text-emerald-400{{ else }}text-zinc-300 hover:text-emerald-400{{ end }}">
             {{ .Name }}
-
           </a>
 
         </li>
