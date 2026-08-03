@@ -13,10 +13,10 @@ tagline = "Building reliable distributed systems and backend services."
 github = "https://github.com/ikwukao"
 
 [markup]
-  [markup.highlight]
-    style = "github-dark"
-    lineNos = false
-    noClasses = false
+[markup.highlight]
+style = "github-dark"
+lineNos = false
+noClasses = false
 
 [menu]
 
@@ -26,8 +26,8 @@ url = "/projects/"
 weight = 10
 
 [[menu.main]]
-name = "Articles"
-url = "/articles/"
+name = "Journal"
+url = "/journal/"
 weight = 20
 
 [[menu.main]]
