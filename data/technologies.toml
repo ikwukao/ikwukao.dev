@@ -1,0 +1,48 @@
+[[categories]]
+title = "Languages"
+
+items = [
+    "Go",
+    "Python",
+    "SQL",
+    "Bash",
+    "TypeScript"
+]
+
+[[categories]]
+title = "Backend"
+
+items = [
+    "net/http",
+    "Gin Gonic",
+    "gRPC & Protocol Buffers",
+    "GraphQL",
+    "GORM",
+    "database/sql",
+    "SQLX",
+    "Redis",
+    "Apache Kafka & NATS"
+
+]
+
+[[categories]]
+title = "Infrastructure"
+
+items = [
+    "Docker",
+    "Kubernetes",
+    "Linux",
+    "Git",
+    "GitHub Actions",
+    "Prometheus",
+    "OpenTelemetry",
+    "Grafana"
+]
+
+[[categories]]
+title = "Cloud"
+
+items = [
+    "AWS",
+    "GCP"
+]
