@@ -1,0 +1,39 @@
+<button
+    id="backToTop"
+    class="fixed bottom-8 right-8 hidden rounded-full border border-white/10 bg-zinc-900/80 p-3 backdrop-blur transition hover:border-emerald-500">
+
+    ↑
+
+</button>
+
+<script>
+
+const button = document.getElementById("backToTop");
+
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 500) {
+
+        button.classList.remove("hidden");
+
+    } else {
+
+        button.classList.add("hidden");
+
+    }
+
+});
+
+button.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+});
+
+</script>

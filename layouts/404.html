@@ -1,24 +1,30 @@
 {{ define "main" }}
 
-<section class="flex min-h-[70vh] items-center justify-center">
+<section class="flex min-h-[80vh] items-center justify-center">
 
     <div class="text-center">
 
-        <h1 class="text-7xl font-bold text-white">
+        <p class="mb-4 text-emerald-400">
 
-            404
+            Error 404
+
+        </p>
+
+        <h1 class="text-6xl font-bold">
+
+            Page Not Found
 
         </h1>
 
-        <p class="mt-6 text-zinc-400">
+        <p class="mx-auto mt-6 max-w-lg text-zinc-400">
 
-            The page you're looking for doesn't exist.
+            The page you're looking for doesn't exist or has been moved.
 
         </p>
 
         <a
             href="/"
-            class="mt-10 inline-block rounded-md bg-emerald-500 px-6 py-3 font-medium text-black">
+            class="mt-10 inline-flex rounded-md bg-emerald-500 px-6 py-3 font-medium text-black transition hover:bg-emerald-400">
 
             Return Home
 

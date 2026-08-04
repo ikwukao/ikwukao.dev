@@ -2,27 +2,39 @@
 
   <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
 
-    <a href="/" class="flex items-center gap-2">
+    <a
+      href="/"
+      class="flex items-center gap-2 transition hover:opacity-90">
 
       <span class="logo text-xl font-bold text-emerald-500">
         >_
       </span>
 
-      <span class="font-semibold tracking-tight">
+      <span class="font-semibold tracking-tight text-white">
         ikwukao
       </span>
 
     </a>
 
-    <nav>
+    <nav aria-label="Primary Navigation">
 
       <ul class="flex items-center gap-8">
 
         {{ range site.Menus.main }}
 
         <li>
-          <a href="{{ .URL }}" class="text-sm transition {{ if $.IsMenuCurrent "main" . }}text-emerald-400{{ else }}text-zinc-300 hover:text-emerald-400{{ end }}">
+
+          <a
+            href="{{ .URL }}"
+            class="text-sm font-medium transition-colors duration-200
+            {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+              text-emerald-400
+            {{ else }}
+              text-zinc-300 hover:text-emerald-400
+            {{ end }}">
+
             {{ .Name }}
+
           </a>
 
         </li>
