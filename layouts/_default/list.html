@@ -1,46 +1,73 @@
 {{ define "main" }}
 
-<section class="py-24">
+<section class="py-28">
 
-  <div class="mx-auto max-w-6xl px-6">
+    <div class="mx-auto max-w-6xl px-6">
 
-    <header class="max-w-3xl">
+        {{ partial "section-header.html" (dict
+            "title" .Title
+            "description" .Description
+        ) }}
 
-      <h1 class="text-5xl font-bold tracking-tight">
-        {{ .Title }}
-      </h1>
+        <div class="mt-16">
 
-      {{ with .Description }}
-      <p class="mt-6 text-lg leading-8 text-zinc-400">
-        {{ . }}
-      </p>
-      {{ end }}
+            {{ if eq .Section "projects" }}
 
-    </header>
+                <div class="grid gap-8 lg:grid-cols-2">
 
-    <div class="mt-16">
+                    {{ range .Pages.ByDate.Reverse }}
 
-      {{ block "content" . }}
-      {{ range .Pages }}
-        <article class="border-b border-white/10 py-8">
-          <h2 class="text-2xl font-semibold">
-            <a href="{{ .RelPermalink }}" class="hover:text-emerald-400">
-              {{ .Title }}
-            </a>
-          </h2>
+                        {{ partial "project-card.html" . }}
 
-          {{ with .Summary }}
-          <p class="mt-3 text-zinc-400">
-            {{ . }}
-          </p>
-          {{ end }}
-        </article>
-      {{ end }}
-      {{ end }}
+                    {{ end }}
+
+                </div>
+
+            {{ else }}
+
+                {{ range (where .Pages ".Params.featured" true).ByDate.Reverse }}
+
+                    <article class="border-b border-white/10 py-8">
+
+                        <h2 class="text-2xl font-semibold">
+
+                            <a
+                                href="{{ .RelPermalink }}"
+                                class="transition hover:text-emerald-400">
+
+                                {{ .Title }}
+
+                            </a>
+
+                        </h2>
+
+                        {{ with .Description }}
+
+                        <p class="mt-4 leading-8 text-zinc-400">
+
+                            {{ . }}
+
+                        </p>
+
+                        {{ else }}
+
+                        <p class="mt-4 leading-8 text-zinc-400">
+
+                            {{ .Summary }}
+
+                        </p>
+
+                        {{ end }}
+
+                    </article>
+
+                {{ end }}
+
+            {{ end }}
+
+        </div>
 
     </div>
-
-  </div>
 
 </section>
 

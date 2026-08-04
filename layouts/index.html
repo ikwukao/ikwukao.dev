@@ -104,8 +104,8 @@
 
         <div class="mt-14 grid gap-8 lg:grid-cols-3">
 
-            {{ range first 3 site.Data.projects.featured }}
-
+            {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
+            
                 {{ partial "project-card.html" . }}
 
             {{ end }}
