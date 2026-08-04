@@ -62,3 +62,25 @@
   border-radius: .75rem;
   border: 1px solid rgb(39 39 42);
 }
+
+/* Append beautiful code blocks */
+.prose pre {
+  overflow-x: auto;
+  margin: 2rem 0;
+  padding: 1.25rem;
+  border: 1px solid rgb(39 39 42);
+  border-radius: .75rem;
+  background: rgb(9 9 11);
+}
+
+.prose code {
+  font-family: "JetBrains Mono", monospace;
+  font-size: .9rem;
+}
+
+.prose :not(pre)>code {
+  padding: .2rem .45rem;
+  border-radius: .35rem;
+  background: rgb(24 24 27);
+  color: #10B981;
+}
