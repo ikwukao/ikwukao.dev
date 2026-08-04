@@ -1,0 +1,14 @@
+{
+    "name": "Ikwuka Okoye",
+    "short_name": "ikwukao",
+    "display": "standalone",
+    "background_color": "#09090B",
+    "theme_color": "#10B981",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "64x64",
+            "type": "image/x-icon"
+        }
+    ]
+}

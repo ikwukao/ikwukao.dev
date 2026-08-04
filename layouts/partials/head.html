@@ -1,26 +1,136 @@
 <meta charset="utf-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<meta 
-  name="description" 
-  content="{{ .Site.Params.description }}">
-
-<meta 
-  name="author" 
-  content="{{ .Site.Params.author }}">
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1">
 
 <title>
-  {{ if .Title }}
-    {{ .Title }} | {{ .Site.Title }}
-  {{ else }}
-    {{ .Site.Title }}
-  {{ end }}
+{{ if .IsHome }}
+    {{ site.Title }} | Distributed Systems & Backend Engineer
+{{ else }}
+    {{ .Title }} | {{ site.Title }}
+{{ end }}
 </title>
 
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<!-- Primary SEO -->
+
+<meta
+    name="description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+
+<meta
+    name="author"
+    content="Ikwuka Okoye">
+
+<meta
+    name="robots"
+    content="index,follow">
+
+<link
+    rel="canonical"
+    href="{{ .Permalink }}">
+
+<!-- Open Graph -->
+
+<meta
+    property="og:type"
+    content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+
+<meta
+    property="og:site_name"
+    content="{{ site.Title }}">
+
+<meta
+    property="og:title"
+    content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
+
+<meta
+    property="og:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+
+<meta
+    property="og:url"
+    content="{{ .Permalink }}">
+
+{{ with .Params.image }}
+<meta
+    property="og:image"
+    content="{{ . | absURL }}">
+{{ else }}
+<meta
+    property="og:image"
+    content="{{ 'images/og-image.png' | absURL }}">
+{{ end }}
+
+<meta
+    property="og:image:alt"
+    content="Ikwuka Okoye — Distributed Systems & Backend Engineer">
+
+<meta
+    property="og:locale"
+    content="en_US">
+
+<!-- Twitter / X -->
+
+<meta
+    name="twitter:card"
+    content="summary_large_image">
+
+<meta
+    name="twitter:title"
+    content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
+
+<meta
+    name="twitter:description"
+    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+
+{{ with .Params.image }}
+<meta
+    name="twitter:image"
+    content="{{ . | absURL }}">
+{{ else }}
+<meta
+    name="twitter:image"
+    content="{{ 'images/og-image.png' | absURL }}">
+{{ end }}
+
+<!-- Icons -->
+
+<link
+    rel="icon"
+    type="image/x-icon"
+    href="/favicon.ico">
+
+<link
+    rel="apple-touch-icon"
+    href="/apple-touch-icon.png">
+
+<link
+    rel="manifest"
+    href="/site.webmanifest">
+
+<meta
+    name="theme-color"
+    content="#09090B">
+
+<!-- RSS Feed -->
+
+{{ with .OutputFormats.Get "RSS" }}
+<link
+    rel="alternate"
+    type="application/rss+xml"
+    title="{{ site.Title }}"
+    href="{{ .RelPermalink }}">
+{{ end }}
+
+<!-- Styles -->
 
 {{ with resources.Get "css/main.css" }}
-{{ $css := . | css.TailwindCSS }}
-<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+{{ $css := . | css.TailwindCSS | fingerprint }}
+
+<link
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+    integrity="{{ $css.Data.Integrity }}">
+
 {{ end }}

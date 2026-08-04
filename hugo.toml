@@ -1,6 +1,6 @@
 baseURL = "https://ikwukao.dev/"
 languageCode = "en-us"
-title = "Ikwuka Okoye | Software Engineer | Backend & DevOps"
+title = "Ikwuka Okoye"
 enableRobotsTXT = true
 
 [sitemap]
@@ -12,7 +12,7 @@ filename = "sitemap.xml"
 home = ["HTML", "RSS"]
 
 [params]
-description = "Distributed Systems Engineer | Backend Engineer |  Go • Python • SQL • Linux"
+description = "Distributed Systems and Backend Engineer specializing in Go, Python, DevOps, distributed systems, cloud-native infrastructure, and developer tooling."
 author = "Ikwuka Okoye"
 tagline = "Building reliable distributed systems and backend services."
 github = "https://github.com/ikwukao"
