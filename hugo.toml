@@ -1,10 +1,15 @@
 baseURL = "https://ikwukao.dev/"
 languageCode = "en-us"
-title = "ikwukao"
-
+title = "Ikwuka Okoye | Software Engineer | Backend & DevOps"
 enableRobotsTXT = true
 
-disableKinds = ["taxonomy", "term"]
+[sitemap]
+changefreq = "weekly"
+priority = 0.8
+filename = "sitemap.xml"
+
+[outputs]
+home = ["HTML", "RSS"]
 
 [params]
 description = "Distributed Systems Engineer | Backend Engineer |  Go • Python • SQL • Linux"
