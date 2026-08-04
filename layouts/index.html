@@ -105,7 +105,7 @@
         <div class="mt-14 grid gap-8 lg:grid-cols-3">
 
             {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
-            
+
                 {{ partial "project-card.html" . }}
 
             {{ end }}
@@ -118,46 +118,41 @@
 
 <!-- Engineering Journal -->
 
-<section class="py-28 border-t border-white/10">
+{{ range first 3 (where site.RegularPages "Section" "journal").ByDate.Reverse }}
 
-    <div class="mx-auto max-w-6xl px-6">
+    <article class="group border-b border-white/10 py-8">
 
-        {{ partial "section-header.html" (dict
-            "title" "Latest from the Engineering Journal"
-            "description" "Technical articles documenting engineering decisions, implementation details, and lessons learned."
-        ) }}
+        <h3 class="text-2xl font-semibold">
 
-        <div class="mt-14">
+            <a
+                href="{{ .RelPermalink }}"
+                class="transition group-hover:text-emerald-400">
 
-            {{ range first 3 (where site.RegularPages "Section" "journal") }}
+                {{ .Title }}
 
-                <article class="border-b border-white/10 py-8">
+            </a>
 
-                    <h3 class="text-2xl font-semibold">
+        </h3>
 
-                        <a
-                            href="{{ .RelPermalink }}"
-                            class="transition hover:text-emerald-400">
+        <p class="mt-4 leading-8 text-zinc-400">
 
-                            {{ .Title }}
-
-                        </a>
-
-                    </h3>
-
-                    <p class="mt-3 text-zinc-400">
-                        {{ .Summary }}
-                    </p>
-
-                </article>
-
+            {{ with .Description }}
+                {{ . }}
+            {{ else }}
+                {{ .Summary }}
             {{ end }}
 
-        </div>
+        </p>
 
-    </div>
+        <p class="mt-4 text-sm text-zinc-500">
 
-</section>
+            {{ .Date.Format "January 2, 2006" }}
+
+        </p>
+
+    </article>
+
+{{ end }}
 
 <!-- Technology Stack -->
 
