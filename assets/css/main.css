@@ -36,8 +36,19 @@ body {
   color: black;
 }
 
+::selection {
+  background: #10B981;
+  color: black;
+}
+
 a {
   transition: color 180ms ease;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #10B981;
+  outline-offset: 4px;
 }
 
 code,
