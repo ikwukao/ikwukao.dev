@@ -1,16 +1,11 @@
 # ikwukao.dev
 
-<div align="center">
-
 ![Banner](static/images/banner.png)
-
-### A modern, high-performance portfolio built with Hugo to showcase distributed systems, backend engineering, DevOps projects, and technical writing.
+**A modern, high-performance portfolio built with Hugo to showcase distributed systems, backend engineering, DevOps projects, and technical writing**
 
 [![Hugo](https://img.shields.io/badge/Hugo-Static%20Site-FF4088?style=for-the-badge\&logo=hugo)](https://gohugo.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38BDF8?style=for-the-badge\&logo=tailwindcss)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-
-</div>
 
 ---
 
@@ -197,15 +192,10 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Connect With Me
 
 * GitHub: **@ikwukao**
-* Website: **https://ikwukao.dev** *(coming soon)*
+* Website: **<https://ikwukao.dev>** *(coming soon)*
 
 ---
 
-<div align="center">
-
 **Built with ❤️, Go, Python, Linux, and an obsession for reliable software engineering.**
-
-</div>
-
 
 ---
