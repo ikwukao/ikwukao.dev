@@ -63,7 +63,7 @@
   border: 1px solid rgb(39 39 42);
 }
 
-/* Append beautiful code blocks */
+/* Append Beautiful Code Blocks */
 .prose pre {
   overflow-x: auto;
   margin: 2rem 0;
@@ -83,4 +83,13 @@
   border-radius: .35rem;
   background: rgb(24 24 27);
   color: #10B981;
+}
+
+/* Beautiful Blockquotes */
+.prose blockquote {
+  margin: 2rem 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid #10B981;
+  color: rgb(161 161 170);
+  font-style: italic;
 }
