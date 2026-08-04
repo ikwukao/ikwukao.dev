@@ -28,6 +28,14 @@ style = "github-dark"
 lineNos = false
 noClasses = false
 
+[minify]
+disableCSS = false
+disableHTML = false
+disableJS = false
+disableJSON = false
+disableSVG = false
+disableXML = false
+
 [menu]
 
 [[menu.main]]

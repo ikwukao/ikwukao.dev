@@ -128,7 +128,7 @@
 <!-- Styles -->
 
 {{ with resources.Get "css/main.css" }}
-{{ $css := . | css.TailwindCSS | fingerprint }}
+{{ $css := . | css.TailwindCSS | minify | fingerprint }}
 
 <link
     rel="stylesheet"
