@@ -13,9 +13,14 @@ home = ["HTML", "RSS"]
 
 [params]
 description = "Distributed Systems and Backend Engineer specializing in Go, Python, DevOps, distributed systems, cloud-native infrastructure, and developer tooling."
+
 author = "Ikwuka Okoye"
 tagline = "Building reliable distributed systems and backend services."
+
+email = "mailto:ikwukao@proton.me"
 github = "https://github.com/ikwukao"
+whatsapp = "http://wa.me/2347078080356"
+twitter = "https://x.com/ikwukao_"
 
 [markup]
 [markup.highlight]

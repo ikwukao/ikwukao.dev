@@ -123,6 +123,8 @@
     href="{{ .RelPermalink }}">
 {{ end }}
 
+{{ partial "schema.html" . }}
+
 <!-- Styles -->
 
 {{ with resources.Get "css/main.css" }}
