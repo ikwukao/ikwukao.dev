@@ -1,7 +1,13 @@
 baseURL = "https://ikwukao.dev/"
-languageCode = "en-us"
 title = "Ikwuka Okoye"
 enableRobotsTXT = true
+
+defaultContentLanguage = "en"
+
+[languages.en]
+languageName = "English"
+locale = "en-US"
+weight = 1
 
 [sitemap]
 changefreq = "weekly"
