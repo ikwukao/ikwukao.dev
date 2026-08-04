@@ -22,6 +22,14 @@
 
           {{ .Date.Format "January 2, 2006" }}
 
+          {{ if ne .Lastmod .Date }}
+
+          <span class="text-sm text-zinc-500">
+              • Updated {{ .Lastmod.Format "January 2, 2006" }}
+          </span>
+
+          {{ end }}
+
         </span>
 
       </div>
