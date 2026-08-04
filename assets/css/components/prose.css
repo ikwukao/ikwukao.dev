@@ -1,115 +1,66 @@
-/* Premium Typography */
-
 .prose {
-  max-width: 72ch;
-  color: rgb(212 212 216);
-  line-height: 1.9;
-}
-
-.prose h1,
-.prose h2,
-.prose h3,
-.prose h4 {
-  color: white;
-  font-weight: 700;
-  scroll-margin-top: 6rem;
+    max-width: none;
 }
 
 .prose h2 {
-  margin-top: 3rem;
-  margin-bottom: 1rem;
-  font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
 }
 
 .prose h3 {
-  margin-top: 2rem;
-  margin-bottom: .75rem;
-  font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: .75rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
 }
 
 .prose p {
-  margin: 1.4rem 0;
+    margin: 1.25rem 0;
+    color: #a1a1aa;
+    line-height: 1.9;
 }
 
-.prose a {
-  color: #10B981;
-  text-decoration: none;
-}
-
-.prose a:hover {
-  text-decoration: underline;
-}
-
-.prose strong {
-  color: white;
-}
-
-.prose ul,
-.prose ol {
-  margin: 1.5rem 0;
-  padding-left: 1.5rem;
+.prose ul {
+    margin: 1.5rem 0;
+    padding-left: 1.5rem;
 }
 
 .prose li {
-  margin: .5rem 0;
+    margin: .5rem 0;
+    color: #d4d4d8;
 }
 
-.prose hr {
-  margin: 3rem 0;
-  border-color: rgb(39 39 42);
+.prose a {
+    color: #10b981;
+    text-decoration: none;
 }
 
-.prose img {
-  margin: 2rem 0;
-  border-radius: .75rem;
-  border: 1px solid rgb(39 39 42);
-}
-
-/* Append Beautiful Code Blocks */
-.prose pre {
-  overflow-x: auto;
-  margin: 2rem 0;
-  padding: 1.25rem;
-  border: 1px solid rgb(39 39 42);
-  border-radius: .75rem;
-  background: rgb(9 9 11);
+.prose a:hover {
+    color: #34d399;
 }
 
 .prose code {
-  font-family: "JetBrains Mono", monospace;
-  font-size: .9rem;
+    border-radius: .375rem;
+    background: #18181b;
+    padding: .15rem .4rem;
+    color: #34d399;
+    font-family: "JetBrains Mono", monospace;
 }
 
-.prose :not(pre)>code {
-  padding: .2rem .45rem;
-  border-radius: .35rem;
-  background: rgb(24 24 27);
-  color: #10B981;
+.prose pre {
+    overflow-x: auto;
+    border-radius: .75rem;
+    background: #09090b;
+    padding: 1.25rem;
 }
 
-/* Beautiful Blockquotes */
 .prose blockquote {
-  margin: 2rem 0;
-  padding-left: 1.25rem;
-  border-left: 4px solid #10B981;
-  color: rgb(161 161 170);
-  font-style: italic;
-}
-
-/* Tables */
-.prose table {
-  width: 100%;
-  margin: 2rem 0;
-  border-collapse: collapse;
-}
-
-.prose th,
-.prose td {
-  padding: .8rem 1rem;
-  border: 1px solid rgb(39 39 42);
-}
-
-.prose th {
-  background: rgb(24 24 27);
-  color: white;
+    margin: 2rem 0;
+    border-left: 4px solid #10b981;
+    padding-left: 1rem;
+    color: #a1a1aa;
 }
