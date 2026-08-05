@@ -1,0 +1,22 @@
+{{ define "main" }}
+
+<section class="py-28">
+
+    <div class="mx-auto max-w-6xl px-6">
+
+        {{ partial "section-header.html" (dict
+            "title" .Title
+            "description" .Description
+        ) }}
+
+        <div class="mt-16 prose prose-invert max-w-none">
+
+            {{ .Content }}
+
+        </div>
+
+    </div>
+
+</section>
+
+{{ end }}
