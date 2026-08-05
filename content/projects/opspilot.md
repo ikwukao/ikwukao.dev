@@ -78,12 +78,13 @@ Core Engine
  ├── Container Tools
  └── API Integrations
 ```
+
 ---
 
 ## Technology Stack
 
 | Technology | Purpose |
-|------------|---------|
+| ------------ | --------- |
 | Go | CLI and backend components |
 | Python | Automation and scripting |
 | Docker | Containerized execution |
