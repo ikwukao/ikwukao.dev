@@ -5,7 +5,7 @@ enableRobotsTXT = true
 defaultContentLanguage = "en"
 
 [languages.en]
-languageName = "English"
+label = "English"
 locale = "en-US"
 weight = 1
 
