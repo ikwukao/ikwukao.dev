@@ -121,7 +121,7 @@
 {{ range first 3 (where site.RegularPages "Section" "journal").ByDate.Reverse }}
 
     <article class="group border-b border-white/10 py-8">
-
+        
         <h3 class="text-2xl font-semibold">
 
             <a
@@ -148,6 +148,10 @@
 
             {{ .Date.Format "January 2, 2006" }}
 
+        </p>
+
+        <p>
+            {{ .ReadingTime }} min read
         </p>
 
     </article>
