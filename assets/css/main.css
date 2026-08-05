@@ -199,3 +199,13 @@ button,
   background: #10b981;
   animation: blink 1s steps(1) infinite;
 }
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  z-index: 9999;
+  background: #10b981;
+}
