@@ -1,119 +1,83 @@
-<article class="rounded-xl border border-white/10 bg-zinc-900/40 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
+<article class="group flex h-full flex-col rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/10">
 
-    <div class="flex items-start justify-between gap-4">
+  <!-- Status -->
 
-        <h3 class="text-2xl font-semibold">
+  {{ with .Params.status }}
+  <div class="mb-6">
+    <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-emerald-400">
+      {{ . }}
+    </span>
+  </div>
+  {{ end }}
 
-            <a href="{{ .RelPermalink }}" class="hover:text-emerald-400">
+  <!-- Title -->
 
-                {{ .Title }}
+  <h3 class="text-2xl font-bold transition group-hover:text-emerald-400">
 
-            </a>
+    <a href="{{ .RelPermalink }}">
+      {{ .Title }}
+    </a>
 
-        </h3>
+  </h3>
 
-        {{ with .Params.status }}
+  <!-- Summary -->
 
-        <span class="rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-emerald-400">
+  <p class="mt-5 grow leading-8 text-zinc-400">
 
-            {{ . }}
+    {{ with .Description }}
+      {{ . }}
+    {{ else }}
+      {{ .Summary }}
+    {{ end }}
 
-        </span>
+  </p>
 
-        {{ end }}
+  <!-- Technology -->
 
-    </div>
+  {{ with .Params.technologies }}
 
-    <p class="mt-6 leading-8 text-zinc-400">
+  <div class="mt-8 flex flex-wrap gap-2">
 
-        {{ with .Description }}
-            {{ . }}
-        {{ else }}
-            {{ .Summary }}
-        {{ end }}
+    {{ range . }}
 
-    </p>
+      <span class="rounded-full border border-white/10 bg-zinc-800/60 px-3 py-1 text-xs uppercase tracking-wide text-zinc-300">
 
-    {{ with .Params.technologies }}
+        {{ . }}
 
-    <div class="mt-6 flex flex-wrap gap-2">
-
-        {{ range . }}
-
-        <span class="rounded-full border border-white/10 px-3 py-1 text-sm text-zinc-300">
-
-            {{ . }}
-
-        </span>
-
-        {{ end }}
-
-    </div>
+      </span>
 
     {{ end }}
 
-    {{ with .Params.highlights }}
+  </div>
 
-    <div class="mt-6 space-y-2">
+  {{ end }}
 
-        {{ range . }}
+  <!-- Footer -->
 
-        <div class="flex items-center gap-2 text-sm text-zinc-400">
+  <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
 
-            <span class="text-emerald-400">✓</span>
+    <a
+      href="{{ .RelPermalink }}"
+      class="font-medium text-emerald-400 transition hover:text-emerald-300">
 
-            <span>{{ . }}</span>
+      Read Case Study →
 
-        </div>
+    </a>
 
-        {{ end }}
+    {{ with .Params.github }}
 
-    </div>
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-sm text-zinc-400 transition hover:text-white">
+
+        Source ↗
+
+      </a>
 
     {{ end }}
 
-    <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
-
-        <a
-            href="{{ .RelPermalink }}"
-            class="font-medium text-emerald-400 transition hover:text-emerald-300">
-
-            Case Study →
-
-        </a>
-
-        <div class="flex gap-6">
-
-            {{ with .Params.demo }}
-
-            <a
-                href="{{ . }}"
-                target="_blank"
-                rel="noopener"
-                class="text-zinc-400 transition hover:text-white">
-
-                Live Demo
-
-            </a>
-
-            {{ end }}
-
-            {{ with .Params.github }}
-
-            <a
-                href="{{ . }}"
-                target="_blank"
-                rel="noopener"
-                class="text-zinc-400 transition hover:text-white">
-
-                Source Code
-
-            </a>
-
-            {{ end }}
-
-        </div>
-
-    </div>
+  </div>
 
 </article>
