@@ -1,285 +1,429 @@
 {{ define "main" }}
 
+<!-- ===================================================== -->
 <!-- Hero -->
-<section class="flex min-h-[calc(100vh-4rem)] items-center">
-    <div class="hero-bg"></div>
-    <div class="mx-auto w-full max-w-6xl px-6 lg:px-8">
+<!-- ===================================================== -->
 
-        <p class="logo mb-6 text-xl font-bold text-emerald-500">
-            >_ ikwukao
-        </p>
-        <h1 class="max-w-5xl text-5xl font-bold tracking-tight text-white md:text-7xl">
+<section class="relative overflow-hidden py-28">
 
-            Building Reliable
-            <br>
+  <div class="hero-bg"></div>
 
-            Distributed Systems
-            <br>
+  <div class="mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-2">
 
-            & Backend Software
+    <!-- Left -->
 
-        </h1>
+    <div>
 
-        <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 md:text-xl">
-        
-            I design and build scalable backend services, distributed systems,
-            and developer tooling using Go, Python, Linux, SQL, Docker,
-            and cloud-native technologies.
-        
-        </p>
+      <p class="logo mb-5 text-xl font-bold text-emerald-500">
+        >_ ikwukao
+      </p>
 
-        <div class="mt-12 flex flex-wrap gap-4">
+      <p class="mb-6 text-sm uppercase tracking-[0.25em] text-emerald-400">
+        Backend Engineer • Distributed Systems • Go
+      </p>
 
-            <a
-                href="/projects/"
-                class="rounded-md border border-emerald-500 bg-emerald-500 px-6 py-3 font-medium text-black transition hover:bg-emerald-400">
+      <h1 class="max-w-xl text-5xl font-bold tracking-tight text-white md:text-7xl">
 
-                View My Work →
+        Building Reliable
 
-            </a>
-
-            <a
-                href="/journal/"
-                class="rounded-md border border-zinc-700 px-6 py-3 font-medium transition hover:border-emerald-500 hover:text-emerald-400">
-
-                Engineering Journal
-
-            </a>
-
-        </div>
-
-        <div class="mt-16 overflow-hidden rounded-xl border border-white/10 bg-zinc-950">
-
-            <div class="border-b border-white/10 px-4 py-2 text-sm text-zinc-500">
-
-                terminal
-
-            </div>
-
-        <pre class="overflow-x-auto p-6 text-sm leading-7 text-emerald-400"><code>$ whoami
-
-        Ikwuka Okoye
-
-        $ role
-
-        Distributed Systems & Backend Engineer
-
-        $ primary_languages
-
-        Go
-        Python
-
-        $ current_focus
+        <br>
 
         Distributed Systems
-        Backend Architecture
-        DevOps Infrastructure Automation
-        Developer Tooling
 
-        $ status
+        <br>
 
-        Open to Remote Opportunities
-        </code></pre>
+        & Backend Software
 
-        </div>
+      </h1>
 
-        <p class="mt-12 text-sm uppercase tracking-[0.2em] text-zinc-500">
-            Available for Remote Opportunities
-        </p>
+      <p class="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
+
+        I design scalable backend services, distributed systems, and developer
+        tooling using Go, Python, Linux, Docker, Kubernetes, SQL, and
+        cloud-native technologies.
+
+      </p>
+
+      <div class="mt-12 flex flex-wrap gap-4">
+
+        <a
+          href="/projects/"
+          class="btn-primary">
+
+          View My Work →
+
+        </a>
+
+        <a
+          href="/journal/"
+          class="btn-secondary">
+
+          Engineering Journal
+
+        </a>
+
+      </div>
 
     </div>
 
+    <!-- Right -->
+
+    <div>
+
+      <div class="overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl shadow-emerald-500/5">
+
+        <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
+
+          <div class="flex gap-2">
+
+            <span class="h-3 w-3 rounded-full bg-red-500"></span>
+            <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
+            <span class="h-3 w-3 rounded-full bg-green-500"></span>
+
+          </div>
+
+          <span class="text-xs uppercase tracking-widest text-zinc-500">
+
+            engineer.sh
+
+          </span>
+
+        </div>
+
+<pre class="overflow-x-auto p-6 font-mono text-sm leading-8 text-emerald-400"><code>$ whoami
+Ikwuka Okoye
+
+$ role
+Backend Engineer
+Distributed Systems
+
+$ stack
+Go
+Python
+Docker
+Kubernetes
+PostgreSQL
+Linux
+
+$ focus
+Backend Engineering
+Distributed Systems
+Developer Tooling
+
+$ availability
+Open to Remote Opportunities
+</code></pre>
+
+      </div>
+
+    </div>
+
+  </div>
+
 </section>
 
-<!-- Featured Projects -->
+<!-- ===================================================== -->
+<!-- Technology Strip -->
+<!-- ===================================================== -->
+
+<section class="border-y border-white/10 bg-zinc-950/60 py-8">
+
+  <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-8 px-6 text-sm uppercase tracking-[0.2em] text-zinc-400">
+
+    <span>Go</span>
+
+    <span>Python</span>
+
+    <span>Docker</span>
+
+    <span>Kubernetes</span>
+
+    <span>PostgreSQL</span>
+
+    <span>Linux</span>
+
+    <span>Git</span>
+
+    <span>REST APIs</span>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- What I Build -->
+<!-- ===================================================== -->
 
 <section class="py-28">
 
-    <div class="mx-auto max-w-6xl px-6">
+  <div class="mx-auto max-w-6xl px-6">
 
-        {{ partial "section-header.html" (dict
-            "title" "Featured Projects"
-            "description" "A selection of engineering projects focused on backend systems, distributed systems, DevOps, and developer tooling."
-        ) }}
+    {{ partial "section-header.html" (dict
+      "title" "What I Build"
+      "description" "I enjoy designing software that is reliable, maintainable, and built to scale."
+    ) }}
 
-        <div class="mt-14 grid gap-8 lg:grid-cols-3">
+    <div class="mt-14 grid gap-8 lg:grid-cols-3">
 
-            {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur">
 
-                {{ partial "project-card.html" . }}
+        <h3 class="text-2xl font-semibold">
+          Backend Systems
+        </h3>
 
-            {{ end }}
+        <ul class="mt-6 space-y-3 text-zinc-400">
 
-        </div>
+          <li>REST APIs</li>
+          <li>Authentication</li>
+          <li>SQL Databases</li>
+          <li>Performance Optimization</li>
+
+        </ul>
+
+      </div>
+
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur">
+
+        <h3 class="text-2xl font-semibold">
+          Distributed Systems
+        </h3>
+
+        <ul class="mt-6 space-y-3 text-zinc-400">
+
+          <li>Concurrency</li>
+          <li>Scalability</li>
+          <li>Fault Tolerance</li>
+          <li>System Design</li>
+
+        </ul>
+
+      </div>
+
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur">
+
+        <h3 class="text-2xl font-semibold">
+          Developer Tooling
+        </h3>
+
+        <ul class="mt-6 space-y-3 text-zinc-400">
+
+          <li>CLI Applications</li>
+          <li>Automation</li>
+          <li>DevOps Utilities</li>
+          <li>Engineering Workflows</li>
+
+        </ul>
+
+      </div>
 
     </div>
 
+  </div>
+
 </section>
 
+<!-- ===================================================== -->
+<!-- Featured Projects -->
+<!-- ===================================================== -->
+
+<section class="py-28 border-t border-white/10">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Featured Projects"
+      "description" "Engineering projects demonstrating backend architecture, distributed systems, and developer tooling."
+    ) }}
+
+    <div class="mt-14 grid gap-8 lg:grid-cols-3">
+
+      {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
+
+        {{ partial "project-card.html" . }}
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
 <!-- Engineering Journal -->
+<!-- ===================================================== -->
 
-{{ range first 3 (where site.RegularPages "Section" "journal").ByDate.Reverse }}
+<section class="py-28 border-t border-white/10">
 
-    <article class="group border-b border-white/10 py-8">
-        
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Engineering Journal"
+      "description" "Technical articles documenting engineering decisions, implementation details, and lessons learned."
+    ) }}
+
+    <div class="mt-14">
+
+      {{ range first 3 (where site.RegularPages "Section" "journal").ByDate.Reverse }}
+
+      <article class="group border-b border-white/10 py-8">
+
         <h3 class="text-2xl font-semibold">
 
-            <a
-                href="{{ .RelPermalink }}"
-                class="transition group-hover:text-emerald-400">
+          <a href="{{ .RelPermalink }}" class="transition group-hover:text-emerald-400">
 
-                {{ .Title }}
+            {{ .Title }}
 
-            </a>
+          </a>
 
         </h3>
 
         <p class="mt-4 leading-8 text-zinc-400">
 
-            {{ with .Description }}
-                {{ . }}
-            {{ else }}
-                {{ .Summary }}
-            {{ end }}
+          {{ with .Description }}
+            {{ . }}
+          {{ else }}
+            {{ .Summary }}
+          {{ end }}
 
         </p>
 
-        <p class="mt-4 text-sm text-zinc-500">
+        <div class="mt-4 flex gap-6 text-sm text-zinc-500">
 
-            {{ .Date.Format "January 2, 2006" }}
+          <span>{{ .Date.Format "January 2, 2006" }}</span>
 
-        </p>
-
-        <p>
-            {{ .ReadingTime }} min read
-        </p>
-
-    </article>
-
-{{ end }}
-
-<!-- Technology Stack -->
-
-<section class="py-28">
-
-    <div class="mx-auto max-w-6xl px-6">
-
-        {{ partial "section-header.html" (dict
-            "title" "Core Technologies"
-            "description" "The languages, frameworks, and infrastructure technologies I use to build reliable software."
-        ) }}
-
-        <div class="mt-14 grid gap-6 md:grid-cols-2">
-
-            {{ range site.Data.technologies.categories }}
-
-                {{ partial "tech-category.html" . }}
-
-            {{ end }}
+          <span>{{ .ReadingTime }} min read</span>
 
         </div>
 
+      </article>
+
+      {{ end }}
+
     </div>
+
+  </div>
 
 </section>
 
-<!-- Experience Snapshot -->
+<!-- ===================================================== -->
+<!-- Core Technologies -->
+<!-- ===================================================== -->
 
-<section class="border-t border-white/10 py-28">
+<section class="py-28 border-t border-white/10">
 
-    <div class="mx-auto max-w-6xl px-6">
+  <div class="mx-auto max-w-6xl px-6">
 
-        {{ partial "section-header.html" (dict
-            "title" "Current Focus"
-            "description" "The engineering disciplines and technologies I'm currently investing in."
-        ) }}
+    {{ partial "section-header.html" (dict
+      "title" "Core Technologies"
+      "description" "Languages, frameworks, and infrastructure technologies I use."
+    ) }}
 
-        <div class="mt-12 grid gap-6 md:grid-cols-2">
+    <div class="mt-14 grid gap-6 md:grid-cols-2">
 
-            <div class="rounded-xl border border-white/10 p-6">
+      {{ range site.Data.technologies.categories }}
 
-                <ul class="space-y-4 text-zinc-300">
+        {{ partial "tech-category.html" . }}
 
-                    <li>• Distributed Systems</li>
-
-                    <li>• Backend Engineering</li>
-
-                    <li>• Go Development</li>
-
-                    <li>• Python Tooling</li>
-
-                    <li>• Cloud-native Infrastructure</li>
-
-                </ul>
-
-            </div>
-
-            <div class="rounded-xl border border-white/10 p-6">
-
-                <p class="leading-8 text-zinc-400">
-
-                    I'm currently focused on designing reliable backend services,
-                    distributed systems, and developer tooling while continuing to
-                    deepen my knowledge of cloud-native infrastructure and software architecture.
-
-                </p>
-
-                <p class="mt-6 font-medium text-emerald-400">
-
-                    Open to Remote Backend & DevOps/Platform Engineering Opportunities.
-
-                </p>
-
-            </div>
-
-        </div>
+      {{ end }}
 
     </div>
+
+  </div>
 
 </section>
 
-<!-- Contact CTA -->
+<!-- ===================================================== -->
+<!-- Current Focus -->
+<!-- ===================================================== -->
 
-<section class="py-28">
+<section class="py-28 border-t border-white/10">
 
-    <div class="mx-auto max-w-4xl px-6 text-center">
+  <div class="mx-auto max-w-6xl px-6">
 
-        <h2 class="text-5xl font-bold tracking-tight">
+    {{ partial "section-header.html" (dict
+      "title" "Current Focus"
+      "description" "Areas I'm actively building and deepening my expertise in."
+    ) }}
 
-            Let's Build Something Great
+    <div class="mt-14 grid gap-6 md:grid-cols-2">
 
-        </h2>
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
 
-        <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
+        <h3 class="font-semibold">Backend Engineering</h3>
+        <p class="mt-2 text-zinc-400">Production-focused development with Go and Python.</p>
 
-            Interested in backend engineering, distributed systems,
-            platform engineering, or developer tooling?
+      </div>
 
-            I'd love to connect.
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
 
-        </p>
+        <h3 class="font-semibold">Distributed Systems</h3>
+        <p class="mt-2 text-zinc-400">Concurrency, scalability, and resilient architectures.</p>
 
-        <div class="mt-12 flex flex-wrap justify-center gap-4">
+      </div>
 
-            <a
-                href="/contact/"
-                class="rounded-md border border-emerald-500 bg-emerald-500 px-6 py-3 font-medium text-black transition hover:bg-emerald-400">
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
 
-                Contact Me
+        <h3 class="font-semibold">Cloud Native</h3>
+        <p class="mt-2 text-zinc-400">Docker, Kubernetes, Linux, and automation.</p>
 
-            </a>
+      </div>
 
-            <a
-                href="/resume/"
-                class="rounded-md border border-zinc-700 px-6 py-3 font-medium transition hover:border-emerald-500 hover:text-emerald-400">
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
 
-                View Resume
+        <h3 class="font-semibold">Developer Tooling</h3>
+        <p class="mt-2 text-zinc-400">CLI applications, DevOps utilities, and engineering workflows.</p>
 
-            </a>
-
-        </div>
+      </div>
 
     </div>
+
+  </div>
+
+</section>
+
+<!-- ===================================================== -->
+<!-- Contact -->
+<!-- ===================================================== -->
+
+<section class="py-28 border-t border-white/10">
+
+  <div class="mx-auto max-w-4xl px-6 text-center">
+
+    <h2 class="text-5xl font-bold">
+
+      Let's Build Reliable Software Together
+
+    </h2>
+
+    <p class="mx-auto mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
+
+      Interested in backend engineering, distributed systems, platform engineering,
+      or developer tooling? I'd be glad to connect and discuss opportunities.
+
+    </p>
+
+    <div class="mt-12 flex flex-wrap justify-center gap-4">
+
+      <a
+        href="/contact/"
+        class="btn-primary">
+
+        Contact Me
+
+      </a>
+
+      <a
+        href="/resume/"
+        class="btn-secondary">
+
+        View Resume
+
+      </a>
+
+    </div>
+
+  </div>
 
 </section>
 
