@@ -4,18 +4,25 @@
 
     {{ partial "section-header.html" (dict
       "title" "What I Build"
-      "description" "I enjoy designing software that is reliable, maintainable, and built to scale."
+      "description" "I build software focused on reliability, scalability, and maintainability—from backend APIs to distributed systems and platform automation."
     ) }}
 
     <div class="mt-14 grid gap-8 lg:grid-cols-3">
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur">
+      <!-- Backend Engineering -->
+      <article class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+
+        <div class="mb-6 text-4xl">⚙️</div>
 
         <h3 class="text-2xl font-semibold">
-          Backend Systems
+          Backend Engineering
         </h3>
 
-        <ul class="mt-6 space-y-3 text-zinc-400">
+        <p class="mt-4 leading-7 text-zinc-400">
+          Designing secure, maintainable, and high-performance backend services.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-zinc-300">
 
           <li>REST APIs</li>
           <li>Authentication</li>
@@ -24,15 +31,22 @@
 
         </ul>
 
-      </div>
+      </article>
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur">
+      <!-- Distributed Systems -->
+      <article class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+
+        <div class="mb-6 text-4xl">🌐</div>
 
         <h3 class="text-2xl font-semibold">
           Distributed Systems
         </h3>
 
-        <ul class="mt-6 space-y-3 text-zinc-400">
+        <p class="mt-4 leading-7 text-zinc-400">
+          Building resilient systems that remain reliable as they grow.
+        </p>
+
+        <ul class="mt-6 space-y-3 text-zinc-300">
 
           <li>Concurrency</li>
           <li>Scalability</li>
@@ -41,24 +55,31 @@
 
         </ul>
 
-      </div>
+      </article>
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur">
+      <!-- Platform Engineering -->
+      <article class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+
+        <div class="mb-6 text-4xl">🚀</div>
 
         <h3 class="text-2xl font-semibold">
-          Developer Tooling
+          Platform & Automation
         </h3>
 
-        <ul class="mt-6 space-y-3 text-zinc-400">
+        <p class="mt-4 leading-7 text-zinc-400">
+          Automating infrastructure and improving developer productivity.
+        </p>
 
-          <li>CLI Applications</li>
-          <li>Automation</li>
-          <li>DevOps Utilities</li>
-          <li>Engineering Workflows</li>
+        <ul class="mt-6 space-y-3 text-zinc-300">
+
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>Infrastructure Automation</li>
+          <li>Developer Tooling</li>
 
         </ul>
 
-      </div>
+      </article>
 
     </div>
 
