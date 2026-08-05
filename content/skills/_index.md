@@ -1,6 +1,6 @@
 ---
 title: "Skills"
-description: "Technologies, languages, tools, and engineering disciplines I use to build reliable software."
+description: "Technologies, languages, tools, and engineering disciplines I use to build reliable softwares."
 ---
 
 ## Languages
@@ -24,11 +24,17 @@ description: "Technologies, languages, tools, and engineering disciplines I use 
 
 ## DevOps & Cloud
 
+* Linux
 * Docker
 * Kubernetes
-* Linux
+* Prometheus
+* Grafana
+* Terraform - Infrastructure as Code (IaC)
+* OpenTelemetry - Observability & Monitoring
+* Amazon Web Services (AWS)
+* Google Cloud Platform (GCP)
 * Git
-* CI/CD
+* GitHub Action (CI/CD)
 
 ---
 
@@ -43,9 +49,11 @@ description: "Technologies, languages, tools, and engineering disciplines I use 
 
 ## Tools
 
+* Neovim
+* VS Code
+* Goland
 * Hugo
 * Tailwind CSS
-* VS Code
 * GitHub
 
 ---
@@ -53,18 +61,13 @@ description: "Technologies, languages, tools, and engineering disciplines I use 
 ## Currently Learning
 
 * Advanced Distributed Systems
+* Advanced DevOps & CI/CD
 * Platform Engineering
 * Cloud-native Architecture
 * Rust Programming
-* Advanced Go Programming
-* Advanced Python Programming
 * Advanced SQL & Database Design
-* Advanced DevOps & CI/CD
-* Advanced Cloud Platforms (AWS, GCP, Azure)
+* Advanced Cloud Infrastructure Automation (AWS, GCP)
 * Advanced Monitoring & Observability
 * Advanced Networking & Security
-* Advanced Performance Optimization
-* Advanced Scalability & Reliability
 * Advanced Testing & Debugging
-* Advanced Software Development Lifecycle
-* Advanced Agile Methodologies
+* Enterprise Software Engineering (Gin, TypeScript, Vue, Nuxt)
