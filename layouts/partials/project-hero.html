@@ -1,0 +1,111 @@
+<section class="border-b border-white/10 py-28">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    <div class="flex flex-wrap items-center gap-4">
+
+      {{ with .Params.status }}
+
+      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+
+        {{ . }}
+
+      </span>
+
+      {{ end }}
+
+      {{ with .Date }}
+
+      <span class="text-sm text-zinc-500">
+
+        {{ .Format "January 2, 2006" }}
+
+      </span>
+
+      {{ end }}
+
+      <span class="text-sm text-zinc-500">
+
+        {{ .ReadingTime }} min read
+
+      </span>
+
+    </div>
+
+    <h1 class="mt-8 max-w-4xl text-5xl font-bold tracking-tight text-white md:text-6xl">
+
+      {{ .Title }}
+
+    </h1>
+
+    <p class="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">
+
+      {{ with .Description }}
+
+        {{ . }}
+
+      {{ else }}
+
+        {{ .Summary }}
+
+      {{ end }}
+
+    </p>
+
+    {{ with .Params.technologies }}
+
+    <div class="mt-10 flex flex-wrap gap-3">
+
+      {{ range . }}
+
+      <span class="rounded-full border border-white/10 bg-zinc-900/60 px-4 py-2 text-sm text-zinc-300">
+
+        {{ . }}
+
+      </span>
+
+      {{ end }}
+
+    </div>
+
+    {{ end }}
+
+    <div class="mt-12 flex flex-wrap gap-4">
+
+      {{ with .Params.github }}
+
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener"
+        class="btn-primary">
+
+        View Source Code
+
+      </a>
+
+      {{ end }}
+
+      {{ with .Params.demo }}
+
+      {{ if ne . "" }}
+
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener"
+        class="btn-secondary">
+
+        Live Demo
+
+      </a>
+
+      {{ end }}
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>

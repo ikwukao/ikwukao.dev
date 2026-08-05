@@ -1,0 +1,42 @@
+<section class="border-t border-white/10 py-28">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Key Features"
+      "description" "Core capabilities delivered by this project."
+    ) }}
+
+    {{ with .Params.highlights }}
+
+    <div class="mt-14 grid gap-6 md:grid-cols-2">
+
+      {{ range . }}
+
+      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-6 backdrop-blur transition-all duration-300 hover:border-emerald-500/40">
+
+        <div class="flex items-center gap-3">
+
+          <span class="text-emerald-400 text-xl">
+            ✓
+          </span>
+
+          <h3 class="text-lg font-semibold text-white">
+
+            {{ . }}
+
+          </h3>
+
+        </div>
+
+      </div>
+
+      {{ end }}
+
+    </div>
+
+    {{ end }}
+
+  </div>
+
+</section>

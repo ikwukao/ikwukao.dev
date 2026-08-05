@@ -1,0 +1,26 @@
+<section class="border-t border-white/10 py-28">
+
+  <div class="mx-auto max-w-5xl px-6">
+
+    {{ with .Params.future }}
+
+    {{ partial "section-header.html" (dict
+      "title" "Future Improvements"
+      "description" "Planned enhancements and opportunities for continued development."
+    ) }}
+
+    <div class="mt-14 rounded-2xl border border-sky-500/20 bg-sky-500/5 p-8">
+
+      <div class="prose prose-invert max-w-none">
+
+        {{ . | markdownify }}
+
+      </div>
+
+    </div>
+
+    {{ end }}
+
+  </div>
+
+</section>
