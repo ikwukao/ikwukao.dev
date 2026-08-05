@@ -9,7 +9,7 @@
 
     <div class="mt-14 grid gap-6 md:grid-cols-2">
 
-      {{ range site.Data.technologies.categories }}
+      {{ range hugo.Data.technologies.categories }}
 
         {{ partial "tech-category.html" . }}
 
