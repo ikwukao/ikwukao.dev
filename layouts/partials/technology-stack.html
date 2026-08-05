@@ -1,0 +1,22 @@
+<section class="py-28 border-t border-white/10">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Core Technologies"
+      "description" "Languages, frameworks, and infrastructure technologies I use."
+    ) }}
+
+    <div class="mt-14 grid gap-6 md:grid-cols-2">
+
+      {{ range site.Data.technologies.categories }}
+
+        {{ partial "tech-category.html" . }}
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>

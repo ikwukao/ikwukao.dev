@@ -1,21 +1,12 @@
 {{ define "main" }}
 
-<section class="mx-auto max-w-6xl px-6 py-24">
-
-  <h1 class="mb-4 text-5xl font-bold text-emerald-500">
-    >_ ikwukao
-  </h1>
-
-  <p class="text-2xl">
-    Distributed Systems Engineer
-  </p>
-
-  <p class="mt-3 text-zinc-400">
-    Building reliable backend systems,
-    developer tooling,
-    and distributed infrastructure.
-  </p>
-
-</section>
+  {{ partial "hero.html" . }}
+  {{ partial "technology-strip.html" . }}
+  {{ partial "what-i-build.html" . }}
+  {{ partial "featured-projects.html" . }}
+  {{ partial "engineering-journal.html" . }}
+  {{ partial "technology-stack.html" . }}
+  {{ partial "current-focus.html" . }}
+  {{ partial "contact-cta.html" . }}
 
 {{ end }}

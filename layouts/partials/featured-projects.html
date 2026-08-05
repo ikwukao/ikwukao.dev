@@ -1,0 +1,22 @@
+<section class="py-28 border-t border-white/10">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Featured Projects"
+      "description" "Engineering projects demonstrating backend architecture, distributed systems, and developer tooling."
+    ) }}
+
+    <div class="mt-14 grid gap-8 lg:grid-cols-3">
+
+      {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
+
+        {{ partial "project-card.html" . }}
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>
