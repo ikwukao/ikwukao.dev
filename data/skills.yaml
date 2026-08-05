@@ -1,0 +1,144 @@
+summary:
+  title: Professional Summary
+
+  description: >
+    I build reliable backend services, distributed systems, cloud-native
+    infrastructure, and developer tooling with a focus on maintainability,
+    performance, and clean architecture.
+
+categories:
+
+  - title: Backend Engineering
+
+    icon: 🖥️
+
+    description: Designing scalable APIs and backend services.
+
+    skills:
+
+      - name: Go
+        level: Advanced
+
+      - name: Python
+        level: Advanced
+
+      - name: REST APIs
+        level: Advanced
+
+      - name: SQL
+        level: Advanced
+
+      - name: Authentication
+        level: Intermediate
+
+      - name: Authorization
+        level: Intermediate
+
+  - title: Distributed Systems
+
+    icon: 🌐
+
+    description: Building reliable distributed software.
+
+    skills:
+
+      - name: Distributed Systems
+        level: Intermediate
+
+      - name: Concurrency
+        level: Intermediate
+
+      - name: Networking
+        level: Intermediate
+
+      - name: System Design
+        level: Intermediate
+
+      - name: Microservices
+        level: Beginner
+
+  - title: Cloud & DevOps
+
+    icon: ☁️
+
+    description: Infrastructure, automation, and deployment.
+
+    skills:
+
+      - name: Docker
+        level: Advanced
+
+      - name: Kubernetes
+        level: Intermediate
+
+      - name: Linux
+        level: Advanced
+
+      - name: GitHub Actions
+        level: Intermediate
+
+      - name: CI/CD
+        level: Intermediate
+
+  - title: Databases
+
+    icon: 🗄️
+
+    description: Data storage and persistence.
+
+    skills:
+
+      - name: PostgreSQL
+        level: Intermediate
+
+      - name: SQLite
+        level: Advanced
+
+      - name: Redis
+        level: Beginner
+
+  - title: Developer Tools
+
+    icon: ⚙️
+
+    description: Daily engineering workflow.
+
+    skills:
+
+      - name: Git
+        level: Advanced
+
+      - name: Bash
+        level: Advanced
+
+      - name: Hugo
+        level: Advanced
+
+      - name: VS Code
+        level: Advanced
+
+      - name: Neovim
+        level: Beginner
+
+  - title: Software Engineering
+
+    icon: 🧠
+
+    description: Engineering principles and practices.
+
+    skills:
+
+      - name: Clean Architecture
+        level: Intermediate
+
+      - name: Testing
+        level: Intermediate
+
+      - name: Documentation
+        level: Advanced
+
+      - name: Automation
+        level: Intermediate
+
+      - name: Performance
+        level: Beginner

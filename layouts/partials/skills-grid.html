@@ -4,52 +4,68 @@
 
     {{ partial "section-header.html" (dict
       "title" "Core Skills"
-      "description" "Technologies and engineering disciplines I work with regularly."
+      "description" "Technologies, tools, and engineering disciplines I work with."
     ) }}
 
-    <div class="mt-14 grid gap-8 md:grid-cols-2">
+    <div class="mt-14 grid gap-8 lg:grid-cols-2">
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
-        <h3 class="text-xl font-semibold text-white">Backend Engineering</h3>
-        <p class="mt-5 leading-8 text-zinc-400">
-          Go • Python • REST APIs • SQL • API Design • Authentication
-        </p>
-      </div>
+      {{ range hugo.Data.skills.categories }}
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
-        <h3 class="text-xl font-semibold text-white">Distributed Systems</h3>
-        <p class="mt-5 leading-8 text-zinc-400">
-          Concurrency • Networking • Microservices • System Design
-        </p>
-      </div>
+      <article class="rounded-2xl border border-white/10 bg-zinc-900/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
-        <h3 class="text-xl font-semibold text-white">Cloud & DevOps</h3>
-        <p class="mt-5 leading-8 text-zinc-400">
-          Docker • Kubernetes • GitHub Actions • Linux • CI/CD
-        </p>
-      </div>
+        <div class="flex items-center gap-4">
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
-        <h3 class="text-xl font-semibold text-white">Databases</h3>
-        <p class="mt-5 leading-8 text-zinc-400">
-          PostgreSQL • SQLite • Database Design
-        </p>
-      </div>
+          <span class="text-3xl">
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
-        <h3 class="text-xl font-semibold text-white">Developer Tools</h3>
-        <p class="mt-5 leading-8 text-zinc-400">
-          Git • Bash • Hugo • VS Code • Neovim
-        </p>
-      </div>
+            {{ .icon }}
 
-      <div class="rounded-xl border border-white/10 bg-zinc-900/40 p-8">
-        <h3 class="text-xl font-semibold text-white">Software Engineering</h3>
-        <p class="mt-5 leading-8 text-zinc-400">
-          Testing • Documentation • Clean Architecture • Automation
-        </p>
-      </div>
+          </span>
+
+          <div>
+
+            <h3 class="text-2xl font-semibold text-white">
+
+              {{ .title }}
+
+            </h3>
+
+            <p class="mt-1 text-zinc-500">
+
+              {{ .description }}
+
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="mt-8 flex flex-wrap gap-3">
+
+          {{ range .skills }}
+
+          <div class="rounded-full border border-white/10 bg-zinc-950 px-4 py-2">
+
+            <span class="font-medium text-white">
+
+              {{ .name }}
+
+            </span>
+
+            <span class="ml-2 text-xs uppercase tracking-wider text-emerald-400">
+
+              {{ .level }}
+
+            </span>
+
+          </div>
+
+          {{ end }}
+
+        </div>
+
+      </article>
+
+      {{ end }}
 
     </div>
 
