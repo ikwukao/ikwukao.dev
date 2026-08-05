@@ -2,9 +2,11 @@
 
   <div class="hero-bg"></div>
 
-  <div class="mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-2">
+  <div class="mx-auto grid max-w-6xl items-center gap-20 px-6 lg:grid-cols-2">
 
+    <!-- ========================================= -->
     <!-- Left -->
+    <!-- ========================================= -->
 
     <div>
 
@@ -12,9 +14,27 @@
         >_ ikwukao
       </p>
 
+      <!-- Availability Badge -->
+
+      <div class="mb-6 inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2">
+
+        <span class="h-2 w-2 animate-pulse rounded-full bg-emerald-400"></span>
+
+        <span class="text-sm font-medium text-emerald-300">
+          Available for Remote Backend & DevOps Opportunities
+        </span>
+
+      </div>
+
+      <!-- Role -->
+
       <p class="mb-6 text-sm uppercase tracking-[0.25em] text-emerald-400">
-        Backend Engineer • Distributed Systems • Go
+
+        Backend Engineer • DevOps • Distributed Systems • Go
+
       </p>
+
+      <!-- Heading -->
 
       <h1 class="max-w-xl text-5xl font-bold tracking-tight text-white md:text-7xl">
 
@@ -30,19 +50,24 @@
 
       </h1>
 
+      <!-- Description -->
+
       <p class="mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
 
-        I design scalable backend services, distributed systems, and developer
-        tooling using Go, Python, Linux, Docker, Kubernetes, SQL, and
-        cloud-native technologies.
+        I design scalable backend services, distributed systems, platform
+        infrastructure, and developer tooling using Go, Python, Linux,
+        Docker, Kubernetes, SQL, and cloud-native technologies.
 
       </p>
+
+      <!-- Primary Buttons -->
 
       <div class="mt-12 flex flex-wrap gap-4">
 
         <a
           href="/projects/"
-          class="btn-primary">
+          class="btn-primary"
+          aria-label="View Projects">
 
           View My Work →
 
@@ -50,7 +75,8 @@
 
         <a
           href="/journal/"
-          class="btn-secondary">
+          class="btn-secondary"
+          aria-label="Read Engineering Journal">
 
           Engineering Journal
 
@@ -58,25 +84,49 @@
 
       </div>
 
+      <!-- GitHub CTA -->
+
+      <div class="mt-8">
+
+        <a
+          href="{{ site.Params.github }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 text-sm font-medium text-zinc-400 transition hover:text-emerald-400">
+
+          View GitHub
+
+          <span aria-hidden="true">↗</span>
+
+        </a>
+
+      </div>
+
     </div>
 
+    <!-- ========================================= -->
     <!-- Right -->
+    <!-- ========================================= -->
 
     <div>
 
-      <div class="overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl shadow-emerald-500/5">
+      <div class="overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl shadow-emerald-500/10">
+
+        <!-- Terminal Header -->
 
         <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
 
           <div class="flex gap-2">
 
             <span class="h-3 w-3 rounded-full bg-red-500"></span>
+
             <span class="h-3 w-3 rounded-full bg-yellow-500"></span>
+
             <span class="h-3 w-3 rounded-full bg-green-500"></span>
 
           </div>
 
-          <span class="text-xs uppercase tracking-widest text-zinc-500">
+          <span class="text-xs uppercase tracking-[0.2em] text-zinc-500">
 
             engineer.sh
 
@@ -89,16 +139,16 @@ Ikwuka Okoye
 
 $ role
 Backend Engineer
-DevOps Engineer
+DevOps / Platform Engineer
 Distributed Systems
 
 $ stack
-Go
-Python
-Docker
-Kubernetes
-PostgreSQL
-Linux
+Go              ██████████
+Python          ██████████
+Docker          █████████
+Kubernetes      ████████
+PostgreSQL      ████████
+Linux           ██████████
 
 $ focus
 Backend Engineering
@@ -107,7 +157,7 @@ Distributed Systems
 Developer Tooling
 
 $ availability
-Open to Remote Opportunities
+Open to Remote Opportunities <span class="terminal-cursor"></span>
 </code></pre>
 
       </div>

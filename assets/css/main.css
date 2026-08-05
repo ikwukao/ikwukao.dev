@@ -184,9 +184,18 @@ button,
   inset: 0;
   pointer-events: none;
   background:
-    radial-gradient(
-      circle at top right,
-      rgba(16,185,129,08),
-      transparent 40%
-    );
+    radial-gradient(circle at top right,
+      rgba(16,185,129,.12),
+      transparent 45%),
+    radial-gradient(circle at bottom left,
+      rgba(16,185,129,.08),
+      transparent 40%);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.6rem;
+  height: 1.2rem;
+  background: #10b981;
+  animation: blink 1s steps(1) infinite;
 }
