@@ -7,7 +7,7 @@ description: "Professional experience, technical skills, and engineering focus."
 
 A downloadable version of my resume is available below.
 
-[Download Resume](https://drive.google.com/file/d/1BhLEnKorSxf9BNKGddNF2h3MPe18wKLo/view?usp=drive_link)
+[Download Resume](/static/resume/resume.pdf)
 
 ---
 
