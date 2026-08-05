@@ -23,7 +23,7 @@ description = "Distributed Systems and Backend Engineer specializing in Go, Pyth
 author = "Ikwuka Okoye"
 tagline = "Building reliable distributed systems and backend services."
 
-email = "mailto:ikwukao@proton.me"
+email = "ikwukao@proton.me"
 github = "https://github.com/ikwukao"
 whatsapp = "http://wa.me/2347078080356"
 twitter = "https://x.com/ikwukao_"
@@ -55,14 +55,14 @@ url = "/journal/"
 weight = 20
 
 [[menu.main]]
-name = "About"
-url = "/about/"
-weight = 30
-
-[[menu.main]]
 name = "Skills"
 url = "/skills/"
 weight = 25
+
+[[menu.main]]
+name = "About"
+url = "/about/"
+weight = 30
 
 [[menu.main]]
 name = "Resume"
