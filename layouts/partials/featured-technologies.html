@@ -1,0 +1,34 @@
+<section class="border-y border-white/10 bg-zinc-950/40">
+
+    <div class="mx-auto max-w-7xl px-6 py-8">
+
+        <div class="flex flex-wrap items-center justify-center gap-3">
+
+            {{ range slice
+                "Go"
+                "Python"
+                "Docker"
+                "Kubernetes"
+                "PostgreSQL"
+                "AWS"
+                "Terraform"
+                "Linux"
+                "GitHub Actions"
+                "Prometheus"
+                "Grafana"
+                "OpenTelemetry"
+            }}
+
+                <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-2 text-sm font-medium text-emerald-300 transition duration-300 hover:border-emerald-400 hover:bg-emerald-500/10">
+
+                    {{ . }}
+
+                </span>
+
+            {{ end }}
+
+        </div>
+
+    </div>
+
+</section>
