@@ -1,74 +1,52 @@
-<section class="border-b border-white/10 py-28">
+<section class="relative overflow-hidden py-28">
+
+  <div class="hero-bg"></div>
 
   <div class="mx-auto max-w-6xl px-6">
 
-    <div class="flex flex-wrap items-center gap-4">
+    <p class="logo mb-5 text-xl font-bold text-emerald-500">
+      >_ project
+    </p>
 
-      {{ with .Params.status }}
+    {{ with .Params.tech }}
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+    <p class="mb-6 text-sm uppercase tracking-[0.25em] text-emerald-400">
 
-        {{ . }}
+      {{ delimit . " • " }}
 
-      </span>
+    </p>
 
-      {{ end }}
+    {{ end }}
 
-      {{ with .Date }}
-
-      <span class="text-sm text-zinc-500">
-
-        {{ .Format "January 2, 2006" }}
-
-      </span>
-
-      {{ end }}
-
-      <span class="text-sm text-zinc-500">
-
-        {{ .ReadingTime }} min read
-
-      </span>
-
-    </div>
-
-    <h1 class="mt-8 max-w-4xl text-5xl font-bold tracking-tight text-white md:text-6xl">
+    <h1 class="max-w-5xl text-5xl font-bold tracking-tight text-white md:text-7xl">
 
       {{ .Title }}
 
     </h1>
 
-    <p class="mt-8 max-w-3xl text-xl leading-9 text-zinc-400">
+    <p class="mt-8 max-w-3xl text-xl leading-8 text-zinc-400">
 
       {{ with .Description }}
-
+      <p class="mt-8 max-w-3xl text-xl leading-8 text-zinc-400">
         {{ . }}
-
-      {{ else }}
-
-        {{ .Summary }}
-
+      </p>
       {{ end }}
 
     </p>
 
-    {{ with .Params.technologies }}
-
     <div class="mt-10 flex flex-wrap gap-3">
 
-      {{ range . }}
+      {{ range .Params.tech }}
 
-      <span class="rounded-full border border-white/10 bg-zinc-900/60 px-4 py-2 text-sm text-zinc-300">
+        <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-sm text-emerald-300">
 
-        {{ . }}
+          {{ . }}
 
-      </span>
+        </span>
 
       {{ end }}
 
     </div>
-
-    {{ end }}
 
     <div class="mt-12 flex flex-wrap gap-4">
 
@@ -80,7 +58,7 @@
         rel="noopener"
         class="btn-primary">
 
-        View Source Code
+        GitHub →
 
       </a>
 
@@ -88,19 +66,15 @@
 
       {{ with .Params.demo }}
 
-      {{ if ne . "" }}
-
       <a
         href="{{ . }}"
         target="_blank"
         rel="noopener"
         class="btn-secondary">
 
-        Live Demo
+        Live Demo →
 
       </a>
-
-      {{ end }}
 
       {{ end }}
 

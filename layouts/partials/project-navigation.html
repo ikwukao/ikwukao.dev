@@ -1,0 +1,31 @@
+<section class="border-t border-white/10 py-20">
+
+  <div class="mx-auto flex max-w-6xl justify-between px-6">
+
+    {{ with .PrevInSection }}
+
+    <a
+      href="{{ .RelPermalink }}"
+      class="text-zinc-400 transition hover:text-emerald-400">
+
+      ← {{ .Title }}
+
+    </a>
+
+    {{ end }}
+
+    {{ with .NextInSection }}
+
+    <a
+      href="{{ .RelPermalink }}"
+      class="ml-auto text-zinc-400 transition hover:text-emerald-400">
+
+      {{ .Title }} →
+
+    </a>
+
+    {{ end }}
+
+  </div>
+
+</section>

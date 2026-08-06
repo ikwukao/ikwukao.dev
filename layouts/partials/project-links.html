@@ -1,0 +1,44 @@
+<section class="border-t border-white/10 py-24">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Project Links"
+      "description" "Explore the project."
+    ) }}
+
+    <div class="mt-10 flex flex-wrap gap-4">
+
+      {{ with .Params.github }}
+
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener"
+        class="btn-primary">
+
+        View Source
+
+      </a>
+
+      {{ end }}
+
+      {{ with .Params.demo }}
+
+      <a
+        href="{{ . }}"
+        target="_blank"
+        rel="noopener"
+        class="btn-secondary">
+
+        Live Demo
+
+      </a>
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>
