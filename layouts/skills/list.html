@@ -1,19 +1,9 @@
 {{ define "main" }}
 
-<section class="py-28">
-
-    <div class="mx-auto max-w-6xl px-6">
-
-        {{ partial "section-header.html" (dict "title" .Title "description" .Description) }}
-
-        <div class="mt-16 prose prose-invert max-w-none">
-
-            {{ .Content }}
-
-        </div>
-
-    </div>
-
-</section>
+{{ partial "skills-hero.html" . }}
+{{ partial "skills-overview.html" . }}
+{{ partial "skills-grid.html" . }}
+{{ partial "learning-roadmap.html" . }}
+{{ partial "engineering-principles.html" . }}
 
 {{ end }}
