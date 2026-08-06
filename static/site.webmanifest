@@ -1,5 +1,5 @@
 {
-  "name": "ikwukao.dev",
+  "name": "Ikwuka Okoye",
   "short_name": "ikwukao.dev",
   "icons": [
     {
@@ -15,7 +15,7 @@
       "purpose": "maskable"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "theme_color": "#09090B",
+  "background_color": "#09090B",
   "display": "standalone"
 }
