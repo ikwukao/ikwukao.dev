@@ -1,0 +1,36 @@
+<section class="border-t border-white/10 py-28">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "All Projects"
+      "description" "Explore engineering projects covering backend development, distributed systems, DevOps, cloud infrastructure, and developer tooling."
+    ) }}
+
+    <div class="mt-14 grid gap-8 lg:grid-cols-2">
+
+      {{ range .RegularPages.ByWeight }}
+
+        {{ partial "project-card.html" . }}
+
+      {{ else }}
+
+        <div class="rounded-2xl border border-dashed border-white/10 p-12 text-center">
+
+          <h3 class="text-xl font-semibold text-white">
+            Projects Coming Soon
+          </h3>
+
+          <p class="mt-4 text-zinc-400">
+            New engineering projects and technical case studies will appear here as they are published.
+          </p>
+
+        </div>
+
+      {{ end }}
+
+    </div>
+
+  </div>
+
+</section>
