@@ -1,13 +1,15 @@
+{{ if or .Params.github .Params.demo }}
+
 <section class="border-t border-white/10 py-24">
 
   <div class="mx-auto max-w-6xl px-6">
 
     {{ partial "section-header.html" (dict
-      "title" "Project Links"
-      "description" "Explore the project."
+      "title" "Explore Project"
+      "description" "Source code and live deployment."
     ) }}
 
-    <div class="mt-10 flex flex-wrap gap-4">
+    <div class="mt-12 flex flex-wrap gap-4">
 
       {{ with .Params.github }}
 
@@ -17,7 +19,7 @@
         rel="noopener"
         class="btn-primary">
 
-        View Source
+        View Source →
 
       </a>
 
@@ -31,7 +33,7 @@
         rel="noopener"
         class="btn-secondary">
 
-        Live Demo
+        Live Demo →
 
       </a>
 
@@ -42,3 +44,5 @@
   </div>
 
 </section>
+
+{{ end }}

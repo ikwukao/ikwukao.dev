@@ -4,25 +4,45 @@
 
     {{ with .PrevInSection }}
 
-    <a
-      href="{{ .RelPermalink }}"
-      class="text-zinc-400 transition hover:text-emerald-400">
+      <a
+        href="{{ .RelPermalink }}"
+        class="group">
 
-      ← {{ .Title }}
+        <p class="text-sm uppercase tracking-wider text-zinc-500">
 
-    </a>
+          Previous Project
+
+        </p>
+
+        <p class="mt-2 text-lg transition group-hover:text-emerald-400">
+
+          ← {{ .Title }}
+
+        </p>
+
+      </a>
 
     {{ end }}
 
     {{ with .NextInSection }}
 
-    <a
-      href="{{ .RelPermalink }}"
-      class="ml-auto text-zinc-400 transition hover:text-emerald-400">
+      <a
+        href="{{ .RelPermalink }}"
+        class="group ml-auto text-right">
 
-      {{ .Title }} →
+        <p class="text-sm uppercase tracking-wider text-zinc-500">
 
-    </a>
+          Next Project
+
+        </p>
+
+        <p class="mt-2 text-lg transition group-hover:text-emerald-400">
+
+          {{ .Title }} →
+
+        </p>
+
+      </a>
 
     {{ end }}
 
