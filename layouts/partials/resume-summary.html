@@ -4,40 +4,44 @@
 
     {{ partial "section-header.html" (dict
       "title" "Core Expertise"
-      "description" "Technologies and engineering disciplines I specialize in."
+      "description" "Technical skills and engineering disciplines that power the systems I build."
     ) }}
 
     <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-      <article class="rounded-xl border border-white/10 p-6">
-        <h3 class="font-semibold text-white">Backend Engineering</h3>
-        <p class="mt-3 text-zinc-400">Go, Python, REST APIs, gRPC, microservices.</p>
-      </article>
+      {{ range hugo.Data.skills.categories }}
 
-      <article class="rounded-xl border border-white/10 p-6">
-        <h3 class="font-semibold text-white">Distributed Systems</h3>
-        <p class="mt-3 text-zinc-400">Concurrency, messaging, fault tolerance, service communication.</p>
-      </article>
+        <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
 
-      <article class="rounded-xl border border-white/10 p-6">
-        <h3 class="font-semibold text-white">Cloud & DevOps</h3>
-        <p class="mt-3 text-zinc-400">Docker, Kubernetes, Terraform, GitHub Actions, Linux.</p>
-      </article>
+          <h3 class="text-xl font-semibold text-white">
 
-      <article class="rounded-xl border border-white/10 p-6">
-        <h3 class="font-semibold text-white">Databases</h3>
-        <p class="mt-3 text-zinc-400">PostgreSQL, Redis, SQLite, ClickHouse.</p>
-      </article>
+            {{ .title }}
 
-      <article class="rounded-xl border border-white/10 p-6">
-        <h3 class="font-semibold text-white">Observability</h3>
-        <p class="mt-3 text-zinc-400">Prometheus, Grafana, OpenTelemetry, pprof.</p>
-      </article>
+          </h3>
 
-      <article class="rounded-xl border border-white/10 p-6">
-        <h3 class="font-semibold text-white">AI Engineering</h3>
-        <p class="mt-3 text-zinc-400">AI Agents, RAG, LLM integrations.</p>
-      </article>
+          <p class="mt-3 leading-7 text-zinc-400">
+
+            {{ .description }}
+
+          </p>
+
+          <div class="mt-6 flex flex-wrap gap-2">
+
+            {{ range .skills }}
+
+              <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-sm text-emerald-300">
+
+                {{ .name }}
+
+              </span>
+
+            {{ end }}
+
+          </div>
+
+        </article>
+
+      {{ end }}
 
     </div>
 
