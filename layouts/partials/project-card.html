@@ -1,83 +1,93 @@
-<article class="group rounded-xl border border-white/10 bg-zinc-900/40 p-6 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-emerald-500/10">
-  <!-- Status -->
+<article class="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-zinc-950/40 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
 
-  {{ with .Params.status }}
-  <div class="mb-6">
-    <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-emerald-400">
-      {{ . }}
-    </span>
-  </div>
+  {{ with .Params.cover }}
+    <img
+      src="{{ . }}"
+      alt="{{ $.Title }}"
+      class="h-56 w-full object-cover">
   {{ end }}
 
-  <!-- Title -->
+  <div class="flex flex-1 flex-col p-7">
 
-  <h3 class="text-2xl font-bold transition group-hover:text-emerald-400">
-
-    <a href="{{ .RelPermalink }}" class="transition group-hover:text-emerald-400">
-
-        {{ .Title }}
-
-    </a>
-
-  </h3>
-
-  <!-- Summary -->
-
-  <p class="mt-5 grow leading-8 text-zinc-400">
-
-    {{ with .Description }}
-      {{ . }}
-    {{ else }}
-      {{ .Summary }}
-    {{ end }}
-
-  </p>
-
-  <!-- Technology -->
-
-  {{ with .Params.technologies }}
-
-  <div class="mt-8 flex flex-wrap gap-2">
-
-    {{ range . }}
-
-      <span class="rounded-full border border-white/10 bg-zinc-800/60 px-3 py-1 text-xs uppercase tracking-wide text-zinc-300">
-
-        {{ . }}
-
+    {{ if .Params.featured }}
+      <span class="mb-4 w-fit rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1 text-xs font-medium uppercase tracking-wider text-emerald-300">
+        Featured
       </span>
-
     {{ end }}
 
-  </div>
+    <h3 class="text-2xl font-semibold text-white transition group-hover:text-emerald-400">
 
-  {{ end }}
+      <a href="{{ .RelPermalink }}">
+        {{ .Title }}
+      </a>
 
-  <!-- Footer -->
+    </h3>
 
-  <div class="mt-8 flex items-center justify-between border-t border-white/10 pt-6">
+    <p class="mt-4 flex-1 leading-7 text-zinc-400">
 
-    <a
-      href="{{ .RelPermalink }}"
-      class="font-medium text-emerald-400 transition hover:text-emerald-300">
+      {{ with .Description }}
+        {{ . }}
+      {{ else }}
+        {{ .Summary }}
+      {{ end }}
 
-      Read Case Study →
+    </p>
 
-    </a>
+    {{ with .Params.tech }}
+      <div class="mt-6 flex flex-wrap gap-2">
 
-    {{ with .Params.github }}
+        {{ range . }}
+
+          <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-xs text-emerald-300">
+            {{ . }}
+          </span>
+
+        {{ end }}
+
+      </div>
+    {{ end }}
+
+    <div class="mt-8 flex items-center justify-between">
 
       <a
-        href="{{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="text-sm text-zinc-400 transition hover:text-white">
+        href="{{ .RelPermalink }}"
+        class="font-medium text-emerald-400 transition hover:text-emerald-300">
 
-        Source ↗
+        Read Case Study →
 
       </a>
 
-    {{ end }}
+      <div class="flex items-center gap-4">
+
+        {{ with .Params.github }}
+          <a
+            href="{{ . }}"
+            target="_blank"
+            rel="noopener"
+            class="text-zinc-500 transition hover:text-white"
+            aria-label="GitHub Repository">
+
+            GitHub
+
+          </a>
+        {{ end }}
+
+        {{ with .Params.demo }}
+          <a
+            href="{{ . }}"
+            target="_blank"
+            rel="noopener"
+            class="text-zinc-500 transition hover:text-white"
+            aria-label="Live Demo">
+
+            Demo
+
+          </a>
+        {{ end }}
+
+      </div>
+
+    </div>
 
   </div>
 
