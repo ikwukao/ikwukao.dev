@@ -15,11 +15,12 @@
 
         <div class="flex items-center gap-4">
 
-          <span class="text-3xl">
-
-            {{ .icon }}
-
-          </span>
+          {{ partial "icon.html" (dict
+            "name" .icon
+            "class" "skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-400"
+          ) }}
+        
+        </div>
 
           <div>
 

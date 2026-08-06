@@ -10,7 +10,7 @@ categories:
 
   - title: Backend Engineering
 
-    icon: 🖥️
+    icon: backend
 
     description: Designing scalable APIs and backend services.
 
@@ -36,7 +36,7 @@ categories:
 
   - title: Distributed Systems
 
-    icon: 🌐
+    icon: distributed
 
     description: Building reliable distributed software.
 
@@ -59,7 +59,7 @@ categories:
 
   - title: Cloud & DevOps
 
-    icon: ☁️
+    icon: cloud
 
     description: Infrastructure, automation, and deployment.
 
@@ -82,7 +82,7 @@ categories:
 
   - title: Databases
 
-    icon: 🗄️
+    icon: database
 
     description: Data storage and persistence.
 
@@ -99,7 +99,7 @@ categories:
 
   - title: Developer Tools
 
-    icon: ⚙️
+    icon: tools
 
     description: Daily engineering workflow.
 
@@ -122,7 +122,7 @@ categories:
 
   - title: Software Engineering
 
-    icon: 🧠
+    icon: engineering
 
     description: Engineering principles and practices.
 

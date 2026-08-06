@@ -209,3 +209,28 @@ button,
   z-index: 9999;
   background: #10b981;
 }
+
+/* ---------- SVG Icons ---------- */
+
+.skill-icon svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.skill-icon svg * {
+  stroke: currentColor;
+}
+
+.skill-icon {
+  transition:
+    transform 200ms ease,
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease;
+}
+
+article:hover .skill-icon {
+  transform: scale(1.08);
+  background: rgb(16 185 129 / 0.15);
+  border-color: rgb(16 185 129 / 0.35);
+}
