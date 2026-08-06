@@ -1,36 +1,86 @@
 {{ define "main" }}
 
-<section class="flex min-h-[70vh] items-center justify-center">
+<section class="relative flex min-h-[80vh] items-center overflow-hidden">
 
-    <div class="text-center">
+  <div class="hero-bg"></div>
 
-        <p class="logo text-5xl text-emerald-500">
+  <div class="mx-auto max-w-4xl px-6 text-center">
 
-            >_
+    <p class="logo mb-6 text-xl font-bold text-emerald-500">
 
-        </p>
+      >_ 404
 
-        <h1 class="mt-8 text-6xl font-bold">
+    </p>
 
-            404
+    <p class="mb-6 text-sm uppercase tracking-[0.25em] text-emerald-400">
 
-        </h1>
+      Page Not Found
 
-        <p class="mt-6 text-zinc-400">
+    </p>
 
-            Looks like this route doesn't exist.
+    <h1 class="text-5xl font-bold tracking-tight text-white md:text-7xl">
 
-        </p>
+      Lost in the Terminal?
 
-        <a
-            href="/"
-            class="btn-primary mt-10 inline-flex">
+    </h1>
 
-            Return Home
+    <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
 
-        </a>
+      The page you're looking for doesn't exist, may have been moved,
+      or the URL might be incorrect.
+
+    </p>
+
+    <div class="mt-12 flex flex-wrap justify-center gap-4">
+
+      <a
+        href="/"
+        class="btn-primary">
+
+        ← Back Home
+
+      </a>
+
+      <a
+        href="/projects/"
+        class="btn-secondary">
+
+        View Projects
+
+      </a>
 
     </div>
+
+    <div class="mx-auto mt-16 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-zinc-950">
+
+      <div class="border-b border-white/10 px-5 py-3 text-left text-xs uppercase tracking-widest text-zinc-500">
+
+        terminal
+
+      </div>
+
+<pre class="overflow-x-auto p-6 font-mono text-sm leading-8 text-emerald-400"><code>$ find /page
+
+Error:
+No such file or directory
+
+$ pwd
+
+/home/ikwukao
+
+$ suggestion
+
+cd /
+
+open homepage
+
+status: ready
+<span class="terminal-cursor"></span>
+</code></pre>
+
+    </div>
+
+  </div>
 
 </section>
 
