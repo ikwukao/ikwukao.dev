@@ -1,31 +1,92 @@
-<section class="border-y border-white/10 bg-zinc-950/40">
+<section class="border-y border-white/10 bg-zinc-950/30">
 
-    <div class="mx-auto max-w-7xl px-6 py-8">
+    <div class="mx-auto max-w-7xl px-6 py-10">
 
-        <div class="flex flex-wrap items-center justify-center gap-3">
+        <div class="grid gap-8 lg:grid-cols-4">
 
-            {{ range slice
-                "Go"
-                "Python"
-                "Docker"
-                "Kubernetes"
-                "PostgreSQL"
-                "AWS"
-                "Terraform"
-                "Linux"
-                "GitHub Actions"
-                "Prometheus"
-                "Grafana"
-                "OpenTelemetry"
-            }}
+            <!-- Languages -->
 
-                <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-4 py-2 text-sm font-medium text-emerald-300 transition duration-300 hover:border-emerald-400 hover:bg-emerald-500/10">
+            <div>
 
-                    {{ . }}
+                <p class="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
 
-                </span>
+                    Languages
 
-            {{ end }}
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="tech-pill">Go</span>
+                    <span class="tech-pill">Python</span>
+                    <span class="tech-pill">SQL</span>
+                    <span class="tech-pill">Bash</span>
+
+                </div>
+
+            </div>
+
+            <!-- Backend -->
+
+            <div>
+
+                <p class="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+
+                    Backend
+
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="tech-pill">REST APIs</span>
+                    <span class="tech-pill">gRPC</span>
+                    <span class="tech-pill">Microservices</span>
+                    <span class="tech-pill">PostgreSQL</span>
+
+                </div>
+
+            </div>
+
+            <!-- Platform -->
+
+            <div>
+
+                <p class="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+
+                    Platform
+
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="tech-pill">Docker</span>
+                    <span class="tech-pill">Kubernetes</span>
+                    <span class="tech-pill">Terraform</span>
+                    <span class="tech-pill">AWS</span>
+
+                </div>
+
+            </div>
+
+            <!-- Observability -->
+
+            <div>
+
+                <p class="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-zinc-500">
+
+                    Observability
+
+                </p>
+
+                <div class="flex flex-wrap gap-2">
+
+                    <span class="tech-pill">Prometheus</span>
+                    <span class="tech-pill">Grafana</span>
+                    <span class="tech-pill">OpenTelemetry</span>
+                    <span class="tech-pill">GitHub Actions</span>
+
+                </div>
+
+            </div>
 
         </div>
 

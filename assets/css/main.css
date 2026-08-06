@@ -234,3 +234,12 @@ article:hover .skill-icon {
   background: rgb(16 185 129 / 0.15);
   border-color: rgb(16 185 129 / 0.35);
 }
+
+/*--------- Featured Technologies -----------*/
+.tech-pill {
+    @apply rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 text-sm font-medium text-emerald-300 transition-all duration-300;
+}
+
+.tech-pill:hover {
+    @apply border-emerald-400 bg-emerald-500/10 text-white;
+}
