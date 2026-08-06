@@ -1,4 +1,7 @@
 ---
 title: "Uses"
-description: "The hardware, software, and tools I use for backend engineering and distributed systems development."
+
+description: "The tools, hardware, software, and workflow behind my engineering work."
+
+layout: "list"
 ---

@@ -1,9 +1,33 @@
 {{ define "main" }}
 
-  {{ partial "uses-hero.html" . }}
-  {{ partial "uses-workstation.html" . }}
-  {{ partial "uses-software.html" . }}
-  {{ partial "uses-development.html" . }}
-  {{ partial "uses-learning.html" . }}
+<section class="relative overflow-hidden py-28">
+
+  <div class="hero-bg"></div>
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    <p class="logo mb-5 text-xl font-bold text-emerald-500">
+
+      >_ uses
+
+    </p>
+
+    <h1 class="max-w-4xl text-5xl font-bold tracking-tight text-white md:text-7xl">
+
+      Tools & Workflow
+
+    </h1>
+
+    <p class="mt-8 max-w-3xl text-xl leading-8 text-zinc-400">
+
+      The hardware, software, and engineering tools I use to build reliable backend systems and distributed applications.
+
+    </p>
+
+  </div>
+
+</section>
+
+{{ partial "uses-list.html" . }}
 
 {{ end }}

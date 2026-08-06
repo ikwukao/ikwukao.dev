@@ -1,0 +1,56 @@
+categories:
+
+  - title: Development
+
+    tools:
+
+      - name: Go
+        description: Primary language for backend systems and distributed services.
+
+      - name: Python
+        description: Automation, tooling, scripting, and AI integration.
+
+      - name: Visual Studio Code
+        description: Primary editor with Go, Python, Docker, and GitHub extensions.
+
+      - name: Neovim
+        description: Terminal-based editing for fast development.
+
+  - title: Infrastructure
+
+    tools:
+
+      - name: Docker
+        description: Containerized development and deployment.
+
+      - name: Kubernetes
+        description: Local orchestration and production workloads.
+
+      - name: Terraform
+        description: Infrastructure as Code.
+
+      - name: GitHub Actions
+        description: Continuous Integration and deployment pipelines.
+
+  - title: Operating System
+
+    tools:
+
+      - name: Xubuntu Linux
+        description: Daily development environment.
+
+      - name: Bash
+        description: Automation and scripting.
+
+  - title: Productivity
+
+    tools:
+
+      - name: GitHub
+        description: Source control and collaboration.
+
+      - name: Obsidian
+        description: Engineering notes and documentation.
+
+      - name: ChatGPT
+        description: Research, prototyping, and technical writing.
