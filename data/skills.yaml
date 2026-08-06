@@ -16,23 +16,41 @@ categories:
 
     skills:
 
-      - name: Go
+      - name: Go (Golang)
         level: Advanced
 
       - name: Python
         level: Advanced
 
+      - name: DSA
+        level: Intermediate
+
+      - name: Gin
+        level: Intermediate
+
       - name: REST APIs
         level: Advanced
 
-      - name: SQL
+      - name: net/http
+        level: Intermediate
+
+      - name: SQL/NoSQL
         level: Advanced
+
+      - name: RabbitMQ
+        level: Intermediate
+
+      - name: TCP/IP
+        level: Intermediate
 
       - name: Authentication
         level: Intermediate
 
       - name: Authorization
         level: Intermediate
+
+      - name: Web Security
+        level: Advanced
 
   - title: Distributed Systems
 
@@ -42,20 +60,36 @@ categories:
 
     skills:
 
-      - name: Distributed Systems
+      - name: Microservices
+        level: Intermediate
+
+      - name: Goroutines
+        level: Intermediate
+
+      - name: gRPC/Protobuf
+        level: Intermediate
+
+      - name: NATS
+        level: Intermediate
+
+      - name: Apache Kafka
         level: Intermediate
 
       - name: Concurrency
         level: Intermediate
 
-      - name: Networking
+      - name: Mutex/sync Package
         level: Intermediate
 
-      - name: System Design
+      - name: Graceful Shutdown
         level: Intermediate
 
-      - name: Microservices
-        level: Beginner
+      - name: Circuit Breaker
+        level: Intermediate
+
+      - name: Raft Consensus
+        level: Intermediate
+
 
   - title: Cloud & DevOps
 
@@ -74,11 +108,30 @@ categories:
       - name: Linux
         level: Advanced
 
+      - name: Terraform
+        level: Intermediate
+
+      - name: Prometheus
+        level: Intermediate
+
+      - name: Grafana
+        level: Intermediate
+
+      - name: OpenTelemetry
+        level: Intermediate
+
+      - name: Helm
+        level: Intermediate
+
       - name: GitHub Actions
         level: Intermediate
 
-      - name: CI/CD
+      - name: AWS
         level: Intermediate
+
+      - name: GCP
+        level: Intermediate
+
 
   - title: Databases
 
@@ -97,6 +150,15 @@ categories:
       - name: Redis
         level: Beginner
 
+      - name: MongoDB
+        level: Beginner
+      
+      - name: CockroachDB
+        level: Beginner
+
+      - name: bbolt
+        level: Beginner
+
   - title: Developer Tools
 
     icon: tools
@@ -108,17 +170,21 @@ categories:
       - name: Git
         level: Advanced
 
-      - name: Bash
+      - name: Bash/Zsh
         level: Advanced
 
-      - name: Hugo
+      - name: Neovim/Vim
+        level: Advanced
+
+      - name: Goland
         level: Advanced
 
       - name: VS Code
         level: Advanced
 
-      - name: Neovim
-        level: Beginner
+      - name: PyCharm
+        level: Advanced
+
 
   - title: Software Engineering
 
