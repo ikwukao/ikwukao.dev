@@ -1,35 +1,37 @@
-<section class="py-28 border-t border-white/10">
+<section class="border-t border-white/10 py-28">
 
   <div class="mx-auto max-w-4xl px-6 text-center">
 
-    <h2 class="text-5xl font-bold">
+    <h2 class="text-5xl font-bold tracking-tight text-white">
 
-      Let's Build Reliable Software Together
+      Ready to Build Together?
 
     </h2>
 
-    <p class="mx-auto mt-8 max-w-2xl text-xl leading-8 text-zinc-400">
+    <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
 
-      Interested in backend engineering, distributed systems, platform engineering,
-      or developer tooling? I'd be glad to connect and discuss opportunities.
+      I'm open to backend engineering, distributed systems, platform engineering,
+      and cloud-native opportunities.
 
     </p>
 
     <div class="mt-12 flex flex-wrap justify-center gap-4">
 
       <a
-        href="/contact/"
+        href="mailto:{{ site.Params.email }}"
         class="btn-primary">
 
-        Contact Me
+        Send an Email
 
       </a>
 
       <a
-        href="/resume/"
+        href="{{ site.Params.github }}"
+        target="_blank"
+        rel="noopener"
         class="btn-secondary">
 
-        View Resume
+        View GitHub
 
       </a>
 
