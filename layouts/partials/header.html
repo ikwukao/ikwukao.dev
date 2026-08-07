@@ -64,14 +64,19 @@
 
     <div class="hidden items-center gap-3 lg:flex">
 
-      <a
-        href="/search/"
-        aria-label="Search"
-        class="rounded-xl border border-white/10 px-4 py-2 text-sm text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400">
+    <a
+      href="/search/"
+      aria-label="Search the website"
+      class="hidden items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400 lg:inline-flex">
 
-        Search
+      {{ partial "icon.html" (dict
+        "set" "icons/brands"
+        "name" "search"
+        "class" "h-4 w-4") }}
 
-      </a>
+      <span>Search</span>
+
+    </a>
 
       <a
         href="{{ site.Params.github }}"
