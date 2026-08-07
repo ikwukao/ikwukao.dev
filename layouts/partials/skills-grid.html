@@ -2,37 +2,41 @@
 
   {{ range hugo.Data.skills.categories }}
 
-  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
+  <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
 
-    <div class="flex items-center gap-4">
+    <div class="flex items-start gap-4">
 
-      <span class="icon h-8 w-8 text-emerald-400 shrink-0">
-        {{ partial "icon.html" .icon }}
-      </span>
+      <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-900 text-emerald-400">
 
-      <div>
+        {{ partial "icon.html" (dict
+          "name" .icon
+          "class" "h-6 w-6") }}
+
+      </div>
+
+      <div class="flex-1">
 
         <h2 class="text-2xl font-bold text-white">
+
           {{ .title }}
+
         </h2>
 
-        <p class="mt-1 text-sm text-zinc-500">
-          {{ len .skills }} Technologies
+        <p class="mt-3 leading-7 text-zinc-400">
+
+          {{ .description }}
+
         </p>
 
       </div>
 
     </div>
 
-    <p class="mt-6 leading-7 text-zinc-400">
-      {{ .description }}
-    </p>
-
     <div class="mt-8 flex flex-wrap gap-3">
 
       {{ range .skills }}
 
-      <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-sm font-medium text-emerald-300 transition hover:border-emerald-400 hover:bg-emerald-500/10">
+      <span class="tech-pill">
 
         {{ .name }}
 

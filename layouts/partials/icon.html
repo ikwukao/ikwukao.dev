@@ -1,5 +1,9 @@
-{{- $icon := printf "icons/%s.svg" . -}}
+{{- $name := .name -}}
+{{- $class := .class | default "h-5 w-5" -}}
+{{- $set := .set | default "icons" -}}
 
-{{- with resources.Get $icon -}}
+{{- with resources.Get (printf "%s/%s.svg" $set $name) -}}
+  <span class="icon {{ $class }}" aria-hidden="true">
     {{ .Content | safeHTML }}
+  </span>
 {{- end -}}
