@@ -1,157 +1,152 @@
 <footer class="border-t border-white/10 bg-black">
 
-    <div class="mx-auto grid max-w-6xl gap-12 px-6 py-16 md:grid-cols-[1.5fr_1fr_auto]">
+  <div class="mx-auto grid max-w-6xl gap-12 px-6 py-16 lg:grid-cols-[1.5fr_1fr_auto]">
 
-        <!-- Brand -->
+    <!-- Brand -->
 
-        <div>
+    <div>
 
-            <a href="/" aria-label="Go to homepage" class="inline-block">
+      <a
+        href="/"
+        aria-label="Go to homepage"
+        class="inline-flex items-center gap-3">
 
-                <p class="logo text-xl font-bold text-emerald-500">
-
-                    >_
-
-                </p>
-
-            </a>
-
-            <h2 class="mt-4 text-lg font-semibold text-white">
-
-                Ikwuka Okoye
-
-            </h2>
-
-            <p class="mt-4 max-w-md leading-8 text-zinc-400">
-
-                Building reliable backend systems, distributed systems,
-                and developer tooling with Go, Python, Linux,
-                and cloud-native technologies.
-
-            </p>
-
-        </div>
-
-        <!-- Navigation -->
+        <span class="logo text-2xl font-bold text-emerald-500">
+          >_
+        </span>
 
         <div>
 
-            <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+          <p class="font-semibold tracking-tight text-white">
+            ikwukao
+          </p>
 
-                Navigation
-
-            </h3>
-
-            <nav class="mt-6 flex flex-col gap-3">
-
-                <a href="/projects/" class="transition hover:text-emerald-400">
-
-                    Projects
-
-                </a>
-
-                <a href="/journal/" class="transition hover:text-emerald-400">
-
-                    Engineering Journal
-
-                </a>
-
-                <a href="/about/" class="transition hover:text-emerald-400">
-
-                    About
-
-                </a>
-
-                <a href="/resume/" class="transition hover:text-emerald-400">
-
-                    Resume
-
-                </a>
-
-                <a href="/contact/" class="transition hover:text-emerald-400">
-
-                    Contact
-
-                </a>
-
-            </nav>
+          <p class="text-sm text-zinc-500">
+            Backend • Distributed Systems • Platform Engineering
+          </p>
 
         </div>
 
-        <!-- Social -->
+      </a>
 
-        <div>
+      <p class="mt-6 max-w-md leading-8 text-zinc-400">
 
-            <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+        I design and build reliable backend systems, distributed platforms,
+        cloud-native infrastructure, and developer tooling with Go, Python,
+        Linux, Kubernetes, and modern DevOps practices.
 
-                Connect
-
-            </h3>
-
-            <div class="mt-6 flex flex-col gap-3">
-
-                <a
-                    href="{{ site.Params.github }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="transition hover:text-emerald-400">
-
-                    GitHub
-
-                </a>
-
-                <a
-                    href="{{ site.Params.whatsapp }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="transition hover:text-emerald-400">
-
-                    WhatsApp
-
-                </a>
-
-                <a
-                    href="{{ site.Params.twitter }}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="transition hover:text-emerald-400">
-
-                    X (Twitter)
-
-                </a>
-
-                <a
-                    href="mailto:{{ site.Params.email }}"
-                    class="transition hover:text-emerald-400">
-
-                    Email
-
-                </a>
-
-            </div>
-
-        </div>
+      </p>
 
     </div>
 
-    <div class="border-t border-white/10">
+    <!-- Navigation -->
 
-        <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-zinc-500 md:flex-row">
+    <div>
 
-            <p>
+      <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
 
-                {{ now.Year }} © Ikwuka Okoye. All rights reserved.
+        Explore
 
-            </p>
+      </h3>
 
-            <p>
+      <nav
+        aria-label="Footer Navigation"
+        class="mt-6 flex flex-col gap-4">
 
-                Designed & Built with Hugo + Tailwind CSS.
+        {{ range site.Menus.main }}
 
-            </p>
+        <a
+          href="{{ .URL }}"
+          class="transition hover:text-emerald-400">
 
-        </div>
+          {{ .Name }}
+
+        </a>
+
+        {{ end }}
+
+      </nav>
 
     </div>
+
+    <!-- Connect -->
+
+    <div>
+
+      <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-zinc-500">
+
+        Connect
+
+      </h3>
+
+      <div class="mt-6 flex items-center gap-5">
+
+        <a
+          href="{{ site.Params.github }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub"
+          class="transition hover:text-emerald-400">
+
+          GitHub
+
+        </a>
+
+        <a
+          href="{{ site.Params.twitter }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X"
+          class="transition hover:text-emerald-400">
+
+          X
+
+        </a>
+
+        <a
+          href="{{ site.Params.whatsapp }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="WhatsApp"
+          class="transition hover:text-emerald-400">
+
+          WhatsApp
+
+        </a>
+
+        <a
+          href="mailto:{{ site.Params.email }}"
+          aria-label="Email"
+          class="transition hover:text-emerald-400">
+
+          Email
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="border-t border-white/10">
+
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-6 py-6 text-sm text-zinc-500 md:flex-row">
+
+      <p>
+
+        {{ now.Year }} © Ikwuka Okoye. All rights reserved.
+
+      </p>
+
+      <p>
+
+        Built with Hugo, Tailwind CSS & Go-inspired simplicity.
+
+      </p>
+
+    </div>
+
+  </div>
 
 </footer>
