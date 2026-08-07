@@ -1,0 +1,75 @@
+{{ define "main" }}
+
+<section class="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
+  <div class="hero-bg absolute inset-0" aria-hidden="true"></div>
+
+  <div class="relative mx-auto w-full max-w-3xl text-center">
+
+    <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-2xl font-bold text-emerald-400 shadow-lg shadow-emerald-500/5 sm:h-24 sm:w-24 sm:text-3xl">
+      500
+    </div>
+
+    <p class="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">
+      Internal Server Error
+    </p>
+
+    <h1 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
+      Something went wrong.
+    </h1>
+
+    <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
+      The server encountered an unexpected problem while processing your
+      request. The issue may be temporary, so please try again or continue
+      exploring the site.
+    </p>
+
+    <div class="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+
+      <a
+        href="/"
+        class="btn-primary inline-flex min-h-11 items-center justify-center px-6">
+        Return Home
+      </a>
+
+      <a
+        href="/projects/"
+        class="btn-secondary inline-flex min-h-11 items-center justify-center rounded-md border border-white/10 px-6 text-sm font-medium text-zinc-300 transition-colors duration-200 hover:border-emerald-500/40 hover:text-emerald-400">
+        Explore Projects
+      </a>
+
+    </div>
+
+    <div class="mt-14 border-t border-white/10 pt-8">
+
+      <p class="text-sm text-zinc-500">
+        Looking for something specific?
+      </p>
+
+      <div class="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm">
+
+        <a
+          href="/journal/"
+          class="text-zinc-400 transition-colors duration-200 hover:text-emerald-400">
+          Engineering Journal
+        </a>
+
+        <a
+          href="/about/"
+          class="text-zinc-400 transition-colors duration-200 hover:text-emerald-400">
+          About
+        </a>
+
+        <a
+          href="/contact/"
+          class="text-zinc-400 transition-colors duration-200 hover:text-emerald-400">
+          Contact
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{{ end }}
