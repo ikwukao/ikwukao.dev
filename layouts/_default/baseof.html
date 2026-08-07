@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="{{ site.Language.Locale | default "en-US" }}">
-
+<!doctype html>
+<html lang="{{ site.Language.Lang }}">
   <head>
-
     {{ partial "head.html" . }}
-
   </head>
 
   <body class="bg-zinc-950 text-zinc-100 antialiased">
 
-      <a
-        href="#main-content"
-        class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded-lg bg-emerald-500 px-4 py-2 font-medium text-black shadow-lg">
-        Skip to main content
-      </a>
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 rounded-lg bg-emerald-500 px-4 py-2 font-medium text-black shadow-lg">
+      Skip to main content
+    </a>
 
     {{ partial "header.html" . }}
 
     <main id="main-content">
-
       {{ block "main" . }}{{ end }}
-
     </main>
 
     {{ partial "footer.html" . }}
@@ -30,5 +25,4 @@
     {{ partial "scripts.html" . }}
 
   </body>
-
 </html>

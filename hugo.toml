@@ -18,12 +18,10 @@ home = ["HTML", "RSS"]
 
 [params]
 author = "Ikwuka Okoye"
+profession = "Golang Backend Engineer • Distributed Systems • Platform Engineering"
+location = "Nigeria"
 description = "Golang Backend Engineer specializing in distributed systems, platform engineering, cloud-native infrastructure, DevOps, and high-performance backend services."
 tagline = "Building reliable backend systems, distributed platforms, and cloud-native infrastructure."
-profession = "Golang Backend Engineer"
-location = "United States of America"
-countryCode = "US"
-countryName = "United States"
 repository = "https://github.com/ikwukao/ikwukao.dev"
 copyright = "2026 © Ikwuka Okoye"
 

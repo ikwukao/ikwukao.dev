@@ -1,64 +1,138 @@
+{{- $pageTitle := site.Title -}}
+{{- if .IsHome -}}
+  {{- $pageTitle = printf "%s | %s" site.Title site.Params.profession -}}
+{{- else if .Title -}}
+  {{- $pageTitle = printf "%s | %s" .Title site.Title -}}
+{{- end -}}
+
+{{- $pageDescription := .Description | default site.Params.description -}}
+{{- $siteURL := site.Home.Permalink -}}
+{{- $pageURL := .Permalink -}}
+
+{{- $personID := printf "%s#person" $siteURL -}}
+{{- $websiteID := printf "%s#website" $siteURL -}}
+{{- $pageID := printf "%s#webpage" $pageURL -}}
+
+{{- $sameAs := slice -}}
+
+{{- with site.Params.github -}}
+  {{- $sameAs = $sameAs | append . -}}
+{{- end -}}
+
+{{- with site.Params.twitter -}}
+  {{- $sameAs = $sameAs | append . -}}
+{{- end -}}
+
+{{- with site.Params.linkedin -}}
+  {{- $sameAs = $sameAs | append . -}}
+{{- end -}}
+
+{{- $knowsAbout := slice
+  "Go"
+  "Golang"
+  "Backend Engineering"
+  "Distributed Systems"
+  "Systems Engineering"
+  "Platform Engineering"
+  "Cloud-Native Engineering"
+  "DevOps"
+  "Site Reliability Engineering"
+  "Developer Infrastructure"
+  "Backend APIs"
+  "Microservices"
+  "REST APIs"
+  "gRPC"
+  "Docker"
+  "Kubernetes"
+  "Terraform"
+  "AWS"
+  "Google Cloud"
+  "Linux"
+  "PostgreSQL"
+  "Redis"
+  "Observability"
+  "Developer Tooling"
+-}}
+
+{{- $graph := slice
+  (dict
+    "@type" "Person"
+    "@id" $personID
+    "name" site.Params.author
+    "url" $siteURL
+    "image" (printf "%simages/og-image.png" $siteURL)
+    "jobTitle" site.Params.profession
+    "description" site.Params.description
+    "email" (printf "mailto:%s" site.Params.email)
+    "nationality" (dict
+      "@type" "Country"
+      "name" "Nigeria"
+    )
+    "address" (dict
+      "@type" "PostalAddress"
+      "addressCountry" "NG"
+    )
+    "knowsAbout" $knowsAbout
+    "sameAs" $sameAs
+  )
+
+  (dict
+    "@type" "WebSite"
+    "@id" $websiteID
+    "url" $siteURL
+    "name" site.Title
+    "description" site.Params.description
+    "publisher" (dict "@id" $personID)
+    "inLanguage" site.Language.Lang
+  )
+
+  (dict
+    "@type" "WebPage"
+    "@id" $pageID
+    "url" $pageURL
+    "name" $pageTitle
+    "description" $pageDescription
+    "isPartOf" (dict "@id" $websiteID)
+    "about" (dict "@id" $personID)
+    "inLanguage" site.Language.Lang
+  )
+-}}
+
+{{- if and (not .IsHome) (gt (len .Ancestors) 0) -}}
+  {{- $items := slice -}}
+  {{- $position := 1 -}}
+
+  {{- range .Ancestors.Reverse -}}
+    {{- if ne .RelPermalink "/" -}}
+      {{- $items = $items | append (dict
+        "@type" "ListItem"
+        "position" $position
+        "name" .LinkTitle
+        "item" .Permalink
+      ) -}}
+      {{- $position = add $position 1 -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $items = $items | append (dict
+    "@type" "ListItem"
+    "position" $position
+    "name" .LinkTitle
+    "item" .Permalink
+  ) -}}
+
+  {{- $graph = $graph | append (dict
+    "@type" "BreadcrumbList"
+    "@id" (printf "%s#breadcrumb" $pageURL)
+    "itemListElement" $items
+  ) -}}
+{{- end -}}
+
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Person",
-      "@id": "{{ site.BaseURL }}#person",
-      "name": "{{ site.Params.author }}",
-      "url": "{{ site.BaseURL }}",
-      "image": "{{ "images/og-image.png" | absURL }}",
-      "jobTitle": "{{ site.Params.profession }}",
-      "description": "{{ site.Params.description }}",
-      "email": "mailto:{{ site.Params.email }}",
-      "nationality": {
-        "@type": "Country",
-        "name": "United States of America (USA)"
-      },
-      "address": {
-        "@type": "PostalAddress",
-        "addressCountry": "{{ .Site.Params.countryCode | default "US" }}"
-      },
-      "knowsAbout": [
-        "Golang",
-        "Go",
-        "Backend Engineering",
-        "Distributed Systems",
-        "Platform Engineering",
-        "Site Reliability Engineering",
-        "AI Infrastructure Engineering",
-        "DevOps",
-        "Cloud-Native Engineering",
-        "Linux",
-        "Docker",
-        "Kubernetes",
-        "Terraform",
-        "AWS",
-        "Google Cloud",
-        "PostgreSQL",
-        "Redis",
-        "REST APIs",
-        "gRPC",
-        "Microservices",
-        "Developer Tooling"
-      ],
-      "sameAs": [
-        "{{ site.Params.github }}",
-        "{{ site.Params.twitter }}",
-        "{{ site.Params.whatsapp }}"
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "@id": "{{ site.BaseURL }}#website",
-      "url": "{{ site.BaseURL }}",
-      "name": "{{ site.Title }}",
-      "description": "{{ site.Params.description }}",
-      "publisher": {
-        "@id": "{{ site.BaseURL }}#person"
-      },
-      "inLanguage": "en-US"
-    }
-  ]
-}
+{{ dict
+  "@context" "https://schema.org"
+  "@graph" $graph
+  | jsonify
+  | safeJS
+}}
 </script>
