@@ -1,0 +1,128 @@
+<section class="border-t border-white/10 py-28">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "section-header.html" (dict
+      "title" "Featured Project"
+      "description" "A showcase of the engineering principles, scalability, and reliability behind my flagship backend system."
+    ) }}
+
+    <article class="mt-14 overflow-hidden rounded-3xl border border-emerald-500/20 bg-gradient-to-br from-zinc-950 to-zinc-900 p-10 shadow-2xl shadow-emerald-500/5">
+
+      <div class="grid gap-12 lg:grid-cols-[2fr_1fr]">
+
+        <div>
+
+          <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-400">
+            Flagship Project
+          </span>
+
+          <h2 class="mt-6 text-4xl font-bold text-white">
+
+            Flux Gateway
+
+          </h2>
+
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-zinc-300">
+
+            A high-performance API Gateway and Reverse Proxy built in Go to
+            protect distributed services through intelligent traffic management,
+            resilience patterns, observability, and cloud-native deployment
+            practices.
+
+          </p>
+
+          <div class="mt-10 flex flex-wrap gap-3">
+
+            <span class="rounded-full border border-white/10 px-4 py-2 text-sm">Go</span>
+            <span class="rounded-full border border-white/10 px-4 py-2 text-sm">Redis</span>
+            <span class="rounded-full border border-white/10 px-4 py-2 text-sm">Docker</span>
+            <span class="rounded-full border border-white/10 px-4 py-2 text-sm">Kubernetes</span>
+            <span class="rounded-full border border-white/10 px-4 py-2 text-sm">Prometheus</span>
+            <span class="rounded-full border border-white/10 px-4 py-2 text-sm">GitHub Actions</span>
+
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-4">
+
+            <a
+              href="https://github.com/ikwukao/flux-gateway"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary">
+
+              View Source
+
+            </a>
+
+            <a
+              href="/projects/flux-gateway/"
+              class="btn-secondary">
+
+              Read Case Study
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <aside class="grid gap-5">
+
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+            <p class="text-sm uppercase tracking-widest text-zinc-500">
+              Throughput
+            </p>
+
+            <p class="mt-2 text-3xl font-bold text-emerald-400">
+              14,200 req/sec
+            </p>
+
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+            <p class="text-sm uppercase tracking-widest text-zinc-500">
+              Latency
+            </p>
+
+            <p class="mt-2 text-3xl font-bold text-emerald-400">
+              &lt;0.4 ms
+            </p>
+
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+            <p class="text-sm uppercase tracking-widest text-zinc-500">
+              Quality Gate
+            </p>
+
+            <p class="mt-2 text-3xl font-bold text-emerald-400">
+              70% Coverage
+            </p>
+
+          </div>
+
+          <div class="rounded-2xl border border-white/10 bg-black/20 p-6">
+
+            <p class="text-sm uppercase tracking-widest text-zinc-500">
+              Stack
+            </p>
+
+            <p class="mt-2 text-lg font-semibold text-white">
+              Go • Redis • Docker • Kubernetes
+            </p>
+
+          </div>
+
+        </aside>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</section>
