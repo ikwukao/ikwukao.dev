@@ -18,49 +18,51 @@ home = ["HTML", "RSS"]
 
 [params]
 author = "Ikwuka Okoye"
-
 description = "Golang Backend Engineer specializing in distributed systems, platform engineering, cloud-native infrastructure, DevOps, and high-performance backend services."
-
 tagline = "Building reliable backend systems, distributed platforms, and cloud-native infrastructure."
-
 profession = "Golang Backend Engineer"
-
-location = "Nigeria"
-
+location = "United States of America"
+countryCode = "US"
+countryName = "United States"
 repository = "https://github.com/ikwukao/ikwukao.dev"
-
 copyright = "2026 © Ikwuka Okoye"
 
 images = ["images/og-image.png"]
 
 email = "ikwukao@proton.me"
-
 github = "https://github.com/ikwukao"
-
 twitter = "https://x.com/ikwukao_"
-
 whatsapp = "https://wa.me/2347078080356"
-
 linkedin = ""
 
-keywords = [
-  "Go",
-  "Golang",
-  "Golang Backend Engineer",
-  "Backend Engineer",
-  "Systems Engineering",
-  "Distributed Systems (Go)",
+# Primary professional specialties.
+specialties = [
+  "Golang Backend Engineering",
+  "Distributed Systems Engineering",
   "Platform Engineering",
   "Site Reliability Engineering",
+  "Backend Engineering (AI Infrastructure)",
   "Cloud DevOps Engineering",
-  "SRE",
-  "Cloud DevOps",
-  "Cloud Native",
+]
+
+# Core technical expertise.
+skills = [
+  "Go",
+  "Golang",
+  "Python",
+  "Distributed Systems",
+  "Backend Engineering",
+  "Platform Engineering",
+  "Site Reliability Engineering",
+  "DevOps",
+  "Cloud-Native Engineering",
+  "AI Infrastructure Engineering",
+  "Linux",
   "Docker",
   "Kubernetes",
   "Terraform",
   "AWS",
-  "Linux",
+  "Google Cloud",
   "PostgreSQL",
   "Redis",
   "REST APIs",
@@ -70,10 +72,6 @@ keywords = [
   "Prometheus",
   "Grafana",
   "OpenTelemetry",
-  "Software Engineer",
-  "Remote Backend Engineer",
-  "Remote",
-  "Nigeria",
 ]
 
 [markup]

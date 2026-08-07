@@ -1,49 +1,64 @@
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Person",
-
-  "name": "Ikwuka Okoye",
-
-  "url": "{{ site.BaseURL }}",
-
-  "image": "{{ "images/og-image.png" | absURL }}",
-
-  "jobTitle": "Golang Backend Engineer, Distributed Systems & Platform Engineer",
-
-  "description": "{{ site.Params.description }}",
-
-  "email": "mailto:{{ site.Params.email }}",
-
-  "sameAs": [
-    "{{ site.Params.github }}",
-    "{{ site.Params.twitter }}",
-    "{{ site.Params.whatsapp }}"
-  ],
-
-  "knowsAbout": [
-    "Go",
-    "Python",
-    "SQL",
-    "Linux",
-    "Docker",
-    "Kubernetes",
-    "Terraform",
-    "GitHub Actions",
-    "Distributed Systems",
-    "Backend Engineering",
-    "Platform Engineering",
-    "Cloud Computing",
-    "REST APIs",
-    "gRPC",
-    "Microservices",
-    "PostgreSQL",
-    "Prometheus",
-    "Grafana",
-    "OpenTelemetry",
-    "Developer Tooling",
-    "AWS",
-    "Google Cloud Platform"
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "{{ site.BaseURL }}#person",
+      "name": "{{ site.Params.author }}",
+      "url": "{{ site.BaseURL }}",
+      "image": "{{ "images/og-image.png" | absURL }}",
+      "jobTitle": "{{ site.Params.profession }}",
+      "description": "{{ site.Params.description }}",
+      "email": "mailto:{{ site.Params.email }}",
+      "nationality": {
+        "@type": "Country",
+        "name": "United States of America (USA)"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "{{ .Site.Params.countryCode | default "US" }}"
+      },
+      "knowsAbout": [
+        "Golang",
+        "Go",
+        "Backend Engineering",
+        "Distributed Systems",
+        "Platform Engineering",
+        "Site Reliability Engineering",
+        "AI Infrastructure Engineering",
+        "DevOps",
+        "Cloud-Native Engineering",
+        "Linux",
+        "Docker",
+        "Kubernetes",
+        "Terraform",
+        "AWS",
+        "Google Cloud",
+        "PostgreSQL",
+        "Redis",
+        "REST APIs",
+        "gRPC",
+        "Microservices",
+        "Developer Tooling"
+      ],
+      "sameAs": [
+        "{{ site.Params.github }}",
+        "{{ site.Params.twitter }}",
+        "{{ site.Params.whatsapp }}"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.BaseURL }}#website",
+      "url": "{{ site.BaseURL }}",
+      "name": "{{ site.Title }}",
+      "description": "{{ site.Params.description }}",
+      "publisher": {
+        "@id": "{{ site.BaseURL }}#person"
+      },
+      "inLanguage": "en-US"
+    }
   ]
 }
 </script>

@@ -1,167 +1,172 @@
 <meta charset="utf-8">
 
 <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1">
+  name="viewport"
+  content="width=device-width, initial-scale=1">
 
 <meta
-    name="msapplication-config"
-    content="browserconfig.xml">
+  name="description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+
+<meta
+  name="author"
+  content="{{ site.Params.author }}">
+
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<meta
+  name="theme-color"
+  content="#050505">
+
+<meta
+  name="color-scheme"
+  content="dark">
 
 <title>
-{{ if .IsHome }}
-    Golang Backend Engineer • Distributed Systems • Platform Engineering | {{ site.Title }}
-{{ else }}
+  {{ if .IsHome }}
+    {{ site.Title }} | {{ site.Params.profession }} — Distributed Systems & Platform Engineering
+  {{ else }}
     {{ .Title }} | {{ site.Title }}
-{{ end }}
+  {{ end }}
 </title>
 
-<!-- Primary SEO -->
-
-<meta
-    name="description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-
-<meta
-    name="keywords"
-    content="{{ delimit site.Params.keywords ", " }}">
-
-<meta
-    name="author"
-    content="Ikwuka Okoye">
-
-<meta
-    name="robots"
-    content="index,follow">
+<link
+  rel="canonical"
+  href="{{ .Permalink }}">
 
 <link
-    rel="canonical"
-    href="{{ .Permalink }}">
+  rel="sitemap"
+  type="application/xml"
+  href="{{ "sitemap.xml" | absURL }}">
 
 <!-- Open Graph -->
 
 <meta
-    property="og:type"
-    content="{{ if .IsHome }}website{{ else }}article{{ end }}">
+  property="og:type"
+  content="{{ if .IsHome }}website{{ else }}article{{ end }}">
 
 <meta
-    property="og:site_name"
-    content="{{ site.Title }}">
+  property="og:site_name"
+  content="{{ site.Title }}">
 
 <meta
-    property="og:title"
-    content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
+  property="og:title"
+  content="{{ if .Title }}{{ .Title }} | {{ site.Title }}{{ else }}{{ site.Title }} | {{ site.Params.profession }}{{ end }}">
 
 <meta
-    property="og:description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  property="og:description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 
 <meta
-    property="og:url"
-    content="{{ .Permalink }}">
+  property="og:url"
+  content="{{ .Permalink }}">
+
+<meta
+  property="og:locale"
+  content="en_US">
 
 {{ with .Params.image }}
 <meta
-    property="og:image"
-    content="{{ . | absURL }}">
+  property="og:image"
+  content="{{ . | absURL }}">
 {{ else }}
 <meta
-    property="og:image"
-    content="{{ "images/og-image.png" | absURL }}">
+  property="og:image"
+  content="{{ "images/og-image.png" | absURL }}">
 {{ end }}
 
 <meta
-    property="og:image:alt"
-    content="Golang Backend Engineer • Distributed Systems • Platform Engineering — Ikwuka Okoye">
+  property="og:image:alt"
+  content="Ikwuka Okoye — Golang Backend Engineer">
+
+<!-- X -->
 
 <meta
-    property="og:locale"
-    content="en_US">
-
-<meta property="og:site_name" content="{{ site.Title }}">
-
-<meta property="og:image:type" content="image/png">
-
-<meta property="og:image:width" content="1200">
-
-<meta property="og:image:height" content="630">
-
-<!-- Twitter / X -->
+  name="twitter:card"
+  content="summary_large_image">
 
 <meta
-    name="twitter:card"
-    content="summary_large_image">
+  name="twitter:title"
+  content="{{ if .Title }}{{ .Title }} | {{ site.Title }}{{ else }}{{ site.Title }} | {{ site.Params.profession }}{{ end }}">
 
 <meta
-    name="twitter:creator"
-    content="@ikwukao_">
-
-<meta
-    name="twitter:site"
-    content="@ikwukao_">
-
-<meta
-    name="twitter:title"
-    content="{{ if .Title }}{{ .Title }}{{ else }}{{ site.Title }}{{ end }}">
-
-<meta
-    name="twitter:description"
-    content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  name="twitter:description"
+  content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
 
 {{ with .Params.image }}
 <meta
-    name="twitter:image"
-    content="{{ . | absURL }}">
+  name="twitter:image"
+  content="{{ . | absURL }}">
 {{ else }}
 <meta
-    name="twitter:image"
-    content="{{ "images/og-image.png" | absURL }}">
+  name="twitter:image"
+  content="{{ "images/og-image.png" | absURL }}">
 {{ end }}
 
-<!-- Favicons -->
+<meta
+  name="twitter:image:alt"
+  content="Ikwuka Okoye — Golang Backend Engineer">
 
-<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+<!-- Icons -->
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link
+  rel="icon"
+  type="image/png"
+  href="/favicon-96x96.png"
+  sizes="96x96">
 
-<link rel="shortcut icon" href="/favicon.ico">
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="/favicon.svg">
 
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link
+  rel="shortcut icon"
+  href="/favicon.ico">
 
-<meta name="apple-mobile-web-app-title" content="ikwukao.dev">
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="/apple-touch-icon.png">
 
-<link rel="manifest" href="/site.webmanifest">
+<meta
+  name="apple-mobile-web-app-title"
+  content="ikwukao.dev">
 
-<meta name="theme-color" content="#09090B">
+<link
+  rel="manifest"
+  href="/site.webmanifest">
 
-<!-- RSS Feed -->
+<!-- RSS -->
 
 {{ with .OutputFormats.Get "RSS" }}
 <link
-    rel="alternate"
-    type="application/rss+xml"
-    title="{{ site.Title }}"
-    href="{{ .RelPermalink }}">
+  rel="alternate"
+  type="application/rss+xml"
+  title="{{ site.Title }}"
+  href="{{ .RelPermalink }}">
 {{ end }}
 
+<!-- DNS Prefetch -->
+
+<link
+  rel="dns-prefetch"
+  href="//github.com">
+
+<link
+  rel="dns-prefetch"
+  href="//x.com">
+
 {{ partial "schema.html" . }}
-
-<!-- Pre-connects -->
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link rel="dns-prefetch" href="//github.com">
-
-<link rel="dns-prefetch" href="//x.com">
 
 <!-- Styles -->
 
 {{ with resources.Get "css/main.css" }}
-{{ $css := . | css.TailwindCSS | minify | fingerprint }}
-
-<link
+  {{ $css := . | css.TailwindCSS | minify | fingerprint }}
+  <link
     rel="stylesheet"
     href="{{ $css.RelPermalink }}"
     integrity="{{ $css.Data.Integrity }}">
-
 {{ end }}
