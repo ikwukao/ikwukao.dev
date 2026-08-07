@@ -1,88 +1,115 @@
-<section class="py-28">
-
+<section class="border-t border-white/10 py-28">
   <div class="mx-auto max-w-6xl px-6">
 
     {{ partial "section-header.html" (dict
       "title" "What I Build"
-      "description" "I build software focused on reliability, scalability, and maintainability—from backend APIs to distributed systems and platform automation."
+      "description" "Engineering systems designed for reliability, scalability, maintainability, and production use."
     ) }}
 
-    <div class="mt-14 grid gap-8 lg:grid-cols-3">
+    <div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
-      <!-- Backend Engineering -->
-      <article class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+      <!-- Backend -->
+      <article class="group rounded-2xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
 
-        <div class="mb-6 text-4xl">⚙️</div>
+        <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+          {{ partial "icon.html" (dict "name" "backend" "class" "h-6 w-6") }}
+        </div>
 
-        <h3 class="text-2xl font-semibold">
-          Backend Engineering
+        <h3 class="mt-6 text-xl font-semibold text-white">
+          Backend Systems
         </h3>
 
         <p class="mt-4 leading-7 text-zinc-400">
-          Designing secure, maintainable, and high-performance backend services.
+          Reliable backend services, APIs, business logic, and server-side systems built with Go and Python.
         </p>
-
-        <ul class="mt-6 space-y-3 text-zinc-300">
-
-          <li>REST APIs</li>
-          <li>Authentication</li>
-          <li>SQL Databases</li>
-          <li>Performance Optimization</li>
-
-        </ul>
 
       </article>
 
       <!-- Distributed Systems -->
-      <article class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+      <article class="group rounded-2xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
 
-        <div class="mb-6 text-4xl">🌐</div>
+        <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+          {{ partial "icon.html" (dict "name" "distributed" "class" "h-6 w-6") }}
+        </div>
 
-        <h3 class="text-2xl font-semibold">
+        <h3 class="mt-6 text-xl font-semibold text-white">
           Distributed Systems
         </h3>
 
         <p class="mt-4 leading-7 text-zinc-400">
-          Building resilient systems that remain reliable as they grow.
+          Scalable services, service communication, fault tolerance, concurrency, and distributed architecture.
         </p>
-
-        <ul class="mt-6 space-y-3 text-zinc-300">
-
-          <li>Concurrency</li>
-          <li>Scalability</li>
-          <li>Fault Tolerance</li>
-          <li>System Design</li>
-
-        </ul>
 
       </article>
 
-      <!-- Platform Engineering -->
-      <article class="rounded-xl border border-white/10 bg-zinc-900/40 p-8 shadow-sm backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+      <!-- Cloud -->
+      <article class="group rounded-2xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
 
-        <div class="mb-6 text-4xl">🚀</div>
+        <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+          {{ partial "icon.html" (dict "name" "cloud" "class" "h-6 w-6") }}
+        </div>
 
-        <h3 class="text-2xl font-semibold">
-          Platform & Automation
+        <h3 class="mt-6 text-xl font-semibold text-white">
+          Cloud & Platform Engineering
         </h3>
 
         <p class="mt-4 leading-7 text-zinc-400">
-          Automating infrastructure and improving developer productivity.
+          Cloud-native infrastructure, containers, Kubernetes, infrastructure as code, and automated delivery pipelines.
         </p>
 
-        <ul class="mt-6 space-y-3 text-zinc-300">
+      </article>
 
-          <li>Docker</li>
-          <li>Kubernetes</li>
-          <li>Infrastructure Automation</li>
-          <li>Developer Tooling</li>
+      <!-- Database -->
+      <article class="group rounded-2xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
 
-        </ul>
+        <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+          {{ partial "icon.html" (dict "name" "database" "class" "h-6 w-6") }}
+        </div>
+
+        <h3 class="mt-6 text-xl font-semibold text-white">
+          Data & Persistence
+        </h3>
+
+        <p class="mt-4 leading-7 text-zinc-400">
+          Data modeling, relational databases, caching, persistence strategies, and reliable data access layers.
+        </p>
+
+      </article>
+
+      <!-- Engineering -->
+      <article class="group rounded-2xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
+
+        <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+          {{ partial "icon.html" (dict "name" "engineering" "class" "h-6 w-6") }}
+        </div>
+
+        <h3 class="mt-6 text-xl font-semibold text-white">
+          Software Engineering
+        </h3>
+
+        <p class="mt-4 leading-7 text-zinc-400">
+          Clean architecture, system design, testing, performance engineering, and maintainable production software.
+        </p>
+
+      </article>
+
+      <!-- Tooling -->
+      <article class="group rounded-2xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/5">
+
+        <div class="skill-icon flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+          {{ partial "icon.html" (dict "name" "tools" "class" "h-6 w-6") }}
+        </div>
+
+        <h3 class="mt-6 text-xl font-semibold text-white">
+          Developer Tooling
+        </h3>
+
+        <p class="mt-4 leading-7 text-zinc-400">
+          CLI applications, developer workflows, automation, build systems, and tools that improve engineering productivity.
+        </p>
 
       </article>
 
     </div>
-
   </div>
-
 </section>
