@@ -260,3 +260,20 @@ article:hover .skill-icon {
 .tech-pill:hover {
     @apply border-emerald-400 bg-emerald-500/10 text-white;
 }
+
+/* ---------------------------------------------------
+   Accessibility
+---------------------------------------------------- */
+
+:focus-visible {
+  outline: 2px solid #10b981;
+  outline-offset: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  border-radius: 0.5rem;
+}
