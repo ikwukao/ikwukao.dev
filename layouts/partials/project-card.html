@@ -2,9 +2,14 @@
 
   {{ with .Params.cover }}
     <img
-      src="{{ . }}"
-      alt="{{ $.Title }}"
-      class="h-56 w-full object-cover">
+      src="{{ .Params.image | relURL }}"
+      alt="{{ .Title }}"
+      class="aspect-video w-full object-cover transition duration-500 group-hover:scale-105"
+      loading="lazy"
+      decoding="async"
+      fetchpriority="low"
+      width="1280"
+      height="720">
   {{ end }}
 
   <div class="flex flex-1 flex-col p-7">
