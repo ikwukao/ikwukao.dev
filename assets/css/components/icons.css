@@ -1,0 +1,26 @@
+.icon,
+.skill-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon svg,
+.skill-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+}
+
+.skill-icon {
+  transition:
+    transform var(--transition),
+    color var(--transition),
+    background-color var(--transition),
+    border-color var(--transition);
+}
+
+article:hover .skill-icon {
+  transform: scale(1.08);
+  color: var(--accent);
+}

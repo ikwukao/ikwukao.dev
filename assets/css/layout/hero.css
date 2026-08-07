@@ -1,0 +1,16 @@
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at top right, rgb(16 185 129 / 0.12), transparent 45%),
+    radial-gradient(circle at bottom left, rgb(16 185 129 / 0.08), transparent 40%);
+}
+
+.terminal-cursor {
+  display: inline-block;
+  width: 0.6rem;
+  height: 1.2rem;
+  background: var(--accent);
+  animation: blink 1s steps(1) infinite;
+}

@@ -1,0 +1,40 @@
+@media (max-width: 1024px) {
+  .section {
+    padding-block: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  .section {
+    padding-block: 4rem;
+  }
+
+  article {
+    border-radius: 1rem;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  #mobile-menu nav a {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,56 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  border-bottom: 1px solid rgb(255 255 255 / 0.05);
+  background: rgb(5 5 5 / 0.75);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+}
+
+header a {
+  text-decoration: none;
+}
+
+header nav a {
+  position: relative;
+  transition:
+    color var(--transition),
+    opacity var(--transition);
+}
+
+header nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -0.45rem;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+
+header nav a:hover::after,
+header nav a[aria-current="page"]::after {
+  width: 100%;
+}
+
+header nav a:hover {
+  color: var(--accent);
+}
+
+#mobile-menu {
+  animation: nav-slide 220ms ease;
+}
+
+@keyframes nav-slide {
+  from {
+    opacity: 0;
+    transform: translateY(-0.75rem);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

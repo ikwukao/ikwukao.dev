@@ -1,0 +1,26 @@
+:root {
+  --bg: #050505;
+  --surface: #0b0b0b;
+  --surface-2: #111111;
+
+  --border: #27272a;
+
+  --text: #f3f4f6;
+  --muted: #9ca3af;
+
+  --accent: #10b981;
+  --accent-hover: #34d399;
+  --accent-foreground: #000000;
+
+  --radius: 0.75rem;
+
+  --shadow-sm: 0 2px 10px rgb(0 0 0 / 0.12);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.18);
+  --shadow-lg: 0 18px 48px rgb(0 0 0 / 0.28);
+
+  --transition-fast: 150ms ease;
+  --transition: 180ms ease;
+  --transition-slow: 300ms ease;
+
+  --container: 72rem;
+}

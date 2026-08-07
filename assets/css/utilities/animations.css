@@ -1,0 +1,20 @@
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.logo::after {
+  content: "_";
+  animation: blink 1s step-end infinite;
+}
+
+#reading-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 0;
+  height: 3px;
+  background: var(--accent);
+}
