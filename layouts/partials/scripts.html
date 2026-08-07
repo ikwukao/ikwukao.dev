@@ -1,57 +1,17 @@
 {{ with resources.Get "js/search.js" }}
-
-  {{ $js := . | js.Build | minify | fingerprint }}
-
+  {{ $search := . | js.Build | minify | fingerprint }}
   <script
-    src="{{ $js.RelPermalink }}"
-    integrity="{{ $js.Data.Integrity }}"
+    src="{{ $search.RelPermalink }}"
+    integrity="{{ $search.Data.Integrity }}"
     defer>
   </script>
-
 {{ end }}
 
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-
-  const button = document.getElementById("mobile-menu-button");
-  const menu = document.getElementById("mobile-menu");
-
-  if (!button || !menu) return;
-
-  button.addEventListener("click", () => {
-
-    const expanded = button.getAttribute("aria-expanded") === "true";
-
-    button.setAttribute("aria-expanded", String(!expanded));
-
-    menu.classList.toggle("hidden");
-
-  });
-
-  document.addEventListener("click", (event) => {
-
-    if (
-      !menu.contains(event.target) &&
-      !button.contains(event.target)
-    ) {
-
-      menu.classList.add("hidden");
-      button.setAttribute("aria-expanded", "false");
-
-    }
-
-  });
-
-  window.addEventListener("resize", () => {
-
-    if (window.innerWidth >= 1024) {
-
-      menu.classList.add("hidden");
-      button.setAttribute("aria-expanded", "false");
-
-    }
-
-  });
-
-});
-</script>
+{{ with resources.Get "js/navigation.js" }}
+  {{ $nav := . | js.Build | minify | fingerprint }}
+  <script
+    src="{{ $nav.RelPermalink }}"
+    integrity="{{ $nav.Data.Integrity }}"
+    defer>
+  </script>
+{{ end }}
