@@ -9,7 +9,7 @@
       aria-label="Go to homepage"
       class="group flex items-center gap-3">
 
-      <span class="logo text-2xl font-bold text-emerald-500 transition group-hover:text-emerald-400">
+      <span class="logo text-2xl font-bold text-emerald-500 transition-colors group-hover:text-emerald-400">
         >_
       </span>
 
@@ -41,11 +41,11 @@
 
           <a
             href="{{ .URL }}"
-            class="text-sm font-medium transition-colors duration-200
+            class="relative text-sm font-medium transition-colors duration-200
             {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
-            text-emerald-400
+              text-emerald-400
             {{ else }}
-            text-zinc-300 hover:text-white
+              text-zinc-300 hover:text-white
             {{ end }}">
 
             {{ .Name }}
@@ -60,13 +60,14 @@
 
     </nav>
 
-    <!-- Right Side -->
+    <!-- Desktop Actions -->
 
-    <div class="flex items-center gap-3">
+    <div class="hidden items-center gap-3 lg:flex">
 
       <a
         href="/search/"
-        class="hidden rounded-xl border border-white/10 px-4 py-2 text-sm transition hover:border-emerald-500/40 hover:text-emerald-400 lg:inline-flex">
+        aria-label="Search"
+        class="rounded-xl border border-white/10 px-4 py-2 text-sm text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400">
 
         Search
 
@@ -76,40 +77,46 @@
         href="{{ site.Params.github }}"
         target="_blank"
         rel="noopener noreferrer"
-        class="hidden rounded-xl bg-emerald-500 px-4 py-2 text-sm font-medium text-black transition hover:bg-emerald-400 lg:inline-flex">
+        aria-label="GitHub Profile"
+        class="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-medium text-black transition hover:bg-emerald-400">
 
         GitHub
 
       </a>
 
-      <button
-        id="mobile-menu-button"
-        aria-label="Toggle navigation"
-        aria-expanded="false"
-        class="rounded-lg border border-white/10 p-3 transition hover:border-emerald-500 hover:text-emerald-400 lg:hidden">
-
-        ☰
-
-      </button>
-
     </div>
+
+    <!-- Mobile Toggle -->
+
+    <button
+      id="mobile-menu-button"
+      type="button"
+      aria-label="Toggle navigation"
+      aria-controls="mobile-menu"
+      aria-expanded="false"
+      class="rounded-xl border border-white/10 p-3 transition hover:border-emerald-500 hover:text-emerald-400 lg:hidden">
+
+      ☰
+
+    </button>
 
   </div>
 
-  <!-- Mobile Menu -->
+  <!-- Mobile Navigation -->
 
   <div
     id="mobile-menu"
     class="hidden border-t border-white/10 bg-zinc-950 lg:hidden">
 
     <nav
-      class="mx-auto flex max-w-7xl flex-col px-6 py-6">
+      aria-label="Mobile Navigation"
+      class="mx-auto flex max-w-7xl flex-col px-6 py-4">
 
       {{ range site.Menus.main }}
 
       <a
         href="{{ .URL }}"
-        class="border-b border-white/5 py-4 transition hover:text-emerald-400">
+        class="border-b border-white/5 py-4 text-zinc-300 transition hover:text-emerald-400">
 
         {{ .Name }}
 
@@ -119,7 +126,7 @@
 
       <a
         href="/search/"
-        class="border-b border-white/5 py-4">
+        class="border-b border-white/5 py-4 text-zinc-300 transition hover:text-emerald-400">
 
         Search
 
@@ -129,7 +136,7 @@
         href="{{ site.Params.github }}"
         target="_blank"
         rel="noopener noreferrer"
-        class="py-4">
+        class="py-4 text-zinc-300 transition hover:text-emerald-400">
 
         GitHub
 
