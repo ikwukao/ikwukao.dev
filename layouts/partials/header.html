@@ -1,140 +1,142 @@
-<!-- Brand -->
+<header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
 
-<a
-  href="/"
-  aria-label="Go to homepage"
-  class="flex items-center gap-3 transition hover:opacity-90">
+  <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
-  <span class="logo text-2xl font-bold text-emerald-500">
-    >_
-  </span>
+    <!-- Brand -->
 
-  <div class="leading-tight">
+    <a
+      href="/"
+      aria-label="Go to homepage"
+      class="group flex items-center gap-3">
 
-    <p class="font-semibold tracking-tight text-white">
-      ikwukao
-    </p>
+      <span class="logo text-2xl font-bold text-emerald-500 transition group-hover:text-emerald-400">
+        >_
+      </span>
 
-    <p class="hidden text-xs text-zinc-500 md:block">
-      Golang Backend • Distributed Systems
-    </p>
+      <div>
+
+        <p class="font-semibold tracking-tight text-white">
+          ikwukao
+        </p>
+
+        <p class="hidden text-xs text-zinc-500 md:block">
+          Golang Backend • Distributed Systems
+        </p>
+
+      </div>
+
+    </a>
+
+    <!-- Desktop Navigation -->
+
+    <nav
+      aria-label="Primary Navigation"
+      class="hidden lg:block">
+
+      <ul class="flex items-center gap-8">
+
+        {{ range site.Menus.main }}
+
+        <li>
+
+          <a
+            href="{{ .URL }}"
+            class="text-sm font-medium transition-colors duration-200
+            {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+            text-emerald-400
+            {{ else }}
+            text-zinc-300 hover:text-white
+            {{ end }}">
+
+            {{ .Name }}
+
+          </a>
+
+        </li>
+
+        {{ end }}
+
+      </ul>
+
+    </nav>
+
+    <!-- Right Side -->
+
+    <div class="flex items-center gap-3">
+
+      <a
+        href="/search/"
+        class="hidden rounded-xl border border-white/10 px-4 py-2 text-sm transition hover:border-emerald-500/40 hover:text-emerald-400 lg:inline-flex">
+
+        Search
+
+      </a>
+
+      <a
+        href="{{ site.Params.github }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="hidden rounded-xl bg-emerald-500 px-4 py-2 text-sm font-medium text-black transition hover:bg-emerald-400 lg:inline-flex">
+
+        GitHub
+
+      </a>
+
+      <button
+        id="mobile-menu-button"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+        class="rounded-lg border border-white/10 p-3 transition hover:border-emerald-500 hover:text-emerald-400 lg:hidden">
+
+        ☰
+
+      </button>
+
+    </div>
 
   </div>
 
-</a>
+  <!-- Mobile Menu -->
 
-<!-- Desktop Navigation -->
+  <div
+    id="mobile-menu"
+    class="hidden border-t border-white/10 bg-zinc-950 lg:hidden">
 
-<nav
-  aria-label="Primary Navigation"
-  class="hidden lg:block">
+    <nav
+      class="mx-auto flex max-w-7xl flex-col px-6 py-6">
 
-  <ul class="flex items-center gap-8">
-
-    {{ range site.Menus.main }}
-
-    <li>
+      {{ range site.Menus.main }}
 
       <a
         href="{{ .URL }}"
-        class="text-sm font-medium transition-colors duration-200
-        {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
-          text-emerald-400
-        {{ else }}
-          text-zinc-300 hover:text-emerald-400
-        {{ end }}">
+        class="border-b border-white/5 py-4 transition hover:text-emerald-400">
 
         {{ .Name }}
 
       </a>
 
-    </li>
+      {{ end }}
 
-    {{ end }}
+      <a
+        href="/search/"
+        class="border-b border-white/5 py-4">
 
-  </ul>
+        Search
 
-</nav>
+      </a>
 
-<!-- Desktop Actions -->
+      <a
+        href="{{ site.Params.github }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="py-4">
 
-<div class="hidden items-center gap-3 lg:flex">
+        GitHub
 
-  <a
-    href="/search/"
-    aria-label="Search"
-    class="rounded-lg border border-white/10 px-4 py-2 text-sm transition hover:border-emerald-500/40 hover:text-emerald-400">
+      </a>
 
-    Search
+    </nav>
 
-  </a>
+  </div>
 
-  <a
-    href="{{ site.Params.github }}"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub Profile"
-    class="rounded-lg border border-white/10 px-4 py-2 text-sm transition hover:border-emerald-500/40 hover:text-emerald-400">
-
-    GitHub
-
-  </a>
-
-</div>
-
-<!-- Mobile Menu Button -->
-
-<button
-  id="mobile-menu-button"
-  type="button"
-  aria-label="Toggle navigation"
-  aria-expanded="false"
-  class="rounded-lg border border-white/10 p-2 text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400 lg:hidden">
-
-  ☰
-
-</button>
-
-<!-- Mobile Navigation -->
-
-<div
-  id="mobile-menu"
-  class="absolute left-0 right-0 top-full hidden border-b border-white/10 bg-black/95 backdrop-blur-lg lg:hidden">
-
-  <nav
-    aria-label="Mobile Navigation"
-    class="mx-auto flex max-w-6xl flex-col px-6 py-6">
-
-    {{ range site.Menus.main }}
-
-    <a
-      href="{{ .URL }}"
-      class="border-b border-white/5 py-4 transition hover:text-emerald-400">
-
-      {{ .Name }}
-
-    </a>
-
-    {{ end }}
-
-    <a
-      href="/search/"
-      class="border-b border-white/5 py-4 transition hover:text-emerald-400">
-
-      Search
-
-    </a>
-
-    <a
-      href="{{ site.Params.github }}"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="py-4 transition hover:text-emerald-400">
-
-      GitHub
-
-    </a>
-
-  </nav>
-
-</div>
+</header>
