@@ -48,7 +48,14 @@
     background: #18181b;
     padding: .15rem .4rem;
     color: #34d399;
-    font-family: "JetBrains Mono", monospace;
+    font-family:
+        "JetBrains Mono",
+        "Cascadia Code",
+        "SFMono-Regular",
+        Consolas,
+        "Liberation Mono",
+        Menlo,
+        monospace;
 }
 
 .prose pre {
@@ -66,11 +73,7 @@
 }
 
 .prose pre {
-  border: 1px solid rgba(255,255,255,.08);
-  border-radius: .75rem;
-  overflow-x: auto;
-}
-
-.prose code {
-  font-family: "JetBrains Mono", monospace;
+    border: 1px solid rgba(255,255,255,.08);
+    border-radius: .75rem;
+    overflow-x: auto;
 }
