@@ -1,23 +1,37 @@
-<header class="sticky top-0 z-50 border-b border-white/10 bg-black/90 backdrop-blur">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-md">
 
-  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+
+    <!-- Brand -->
 
     <a
       href="/"
       aria-label="Go to homepage"
-      class="flex items-center gap-2 transition hover:opacity-90">
+      class="flex items-center gap-3 transition hover:opacity-90">
 
       <span class="logo text-xl font-bold text-emerald-500">
         >_
       </span>
 
-      <span class="font-semibold tracking-tight text-white">
-        ikwukao
-      </span>
+      <div class="leading-tight">
+
+        <p class="font-semibold tracking-tight text-white">
+          ikwukao
+        </p>
+
+        <p class="hidden text-xs text-zinc-500 md:block">
+          Golang Backend • Distributed Systems
+        </p>
+
+      </div>
 
     </a>
 
-    <nav aria-label="Primary Navigation">
+    <!-- Navigation -->
+
+    <nav
+      aria-label="Primary Navigation"
+      class="hidden lg:block">
 
       <ul class="flex items-center gap-8">
 
@@ -45,6 +59,32 @@
       </ul>
 
     </nav>
+
+    <!-- Actions -->
+
+    <div class="flex items-center gap-3">
+
+      <a
+        href="/search/"
+        aria-label="Search"
+        class="rounded-lg border border-white/10 px-4 py-2 text-sm text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400">
+
+        Search
+
+      </a>
+
+      <a
+        href="{{ site.Params.github }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub Profile"
+        class="rounded-lg border border-white/10 px-4 py-2 text-sm text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400">
+
+        GitHub
+
+      </a>
+
+    </div>
 
   </div>
 
