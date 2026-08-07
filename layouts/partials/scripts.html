@@ -9,3 +9,39 @@
   </script>
 
 {{ end }}
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const button = document.getElementById("mobile-menu-button");
+  const menu = document.getElementById("mobile-menu");
+
+  if (!button || !menu) return;
+
+  button.addEventListener("click", () => {
+
+    const expanded = button.getAttribute("aria-expanded") === "true";
+
+    button.setAttribute("aria-expanded", !expanded);
+
+    menu.classList.toggle("hidden");
+
+  });
+
+  document.addEventListener("click", (event) => {
+
+    if (
+      !menu.contains(event.target) &&
+      !button.contains(event.target)
+    ) {
+
+      menu.classList.add("hidden");
+
+      button.setAttribute("aria-expanded", "false");
+
+    }
+
+  });
+
+});
+</script>

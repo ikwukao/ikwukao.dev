@@ -290,3 +290,67 @@ select:focus-visible {
     height: 100%;
     stroke: currentColor;
 }
+
+/* =====================================================
+   Responsive Layout
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .section {
+    padding-block: 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+
+  html {
+    font-size: 15px;
+  }
+
+  .section {
+    padding-block: 4rem;
+  }
+
+  h1 {
+    line-height: 1.1;
+  }
+
+  h2 {
+    line-height: 1.2;
+  }
+
+  .container {
+    padding-inline: 1rem;
+  }
+
+  article {
+    border-radius: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Mobile Navigation */
+
+#mobile-menu {
+  animation: slideDown .25s ease;
+}
+
+@keyframes slideDown {
+
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
