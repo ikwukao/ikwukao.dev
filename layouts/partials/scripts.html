@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const expanded = button.getAttribute("aria-expanded") === "true";
 
-    button.setAttribute("aria-expanded", !expanded);
+    button.setAttribute("aria-expanded", String(!expanded));
 
     menu.classList.toggle("hidden");
 
@@ -36,7 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
     ) {
 
       menu.classList.add("hidden");
+      button.setAttribute("aria-expanded", "false");
 
+    }
+
+  });
+
+  window.addEventListener("resize", () => {
+
+    if (window.innerWidth >= 1024) {
+
+      menu.classList.add("hidden");
       button.setAttribute("aria-expanded", "false");
 
     }
