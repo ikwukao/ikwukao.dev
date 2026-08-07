@@ -1,12 +1,5 @@
-{{- $name := .name -}}
-{{- $class := .class | default "" -}}
+{{- $icon := printf "icons/%s.svg" . -}}
 
-{{ with resources.Get (printf "icons/%s.svg" $name) }}
-
-<div class="{{ $class }}">
-
-  {{ .Content | safeHTML }}
-
-</div>
-
-{{ end }}
+{{- with resources.Get $icon -}}
+    {{ .Content | safeHTML }}
+{{- end -}}

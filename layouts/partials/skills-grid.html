@@ -1,45 +1,49 @@
-<section class="py-28">
+<div class="grid gap-8 lg:grid-cols-2">
 
-  <div class="mx-auto max-w-6xl px-6">
+  {{ range hugo.Data.skills.categories }}
 
-    <div class="grid gap-8 lg:grid-cols-2">
+  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
 
-      {{ range hugo.Data.skills.categories }}
+    <div class="flex items-center gap-4">
 
-      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition hover:border-emerald-500/40">
+      <span class="icon h-8 w-8 text-emerald-400 shrink-0">
+        {{ partial "icon.html" .icon }}
+      </span>
+
+      <div>
 
         <h2 class="text-2xl font-bold text-white">
-
           {{ .title }}
-
         </h2>
 
-        <p class="mt-4 leading-7 text-zinc-400">
-
-          {{ .description }}
-
+        <p class="mt-1 text-sm text-zinc-500">
+          {{ len .skills }} Technologies
         </p>
 
-        <div class="mt-8 flex flex-wrap gap-3">
+      </div>
 
-          {{ range .skills }}
+    </div>
 
-          <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-sm text-emerald-300">
+    <p class="mt-6 leading-7 text-zinc-400">
+      {{ .description }}
+    </p>
 
-            {{ .name }}
+    <div class="mt-8 flex flex-wrap gap-3">
 
-          </span>
+      {{ range .skills }}
 
-          {{ end }}
+      <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-2 text-sm font-medium text-emerald-300 transition hover:border-emerald-400 hover:bg-emerald-500/10">
 
-        </div>
+        {{ .name }}
 
-      </article>
+      </span>
 
       {{ end }}
 
     </div>
 
-  </div>
+  </article>
 
-</section>
+  {{ end }}
+
+</div>
