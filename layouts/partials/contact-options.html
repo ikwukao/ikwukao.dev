@@ -1,92 +1,100 @@
-<section class="border-t border-white/10 py-28">
+{{ partial "section-header.html" (dict
+  "title" "Let's Connect"
+  "description" "Whether you're hiring, building, investing, or looking to collaborate, I'd be glad to hear from you."
+) }}
 
-  <div class="mx-auto max-w-6xl px-6">
+<div class="mt-14 grid gap-6 md:grid-cols-2">
 
-    {{ partial "section-header.html" (dict
-      "title" "Ways to Connect"
-      "description" "Choose the channel that works best for you."
-    ) }}
+  <!-- Email -->
 
-    <div class="mt-14 grid gap-6 md:grid-cols-2">
+  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
 
-      <article class="rounded-xl border border-white/10 p-8">
+    <h3 class="text-xl font-semibold text-white">
+      Email
+    </h3>
 
-        <h3 class="text-xl font-semibold text-white">
-          Email
-        </h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      The best channel for job opportunities, consulting engagements,
+      partnerships, and professional conversations.
+    </p>
 
-        <p class="mt-4 text-zinc-400">
-          Best for opportunities, collaborations, and professional inquiries.
-        </p>
+    <a
+      href="mailto:{{ site.Params.email }}"
+      class="mt-6 inline-flex items-center gap-2 font-medium text-emerald-400 transition hover:text-emerald-300">
 
-        <a
-          href="mailto:{{ site.Params.email }}"
-          class="mt-6 inline-flex text-emerald-400 hover:text-emerald-300">
+      {{ site.Params.email }} →
 
-          {{ site.Params.email }}
+    </a>
 
-        </a>
+  </article>
 
-      </article>
+  <!-- GitHub -->
 
-      <article class="rounded-xl border border-white/10 p-8">
+  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
 
-        <h3 class="text-xl font-semibold text-white">
-          GitHub
-        </h3>
+    <h3 class="text-xl font-semibold text-white">
+      GitHub
+    </h3>
 
-        <p class="mt-4 text-zinc-400">
-          Explore my projects, engineering experiments, and open-source work.
-        </p>
+    <p class="mt-4 leading-7 text-zinc-400">
+      Explore production projects, engineering experiments,
+      open-source contributions, and technical documentation.
+    </p>
 
-        <a
-          href="{{ site.Params.github }}"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="mt-6 inline-flex text-emerald-400 hover:text-emerald-300">
+    <a
+      href="{{ site.Params.github }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="mt-6 inline-flex items-center gap-2 font-medium text-emerald-400 transition hover:text-emerald-300">
 
-          github.com/ikwukao
+      github.com/ikwukao →
 
-        </a>
+    </a>
 
-      </article>
+  </article>
 
-      <article class="rounded-xl border border-white/10 p-8">
+  <!-- Website -->
 
-        <h3 class="text-xl font-semibold text-white">
-          Website
-        </h3>
+  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
 
-        <p class="mt-4 text-zinc-400">
-          Browse my portfolio, technical journal, and engineering projects.
-        </p>
+    <h3 class="text-xl font-semibold text-white">
+      Portfolio
+    </h3>
 
-        <a
-          href="{{ site.BaseURL }}"
-          class="mt-6 inline-flex text-emerald-400 hover:text-emerald-300">
+    <p class="mt-4 leading-7 text-zinc-400">
+      Browse my engineering journal, portfolio, technical skills,
+      backend projects, and development roadmap.
+    </p>
 
-          ikwukao.dev
+    <a
+      href="{{ site.BaseURL }}"
+      class="mt-6 inline-flex items-center gap-2 font-medium text-emerald-400 transition hover:text-emerald-300">
 
-        </a>
+      ikwukao.dev →
 
-      </article>
+    </a>
 
-      <article class="rounded-xl border border-white/10 p-8">
+  </article>
 
-        <h3 class="text-xl font-semibold text-white">
-          Response Time
-        </h3>
+  <!-- Availability -->
 
-        <p class="mt-4 leading-8 text-zinc-400">
+  <article class="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8">
 
-          I typically reply to professional inquiries within 24–48 hours.
+    <h3 class="text-xl font-semibold text-white">
+      Availability
+    </h3>
 
-        </p>
+    <p class="mt-4 leading-7 text-zinc-300">
+      Currently open to remote Backend Engineering, Distributed Systems,
+      Platform Engineering, Site Reliability Engineering (SRE), and Cloud DevOps opportunities.
+    </p>
 
-      </article>
+    <div class="mt-6 inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300">
+
+      Typically replies within 24–48 hours
 
     </div>
 
-  </div>
+  </article>
 
-</section>
+</div>
