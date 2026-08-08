@@ -1,34 +1,33 @@
-<section class="border-t border-white/10 py-28">
+{{ $articles := where site.RegularPages "Section" "journal" }}
 
-  <div class="mx-auto max-w-6xl px-6">
+{{ if $articles }}
 
-    {{ partial "section-header.html" (dict
-      "title" "Engineering Journal"
-      "description" "Technical articles documenting engineering decisions, architecture, implementation details, and lessons learned."
-    ) }}
+<section class="py-24 sm:py-28" aria-labelledby="engineering-journal-title">
 
-    <div class="mt-14 grid gap-8 lg:grid-cols-3">
+  {{ partial "section-header.html" (dict
+    "title" "Engineering Journal"
+    "description" "Notes on systems, architecture, implementation, and lessons learned while building."
+  ) }}
 
-      {{ range first 3 (where site.RegularPages "Section" "journal").ByDate.Reverse }}
+  <div
+    id="engineering-journal-title"
+    class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 
-        {{ partial "journal-card.html" . }}
-
-      {{ end }}
-
-    </div>
-
-    <div class="mt-14 text-center">
-
-      <a
-        href="/journal/"
-        class="btn-secondary">
-
-        View All Articles →
-
-      </a>
-
-    </div>
+    {{ range first 3 $articles.ByDate.Reverse }}
+      {{ partial "journal-card.html" . }}
+    {{ end }}
 
   </div>
 
+  <div class="mt-12 text-center">
+    <a
+      href="{{ "/journal/" | relURL }}"
+      class="btn-secondary">
+      View Engineering Journal
+      <span aria-hidden="true">→</span>
+    </a>
+  </div>
+
 </section>
+
+{{ end }}

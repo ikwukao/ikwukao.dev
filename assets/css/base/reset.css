@@ -93,3 +93,29 @@ button {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
 }
+
+/* ============================================================
+   Layout Safety
+   ============================================================ */
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  min-width: 0;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+pre,
+code {
+  max-width: 100%;
+  overflow-x: auto;
+}

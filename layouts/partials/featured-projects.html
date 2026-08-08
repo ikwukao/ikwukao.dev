@@ -1,11 +1,14 @@
 {{ partial "section-header.html" (dict
   "title" "Selected Projects"
-  "description" "Engineering work across backend systems, distributed infrastructure, automation, and developer tooling."
+  "description" "Engineering projects spanning backend systems, developer tooling, infrastructure, and distributed software."
 ) }}
 
-<div class="mt-12 grid gap-8 lg:grid-cols-3">
+<div class="mt-14 grid gap-8 md:grid-cols-2 xl:grid-cols-3">
 
-  {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
+  {{ $projects := where site.RegularPages "Section" "projects" }}
+  {{ $projects = where $projects ".Params.featured" true }}
+
+  {{ range first 3 $projects }}
 
     {{ partial "project-card.html" . }}
 
@@ -13,13 +16,14 @@
 
 </div>
 
-<div class="mt-10">
+<div class="mt-12 text-center">
 
   <a
-    href="/projects/"
-    class="text-sm font-medium text-emerald-400 transition-colors hover:text-emerald-300">
+    href="{{ "/projects/" | relURL }}"
+    class="btn-secondary">
 
-    Explore all projects
+    View All Projects
+
     <span aria-hidden="true">→</span>
 
   </a>
