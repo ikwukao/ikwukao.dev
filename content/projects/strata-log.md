@@ -2,7 +2,7 @@
 title: "Strata-Log"
 description: "An ultra-high-throughput distributed log aggregation engine in Go designed to safely process thousands of concurrent log streams over raw TCP sockets."
 date: 2026-08-08
-draft: true
+draft: false
 featured: true
 status: "Distributed Systems"
 github: "https://github.com/ikwukao/strata-log"

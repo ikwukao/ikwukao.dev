@@ -2,7 +2,7 @@
 title: "Flux-Gateway"
 description: "A high-performance, fault-tolerant API Gateway and Reverse Proxy engineered in Go to protect downstream microservices from traffic spikes and cascading network partitions."
 date: 2026-08-08
-draft: true
+draft: false
 featured: true
 status: "Flagship Project"
 github: "https://github.com/ikwukao/flux-gateway"

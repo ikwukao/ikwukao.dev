@@ -2,7 +2,7 @@
 title: "Platform-Infra"
 description: "A master multi-project orchestration repository applying Infrastructure-as-Code principles to declaratively manage configurations and workloads for core Go services."
 date: 2026-08-08
-draft: true
+draft: false
 featured: true
 status: "Platform Engineering"
 github: "https://github.com/ikwukao/platform-infra"
