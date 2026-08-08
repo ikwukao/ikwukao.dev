@@ -1,5 +1,0 @@
-{{- $icon := printf "icons/social/%s.svg" . -}}
-
-{{- with resources.Get $icon -}}
-    {{ .Content | safeHTML }}
-{{- end -}}
