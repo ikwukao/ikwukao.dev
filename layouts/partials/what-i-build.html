@@ -1,110 +1,87 @@
-<section class="py-24 sm:py-28" aria-labelledby="what-i-build-title">
+{{ partial "section-header.html" (dict "title" "What I Build" "description" "The systems and engineering problems I focus on across backend development, distributed systems, and infrastructure.") }}
 
-  {{ partial "section-header.html" (dict
-    "title" "What I Build"
-    "description" "The systems and engineering problems I focus on across backend development and infrastructure."
-  ) }}
+<div class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Backend Systems -->
+  <article class="card-interactive flex h-full flex-col p-8">
+    <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+      {{ partial "icon.html" (dict "name" "backend" "class" "h-6 w-6") }}
+    </div>
+    <h3 class="mt-6 text-xl font-semibold text-white">Backend Systems</h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      High-performance APIs, services, business logic, and server-side applications built for reliability and production workloads.
+    </p>
+    <p class="mt-auto pt-6 font-mono text-xs text-zinc-600">
+      Go · Python · REST · gRPC
+    </p>
+  </article>
 
-  <div
-    id="what-i-build-title"
-    class="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Distributed Systems -->
+  <article class="card-interactive flex h-full flex-col p-8">
+    <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+      {{ partial "icon.html" (dict "name" "distributed" "class" "h-6 w-6") }}
+    </div>
+    <h3 class="mt-6 text-xl font-semibold text-white">Distributed Systems</h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      Concurrent services, fault-tolerant architectures, service communication, and systems designed to remain reliable under load.
+    </p>
+    <p class="mt-auto pt-6 font-mono text-xs text-zinc-600">
+      Concurrency · TCP · Resilience · Observability
+    </p>
+  </article>
 
-    <article class="card-interactive p-8">
+  <!-- Cloud & Platform -->
+  <article class="card-interactive flex h-full flex-col p-8">
+    <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+      {{ partial "icon.html" (dict "name" "cloud" "class" "h-6 w-6") }}
+    </div>
+    <h3 class="mt-6 text-xl font-semibold text-white">Cloud & Platform</h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      Containerized workloads, Kubernetes environments, infrastructure as code, and automated delivery workflows for cloud-native systems.
+    </p>
+    <p class="mt-auto pt-6 font-mono text-xs text-zinc-600">
+      Kubernetes · Terraform · Docker · CI/CD · AWS
+    </p>
+  </article>
 
-      <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
-        {{ partial "icon.html" (dict "name" "backend" "class" "h-6 w-6") }}
-      </div>
+  <!-- Data & Persistence -->
+  <article class="card-interactive flex h-full flex-col p-8">
+    <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+      {{ partial "icon.html" (dict "name" "database" "class" "h-6 w-6") }}
+    </div>
+    <h3 class="mt-6 text-xl font-semibold text-white">Data & Persistence</h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      Data modeling, relational storage, caching, and reliable persistence patterns built around predictable data access and system behavior.
+    </p>
+    <p class="mt-auto pt-6 font-mono text-xs text-zinc-600">
+      PostgreSQL · Redis · Caching · Storage
+    </p>
+  </article>
 
-      <h3 class="mt-6 text-xl font-semibold text-white">
-        Backend Systems
-      </h3>
+  <!-- Software Engineering -->
+  <article class="card-interactive flex h-full flex-col p-8">
+    <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+      {{ partial "icon.html" (dict "name" "engineering" "class" "h-6 w-6") }}
+    </div>
+    <h3 class="mt-6 text-xl font-semibold text-white">Software Engineering</h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      System design, testing, performance engineering, clean architecture, and maintainable software backed by disciplined engineering practices.
+    </p>
+    <p class="mt-auto pt-6 font-mono text-xs text-zinc-600">
+      TDD · Benchmarks · Race Detection · CI
+    </p>
+  </article>
 
-      <p class="mt-4 leading-7 text-zinc-400">
-        APIs, services, business logic, and server-side applications built with Go and Python.
-      </p>
-
-    </article>
-
-    <article class="card-interactive p-8">
-
-      <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
-        {{ partial "icon.html" (dict "name" "distributed" "class" "h-6 w-6") }}
-      </div>
-
-      <h3 class="mt-6 text-xl font-semibold text-white">
-        Distributed Systems
-      </h3>
-
-      <p class="mt-4 leading-7 text-zinc-400">
-        Concurrency, service communication, fault tolerance, and architectures designed to scale across components.
-      </p>
-
-    </article>
-
-    <article class="card-interactive p-8">
-
-      <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
-        {{ partial "icon.html" (dict "name" "cloud" "class" "h-6 w-6") }}
-      </div>
-
-      <h3 class="mt-6 text-xl font-semibold text-white">
-        Cloud & Platform
-      </h3>
-
-      <p class="mt-4 leading-7 text-zinc-400">
-        Containers, Kubernetes, infrastructure as code, and automated delivery workflows for cloud-native systems.
-      </p>
-
-    </article>
-
-    <article class="card-interactive p-8">
-
-      <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
-        {{ partial "icon.html" (dict "name" "database" "class" "h-6 w-6") }}
-      </div>
-
-      <h3 class="mt-6 text-xl font-semibold text-white">
-        Data & Persistence
-      </h3>
-
-      <p class="mt-4 leading-7 text-zinc-400">
-        Data modeling, relational databases, caching, and reliable data-access patterns.
-      </p>
-
-    </article>
-
-    <article class="card-interactive p-8">
-
-      <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
-        {{ partial "icon.html" (dict "name" "engineering" "class" "h-6 w-6") }}
-      </div>
-
-      <h3 class="mt-6 text-xl font-semibold text-white">
-        Software Engineering
-      </h3>
-
-      <p class="mt-4 leading-7 text-zinc-400">
-        System design, testing, performance, clean architecture, and maintainable software.
-      </p>
-
-    </article>
-
-    <article class="card-interactive p-8">
-
-      <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
-        {{ partial "icon.html" (dict "name" "tools" "class" "h-6 w-6") }}
-      </div>
-
-      <h3 class="mt-6 text-xl font-semibold text-white">
-        Developer Tooling
-      </h3>
-
-      <p class="mt-4 leading-7 text-zinc-400">
-        CLI applications, automation, developer workflows, and tools that make engineering work more efficient.
-      </p>
-
-    </article>
-
-  </div>
-
-</section>
+  <!-- Developer Tooling -->
+  <article class="card-interactive flex h-full flex-col p-8">
+    <div class="flex h-12 w-12 items-center justify-center rounded-xl border border-white/10 bg-zinc-950 text-emerald-400">
+      {{ partial "icon.html" (dict "name" "tools" "class" "h-6 w-6") }}
+    </div>
+    <h3 class="mt-6 text-xl font-semibold text-white">Developer Tooling</h3>
+    <p class="mt-4 leading-7 text-zinc-400">
+      CLI applications, automation, build systems, and engineering tools that simplify workflows and improve development velocity.
+    </p>
+    <p class="mt-auto pt-6 font-mono text-xs text-zinc-600">
+      CLI · Bash · Make · Automation
+    </p>
+  </article>
+</div>
