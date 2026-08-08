@@ -1,43 +1,21 @@
 {{ define "main" }}
 
-<section class="section-shell">
-  {{ partial "hero.html" . }}
-</section>
+{{ partial "hero.html" . }}
 
-<section class="section-shell">
-  {{ partial "featured-project.html" . }}
-</section>
+{{ partial "project-metrics.html" . }}
 
-<section class="section-shell section-shell--compact">
-  {{ partial "project-metrics.html" . }}
-</section>
+{{ partial "featured-project.html" . }}
 
-<section class="section-shell">
-  {{ partial "featured-projects.html" . }}
-</section>
+{{ partial "featured-projects.html" . }}
 
-<section class="section-shell section-shell--compact">
-  {{ partial "featured-technologies.html" . }}
-</section>
+{{ partial "what-i-build.html" . }}
 
-<section class="section-shell">
-  {{ partial "what-i-build.html" . }}
-</section>
+{{ partial "technology-stack.html" . }}
 
-<section class="section-shell">
-  {{ partial "what-im-looking-for.html" . }}
-</section>
+{{ partial "engineering-journal.html" . }}
 
-<section class="section-shell">
-  {{ partial "engineering-journal.html" . }}
-</section>
+{{ partial "what-im-looking-for.html" . }}
 
-<section class="section-shell">
-  {{ partial "technology-stack.html" . }}
-</section>
-
-<section class="section-shell">
-  {{ partial "contact-cta.html" . }}
-</section>
+{{ partial "contact-cta.html" . }}
 
 {{ end }}

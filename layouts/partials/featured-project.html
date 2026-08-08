@@ -1,116 +1,86 @@
-{{ partial "section-header.html" (dict
-  "title" "Featured Project"
-  "description" "A closer look at the architecture, engineering decisions, and systems thinking behind my work."
-) }}
+<section class="py-28">
+  <div class="mx-auto max-w-7xl px-6">
 
-<article class="card-interactive mt-12 overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/70">
+    {{ partial "section-header.html" (dict
+      "title" "Featured Project"
+      "description" "A closer look at how I approach backend architecture, reliability, observability, and production-oriented engineering."
+    ) }}
 
-  <div class="grid lg:grid-cols-[1.35fr_0.65fr]">
+    <article class="card-interactive mt-14 overflow-hidden rounded-3xl">
 
-    <div class="p-8 sm:p-10 lg:p-12">
+      <div class="grid lg:grid-cols-[1.6fr_0.9fr]">
 
-      <div class="flex flex-wrap items-center gap-3">
+        <div class="p-8 sm:p-10 lg:p-12">
 
-        <span class="tech-pill">
-          Flagship Project
-        </span>
+          <span class="inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-wider text-emerald-400">
+            Featured project
+          </span>
 
-        <span class="text-sm text-zinc-600">
-          Backend · Infrastructure
-        </span>
+          <h2 class="mt-6 text-4xl font-bold tracking-tight text-white">
+            Flux Gateway
+          </h2>
+
+          <p class="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
+            A high-performance API gateway and reverse proxy built in Go,
+            focused on intelligent traffic management, resilience,
+            observability, and cloud-native deployment.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-2">
+            {{ range slice "Go" "Redis" "Docker" "Kubernetes" "Prometheus" "GitHub Actions" }}
+              <span class="tech-pill">{{ . }}</span>
+            {{ end }}
+          </div>
+
+          <div class="mt-10 flex flex-wrap gap-4">
+            <a
+              href="https://github.com/ikwukao/flux-gateway"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-primary">
+              View Source
+              <span aria-hidden="true">↗</span>
+            </a>
+
+            <a
+              href="/projects/flux-gateway/"
+              class="btn-secondary">
+              Read Case Study
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+
+        </div>
+
+        <aside class="border-t border-white/10 bg-zinc-950/50 p-8 lg:border-l lg:border-t-0 lg:p-10">
+
+          <p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            Engineering focus
+          </p>
+
+          <ul class="mt-6 space-y-4 text-sm leading-6 text-zinc-400">
+            <li class="border-b border-white/10 pb-4">
+              Traffic management & routing
+            </li>
+
+            <li class="border-b border-white/10 pb-4">
+              Resilience & fault handling
+            </li>
+
+            <li class="border-b border-white/10 pb-4">
+              Metrics & observability
+            </li>
+
+            <li>
+              Containerized deployment
+            </li>
+          </ul>
+
+        </aside>
 
       </div>
 
-      <h2 class="mt-6 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-        Flux Gateway
-      </h2>
-
-      <p class="mt-6 max-w-3xl text-lg leading-8 text-zinc-400">
-
-        A high-performance API gateway and reverse proxy built in Go,
-        exploring intelligent traffic management, resilience patterns,
-        observability, and cloud-native deployment.
-
-      </p>
-
-      <div class="mt-8 flex flex-wrap gap-2">
-
-        {{ range slice "Go" "Redis" "Docker" "Kubernetes" "Prometheus" "GitHub Actions" }}
-
-        <span class="tech-pill">
-          {{ . }}
-        </span>
-
-        {{ end }}
-
-      </div>
-
-      <div class="mt-10 flex flex-wrap gap-4">
-
-        <a
-          href="https://github.com/ikwukao/flux-gateway"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn-primary">
-
-          View Source
-          <span aria-hidden="true">↗</span>
-
-        </a>
-
-        <a
-          href="/projects/flux-gateway/"
-          class="btn-secondary">
-
-          Read Case Study
-          <span aria-hidden="true">→</span>
-
-        </a>
-
-      </div>
-
-    </div>
-
-    <aside class="border-t border-white/10 bg-black/20 p-8 lg:border-l lg:border-t-0 lg:p-10">
-
-      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-zinc-600">
-        Engineering Focus
-      </p>
-
-      <ul class="mt-6 space-y-5">
-
-        <li>
-          <p class="font-medium text-white">Traffic Management</p>
-          <p class="mt-1 text-sm leading-6 text-zinc-500">
-            Routing and controlled service communication.
-          </p>
-        </li>
-
-        <li>
-          <p class="font-medium text-white">Resilience</p>
-          <p class="mt-1 text-sm leading-6 text-zinc-500">
-            Designing for failure rather than assuming it away.
-          </p>
-        </li>
-
-        <li>
-          <p class="font-medium text-white">Observability</p>
-          <p class="mt-1 text-sm leading-6 text-zinc-500">
-            Metrics and visibility into system behaviour.
-          </p>
-        </li>
-
-        <li>
-          <p class="font-medium text-white">Cloud Native</p>
-          <p class="mt-1 text-sm leading-6 text-zinc-500">
-            Containerized and automation-friendly deployment.
-          </p>
-        </li>
-
-      </ul>
-
-    </aside>
+    </article>
 
   </div>
-
-</article>
+</section>

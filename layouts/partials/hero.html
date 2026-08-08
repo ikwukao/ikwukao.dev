@@ -1,193 +1,115 @@
-<div class="grid items-center gap-16 lg:grid-cols-[1.15fr_0.85fr] lg:gap-20">
+<section class="relative overflow-hidden border-b border-white/10">
+  <div class="mx-auto grid max-w-7xl gap-16 px-6 py-24 lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:py-32">
 
-  <div>
+    <div>
+      <div class="mb-8 flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-1.5 text-sm font-medium text-emerald-300">
+          <span class="h-2 w-2 rounded-full bg-emerald-400" aria-hidden="true"></span>
+          Available for remote opportunities
+        </span>
+      </div>
 
-    <div class="mb-7 flex flex-wrap items-center gap-3">
+      <p class="mb-5 text-sm font-semibold uppercase tracking-[0.22em] text-emerald-400">
+        Backend Engineer · Go · Distributed Systems
+      </p>
 
-      <span
-        class="inline-flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300">
+      <h1 class="max-w-4xl text-5xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
+        Building reliable systems
+        <span class="text-zinc-500">for real-world scale.</span>
+      </h1>
 
-        <span
-          class="h-2 w-2 rounded-full bg-emerald-400"
-          aria-hidden="true"></span>
+      <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
+        I design and build high-performance backend services, distributed systems,
+        and cloud-native platforms with Go, Python, and modern infrastructure.
+      </p>
 
-        Available for remote opportunities
+      <div class="mt-10 flex flex-wrap gap-4">
+        <a
+          href="/projects/"
+          class="btn-primary"
+          aria-label="Explore Ikwuka Okoye's engineering projects">
+          Explore My Work
+          <span aria-hidden="true">→</span>
+        </a>
 
-      </span>
+        <a
+          href="/contact/"
+          class="btn-secondary"
+          aria-label="Contact Ikwuka Okoye">
+          Let's Talk
+        </a>
+      </div>
 
+      <div class="mt-8 flex flex-wrap gap-x-6 gap-y-3 text-sm text-zinc-500">
+        <a
+          href="{{ site.Params.github }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="transition hover:text-emerald-400">
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="/journal/"
+          class="transition hover:text-emerald-400">
+          Engineering Journal <span aria-hidden="true">→</span>
+        </a>
+      </div>
     </div>
-
-    <p class="mb-6 text-sm font-semibold uppercase tracking-[0.24em] text-emerald-400">
-      Go Backend Engineering · Distributed Systems
-    </p>
-
-    <h1 class="max-w-4xl text-5xl font-bold tracking-[-0.03em] text-white sm:text-6xl lg:text-7xl">
-
-      Building reliable systems
-      <span class="text-zinc-500">for the real world.</span>
-
-    </h1>
-
-    <p class="mt-8 max-w-2xl text-lg leading-8 text-zinc-400 sm:text-xl">
-
-      I’m a backend engineer focused on Go, distributed systems, and
-      cloud-native infrastructure. I build reliable services, developer
-      platforms, and backend systems designed to scale.
-
-    </p>
-
-    <div class="mt-10 flex flex-wrap gap-4">
-
-      <a
-        href="/projects/"
-        class="btn-primary"
-        aria-label="Explore engineering projects">
-
-        Explore My Work
-        <span aria-hidden="true">→</span>
-
-      </a>
-
-      <a
-        href="/contact/"
-        class="btn-secondary"
-        aria-label="Get in touch">
-
-        Get in Touch
-
-      </a>
-
-    </div>
-
-    <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-zinc-500">
-
-      <a
-        href="{{ site.Params.github }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="transition-colors hover:text-emerald-400">
-
-        GitHub
-        <span aria-hidden="true">↗</span>
-
-      </a>
-
-      {{ with site.Params.linkedin }}
-
-      <a
-        href="{{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="transition-colors hover:text-emerald-400">
-
-        LinkedIn
-        <span aria-hidden="true">↗</span>
-
-      </a>
-
-      {{ end }}
-
-      {{ with site.Params.twitter }}
-
-      <a
-        href="{{ . }}"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="transition-colors hover:text-emerald-400">
-
-        X
-        <span aria-hidden="true">↗</span>
-
-      </a>
-
-      {{ end }}
-
-    </div>
-
-  </div>
-
-  <div class="relative">
 
     <div
-      class="absolute -inset-6 -z-10 rounded-full bg-emerald-500/10 blur-3xl"
-      aria-hidden="true"></div>
-
-    <div class="overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl">
+      class="overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 shadow-2xl shadow-emerald-500/5"
+      aria-label="Terminal-style engineering workspace"
+      role="img">
 
       <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
-
         <div class="flex gap-2" aria-hidden="true">
           <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
           <span class="h-3 w-3 rounded-full bg-yellow-500/80"></span>
           <span class="h-3 w-3 rounded-full bg-green-500/80"></span>
         </div>
 
-        <span class="font-mono text-xs tracking-[0.18em] text-zinc-600">
-          ~/ikwukao
+        <span class="font-mono text-xs uppercase tracking-[0.2em] text-zinc-600">
+          engineer.sh
         </span>
-
       </div>
 
-      <div class="p-6 font-mono text-sm leading-7 sm:p-8">
-
-        <p class="text-zinc-500">
-          $ whoami
-        </p>
-
-        <p class="mt-1 text-emerald-400">
-          ikwukao
-        </p>
-
-        <p class="mt-5 text-zinc-500">
-          $ focus
-        </p>
-
-        <p class="mt-1 text-zinc-300">
-          Go · Distributed Systems
-        </p>
-
-        <p class="mt-5 text-zinc-500">
-          $ build --reliable
-        </p>
-
-        <div class="mt-1 space-y-1 text-zinc-300">
-
-          <p>
-            <span class="text-emerald-400">✓</span>
-            Backend services
-          </p>
-
-          <p>
-            <span class="text-emerald-400">✓</span>
-            Cloud-native platforms
-          </p>
-
-          <p>
-            <span class="text-emerald-400">✓</span>
-            Developer tooling
-          </p>
-
-          <p>
-            <span class="text-emerald-400">✓</span>
-            Production infrastructure
-          </p>
-
+      <div class="space-y-5 p-6 font-mono text-sm leading-7 sm:p-8">
+        <div>
+          <span class="text-emerald-400">$</span>
+          <span class="ml-2 text-zinc-300">whoami</span>
         </div>
 
-        <p class="mt-5 text-zinc-500">
-          $ status
-        </p>
+        <div class="pl-4 text-zinc-500">
+          ikwukao · backend engineer
+        </div>
 
-        <p class="mt-1">
-          <span class="text-emerald-400">online</span>
-          <span class="text-zinc-600">·</span>
-          <span class="text-zinc-400">ready to build</span>
-        </p>
+        <div>
+          <span class="text-emerald-400">$</span>
+          <span class="ml-2 text-zinc-300">focus --current</span>
+        </div>
 
+        <div class="space-y-1 pl-4 text-zinc-500">
+          <p>→ distributed systems</p>
+          <p>→ high-performance Go services</p>
+          <p>→ cloud-native infrastructure</p>
+          <p>→ platform engineering</p>
+        </div>
+
+        <div>
+          <span class="text-emerald-400">$</span>
+          <span class="ml-2 text-zinc-300">status</span>
+        </div>
+
+        <div class="pl-4 text-emerald-400">
+          systems ready.
+        </div>
+
+        <div class="pt-2 text-zinc-700">
+          _
+        </div>
       </div>
-
     </div>
 
   </div>
-
-</div>
+</section>
