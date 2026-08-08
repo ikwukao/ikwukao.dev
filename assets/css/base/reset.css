@@ -5,30 +5,65 @@
 }
 
 html {
+  min-width: 320px;
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: var(--accent) var(--surface);
+  scrollbar-color: var(--border) var(--surface);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 body {
+  min-height: 100vh;
   margin: 0;
   overflow-x: hidden;
   background: var(--bg);
   color: var(--text);
   line-height: 1.7;
+  text-rendering: optimizeLegibility;
+}
+
+body,
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
 
 img,
-picture {
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
+}
+
+img,
+video {
   height: auto;
 }
 
-svg {
-  display: block;
+button,
+input,
+textarea,
+select {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  border: 0;
 }
 
 ::selection {
@@ -50,7 +85,8 @@ svg {
 }
 
 ::-webkit-scrollbar-thumb {
-  border-radius: 999px;
+  border: 2px solid var(--surface);
+  border-radius: var(--radius-pill);
   background: var(--border);
 }
 

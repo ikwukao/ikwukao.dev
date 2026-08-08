@@ -1,32 +1,33 @@
 @media (max-width: 1024px) {
+  :root {
+    --gutter: 1.25rem;
+    --section-space: var(--section-space-md);
+  }
+
   .section {
-    padding-block: 5rem;
+    padding-block: var(--section-space-md);
   }
 }
 
 @media (max-width: 768px) {
+  :root {
+    --gutter: 1rem;
+  }
+
   html {
     font-size: 15px;
   }
 
-  .container {
-    padding-inline: 1rem;
-  }
-
   .section {
-    padding-block: 4rem;
-  }
-
-  article {
-    border-radius: 1rem;
+    padding-block: var(--section-space-sm);
   }
 
   h1 {
-    line-height: 1.1;
+    line-height: 1.08;
   }
 
   h2 {
-    line-height: 1.2;
+    line-height: 1.15;
   }
 
   .btn-primary,
@@ -36,5 +37,29 @@
 
   #mobile-menu nav a {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --gutter: 0.875rem;
+  }
+
+  .section {
+    padding-block: 3.5rem;
+  }
+}
+
+@media (max-width: 375px) {
+  :root {
+    --gutter: 0.75rem;
+  }
+
+  html {
+    font-size: 14px;
+  }
+
+  .section {
+    padding-block: 3rem;
   }
 }

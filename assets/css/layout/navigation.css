@@ -1,9 +1,9 @@
 header {
   position: sticky;
   top: 0;
-  z-index: 50;
-  border-bottom: 1px solid rgb(255 255 255 / 0.05);
-  background: rgb(5 5 5 / 0.75);
+  z-index: var(--z-header);
+  border-bottom: 1px solid var(--border-subtle);
+  background: rgb(5 5 5 / 0.82);
   backdrop-filter: blur(18px);
   -webkit-backdrop-filter: blur(18px);
 }
@@ -20,13 +20,15 @@ header nav a {
 }
 
 header nav a::after {
-  content: "";
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: -0.45rem;
+  left: 0;
   width: 0;
   height: 2px;
+  margin-inline: auto;
   background: var(--accent);
+  content: "";
   transition: width var(--transition);
 }
 
@@ -36,17 +38,25 @@ header nav a[aria-current="page"]::after {
 }
 
 header nav a:hover {
-  color: var(--accent);
+  color: var(--accent-hover);
 }
 
 #mobile-menu {
+  border-top: 1px solid var(--border-subtle);
+  background: rgb(10 10 10 / 0.98);
   animation: nav-slide 220ms ease;
+}
+
+#mobile-menu a {
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
 }
 
 @keyframes nav-slide {
   from {
     opacity: 0;
-    transform: translateY(-0.75rem);
+    transform: translateY(-0.5rem);
   }
 
   to {

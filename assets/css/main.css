@@ -10,14 +10,13 @@
 @import "./layout/footer.css";
 
 @import "./components/buttons.css";
+@import "./components/cards.css";
 @import "./components/icons.css";
 @import "./components/tech-pill.css";
 @import "./components/prose.css";
 
 @import "./utilities/animations.css";
 @import "./utilities/responsive.css";
-
-/* Mobile Navigation */
 
 #mobile-menu {
   animation: nav-slide-down .2s ease;

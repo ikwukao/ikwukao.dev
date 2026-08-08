@@ -4,6 +4,7 @@ button {
     color var(--transition),
     background-color var(--transition),
     border-color var(--transition),
+    opacity var(--transition),
     transform var(--transition),
     box-shadow var(--transition);
 }
@@ -17,33 +18,49 @@ button,
 .btn-primary,
 .btn-secondary {
   display: inline-flex;
+  min-height: 2.75rem;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
   border-radius: var(--radius);
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9375rem;
   font-weight: 600;
+  line-height: 1;
 }
 
 .btn-primary {
   border: 1px solid var(--accent);
   background: var(--accent);
   color: var(--accent-foreground);
+  box-shadow: 0 0 0 0 rgb(16 185 129 / 0);
 }
 
 .btn-primary:hover {
+  border-color: var(--accent-hover);
   background: var(--accent-hover);
   transform: translateY(-1px);
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-accent);
 }
 
 .btn-secondary {
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
   background: transparent;
-  color: var(--text);
+  color: var(--text-secondary);
 }
 
 .btn-secondary:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  border-color: var(--accent-border);
+  background: var(--accent-soft);
+  color: var(--accent-hover);
+}
+
+.btn-primary:active,
+.btn-secondary:active {
+  transform: translateY(0);
+}
+
+.btn-primary:focus-visible,
+.btn-secondary:focus-visible {
+  outline-offset: 3px;
 }
