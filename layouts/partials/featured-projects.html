@@ -3,12 +3,13 @@
   "description" "Three systems that represent the engineering direction of my portfolio: resilient backend infrastructure, high-throughput distributed systems, and production-oriented platform engineering."
 ) }}
 
-<div class="mt-14 grid gap-6 lg:grid-cols-3">
+<!-- Featured Project Grid -->
+<div class="mt-12 grid gap-6 lg:grid-cols-3">
 
-  <!-- Flux Gateway -->
+  <!-- Flux-Gateway -->
+  <article class="card-interactive group flex h-full flex-col p-8">
 
-  <article class="group flex h-full flex-col overflow-hidden rounded-3xl border border-emerald-500/20 bg-zinc-950/80 p-7 shadow-xl shadow-emerald-500/5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-2xl hover:shadow-emerald-500/10 sm:p-8">
-
+    <!-- Project Header -->
     <div class="flex items-start justify-between gap-4">
 
       <span class="inline-flex rounded-full border border-emerald-500/25 bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-emerald-400">
@@ -21,12 +22,13 @@
 
     </div>
 
-    <h3 class="mt-7 text-2xl font-bold tracking-tight text-white">
+    <!-- Project Identity -->
+    <h3 class="mt-7 text-2xl font-bold tracking-tight text-white transition-colors group-hover:text-emerald-400">
       Flux-Gateway
     </h3>
 
     <p class="mt-4 text-sm font-medium text-emerald-400">
-      Fault-Tolerant API Gateway & Reverse Proxy
+      Fault-Tolerant API Gateway &amp; Reverse Proxy
     </p>
 
     <p class="mt-5 flex-1 text-sm leading-7 text-zinc-400">
@@ -36,21 +38,24 @@
       and production-grade observability.
     </p>
 
+    <!-- Engineering Metrics -->
     <div class="mt-7 grid grid-cols-2 gap-3">
 
-      <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-zinc-600">
           Load
         </p>
+
         <p class="mt-2 text-lg font-bold text-emerald-400">
           14,200 req/s
         </p>
       </div>
 
-      <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-zinc-600">
           Fail-Fast
         </p>
+
         <p class="mt-2 text-lg font-bold text-emerald-400">
           &lt;0.4 ms
         </p>
@@ -58,16 +63,16 @@
 
     </div>
 
+    <!-- Technology Stack -->
     <div class="mt-7 flex flex-wrap gap-2">
-
       <span class="tech-pill">Go</span>
       <span class="tech-pill">Redis</span>
       <span class="tech-pill">Prometheus</span>
       <span class="tech-pill">Docker</span>
       <span class="tech-pill">Kubernetes</span>
-
     </div>
 
+    <!-- Project Actions -->
     <div class="mt-8 flex flex-wrap gap-3">
 
       <a
@@ -91,14 +96,13 @@
 
   </article>
 
+  <!-- Strata-Log -->
+  <article class="card-interactive group flex h-full flex-col p-8">
 
-  <!-- Strata Log -->
-
-  <article class="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/80 p-7 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/5 sm:p-8">
-
+    <!-- Project Header -->
     <div class="flex items-start justify-between gap-4">
 
-      <span class="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-400">
+      <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-400">
         Distributed Systems
       </span>
 
@@ -108,7 +112,8 @@
 
     </div>
 
-    <h3 class="mt-7 text-2xl font-bold tracking-tight text-white">
+    <!-- Project Identity -->
+    <h3 class="mt-7 text-2xl font-bold tracking-tight text-white transition-colors group-hover:text-emerald-400">
       Strata-Log
     </h3>
 
@@ -123,21 +128,24 @@
       buffered persistence.
     </p>
 
+    <!-- Engineering Metrics -->
     <div class="mt-7 grid grid-cols-2 gap-3">
 
-      <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-zinc-600">
           Throughput
         </p>
+
         <p class="mt-2 text-lg font-bold text-emerald-400">
           165K lines/s
         </p>
       </div>
 
-      <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-zinc-600">
           Allocations
         </p>
+
         <p class="mt-2 text-lg font-bold text-emerald-400">
           0 allocs/op
         </p>
@@ -145,16 +153,16 @@
 
     </div>
 
+    <!-- Technology Stack -->
     <div class="mt-7 flex flex-wrap gap-2">
-
       <span class="tech-pill">Go</span>
       <span class="tech-pill">TCP</span>
       <span class="tech-pill">sync.Pool</span>
       <span class="tech-pill">Worker Pools</span>
       <span class="tech-pill">bufio</span>
-
     </div>
 
+    <!-- Project Actions -->
     <div class="mt-8 flex flex-wrap gap-3">
 
       <a
@@ -178,14 +186,13 @@
 
   </article>
 
+  <!-- Platform-Infra -->
+  <article class="card-interactive group flex h-full flex-col p-8">
 
-  <!-- Platform Infra -->
-
-  <article class="group flex h-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-zinc-950/80 p-7 shadow-xl shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:shadow-2xl hover:shadow-emerald-500/5 sm:p-8">
-
+    <!-- Project Header -->
     <div class="flex items-start justify-between gap-4">
 
-      <span class="inline-flex rounded-full border border-white/10 bg-white/[0.03] px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-400">
+      <span class="inline-flex rounded-full border border-white/10 bg-white/5 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.16em] text-zinc-400">
         Platform Engineering
       </span>
 
@@ -195,12 +202,13 @@
 
     </div>
 
-    <h3 class="mt-7 text-2xl font-bold tracking-tight text-white">
+    <!-- Project Identity -->
+    <h3 class="mt-7 text-2xl font-bold tracking-tight text-white transition-colors group-hover:text-emerald-400">
       Platform-Infra
     </h3>
 
     <p class="mt-4 text-sm font-medium text-emerald-400">
-      Infrastructure & Multi-Project Orchestration
+      Infrastructure &amp; Multi-Project Orchestration
     </p>
 
     <p class="mt-5 flex-1 text-sm leading-7 text-zinc-400">
@@ -210,21 +218,24 @@
       workflows.
     </p>
 
+    <!-- Engineering Metrics -->
     <div class="mt-7 grid grid-cols-2 gap-3">
 
-      <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-zinc-600">
           Image Size
         </p>
+
         <p class="mt-2 text-lg font-bold text-emerald-400">
           &lt;20 MB
         </p>
       </div>
 
-      <div class="rounded-2xl border border-white/10 bg-white/[0.02] p-4">
+      <div class="rounded-2xl border border-white/10 bg-white/5 p-4">
         <p class="text-xs uppercase tracking-[0.15em] text-zinc-600">
           Rollouts
         </p>
+
         <p class="mt-2 text-lg font-bold text-emerald-400">
           &lt;25 sec
         </p>
@@ -232,16 +243,16 @@
 
     </div>
 
+    <!-- Technology Stack -->
     <div class="mt-7 flex flex-wrap gap-2">
-
       <span class="tech-pill">Terraform</span>
       <span class="tech-pill">Kubernetes</span>
       <span class="tech-pill">Docker</span>
       <span class="tech-pill">Bash</span>
       <span class="tech-pill">Make</span>
-
     </div>
 
+    <!-- Project Actions -->
     <div class="mt-8 flex flex-wrap gap-3">
 
       <a
@@ -265,4 +276,14 @@
 
   </article>
 
+</div>
+
+<!-- Project Archive Link -->
+<div class="mt-10 flex justify-center">
+  <a
+    href="{{ "/projects/" | relURL }}"
+    class="btn-secondary">
+    View All Projects
+    <span aria-hidden="true">→</span>
+  </a>
 </div>

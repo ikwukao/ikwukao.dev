@@ -2,16 +2,13 @@
 
 {{ if $articles }}
 
-<section class="py-24 sm:py-28" aria-labelledby="engineering-journal-title">
-
   {{ partial "section-header.html" (dict
     "title" "Engineering Journal"
     "description" "Notes on systems, architecture, implementation, and lessons learned while building."
   ) }}
 
-  <div
-    id="engineering-journal-title"
-    class="mt-14 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Recent Journal Articles -->
+  <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 
     {{ range first 3 $articles.ByDate.Reverse }}
       {{ partial "journal-card.html" . }}
@@ -19,15 +16,24 @@
 
   </div>
 
-  <div class="mt-12 text-center">
-    <a
-      href="{{ "/journal/" | relURL }}"
-      class="btn-secondary">
-      View Engineering Journal
-      <span aria-hidden="true">→</span>
-    </a>
-  </div>
+  <!-- Journal Archive Link -->
+  {{ if gt (len $articles) 3 }}
 
-</section>
+    <div class="mt-10 flex justify-center">
+
+      <a
+        href="{{ "/journal/" | relURL }}"
+        class="btn-secondary"
+        aria-label="Read all engineering journal articles">
+
+        Read the Engineering Journal
+
+        <span aria-hidden="true">→</span>
+
+      </a>
+
+    </div>
+
+  {{ end }}
 
 {{ end }}
