@@ -27,6 +27,8 @@ metrics:
 
 Platform-Infra is a master multi-project orchestration repository applying Infrastructure-as-Code principles to declaratively manage configurations and workloads for core Go services.
 
+---
+
 ## Engineering Highlights
 
 - Authored declarative Terraform configurations for local Kubernetes infrastructure.
@@ -40,6 +42,10 @@ Platform-Infra is a master multi-project orchestration repository applying Infra
 - Targeted final transit images below 20MB.
 - Designed deployment workflows targeting rollouts under 25 seconds.
 
+---
+
 ## Engineering Focus
 
 **Infrastructure as Code · Kubernetes · Terraform · Containers · Automation · Platform Engineering**
+
+---

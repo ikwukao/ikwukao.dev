@@ -42,4 +42,4 @@ Flux-Gateway is a high-performance API Gateway and Reverse Proxy built in Go fro
 
 ## Engineering Focus
 
-**Reliability · Concurrency · Fault Tolerance · Traffic Control · Observability · Testing**
+Reliability · Concurrency · Fault Tolerance · Traffic Control · Observability · Testing

@@ -26,6 +26,8 @@ metrics:
 
 Strata-Log is an ultra-high-throughput distributed log aggregation engine in Go designed to safely process thousands of concurrent log streams over raw TCP network sockets.
 
+---
+
 ## Engineering Highlights
 
 - Designed a zero-allocation byte-buffer recycling tier using a custom `sync.Pool` wrapper.
@@ -41,6 +43,10 @@ Strata-Log is an ultra-high-throughput distributed log aggregation engine in Go 
 - Coordinated graceful shutdown with `sync.WaitGroup`.
 - Designed shutdown paths to avoid zombie threads and guarantee buffered data flushes.
 
+---
+
 ## Engineering Focus
 
 **High Throughput · Memory Efficiency · Concurrency · TCP Networking · Buffered I/O · Graceful Shutdown**
+
+---
