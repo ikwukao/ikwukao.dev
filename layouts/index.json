@@ -1,0 +1,17 @@
+[
+{{- $pages := where site.RegularPages "Type" "not in" (slice "404") -}}
+
+{{- range $index, $page := $pages }}
+
+{{ if $index }},{{ end }}
+
+{
+"title": {{ $page.Title | jsonify }},
+"summary": {{ $page.Summary | jsonify }},
+"content": {{ $page.Plain | jsonify }},
+"permalink": {{ $page.RelPermalink | jsonify }}
+}
+
+{{- end }}
+
+]
