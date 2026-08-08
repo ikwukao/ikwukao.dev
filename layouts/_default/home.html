@@ -1,28 +1,52 @@
 {{ define "main" }}
 
-<div class="mx-auto w-full max-w-7xl px-6 sm:px-8 lg:px-10">
+<!-- Homepage -->
+<div>
 
-  <section class="py-20 sm:py-24 lg:py-28">
-    <div class="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
-      {{ partial "hero.html" . }}
+  <!-- Hero -->
+  <section class="section">
+    <div class="container">
+      <div class="grid items-center gap-14 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20">
+        {{ partial "hero.html" . }}
+      </div>
     </div>
   </section>
 
-  <section id="featured-projects" class="py-20 sm:py-24 lg:py-28">
-    {{ partial "featured-projects.html" . }}
+  <!-- Featured Projects -->
+  <section
+    id="featured-projects"
+    class="section">
+    <div class="container">
+      {{ partial "featured-projects.html" . }}
+    </div>
   </section>
 
-  <section id="what-i-build" class="py-20 sm:py-24 lg:py-28">
-    {{ partial "what-i-build.html" . }}
+  <!-- What I Build -->
+  <section
+    id="what-i-build"
+    class="section">
+    <div class="container">
+      {{ partial "what-i-build.html" . }}
+    </div>
   </section>
 
-  <section id="engineering-journal" class="py-20 sm:py-24 lg:py-28">
-    {{ partial "engineering-journal.html" . }}
+  <!-- Engineering Journal -->
+  <section
+    id="engineering-journal"
+    class="section">
+    <div class="container">
+      {{ partial "engineering-journal.html" . }}
+    </div>
   </section>
 
-  <section id="contact" class="py-20 sm:py-24 lg:py-28">
-    <div class="mx-auto max-w-4xl text-center">
-      {{ partial "contact-cta.html" . }}
+  <!-- Contact -->
+  <section
+    id="contact"
+    class="section">
+    <div class="container">
+      <div class="mx-auto max-w-4xl text-center">
+        {{ partial "contact-cta.html" . }}
+      </div>
     </div>
   </section>
 
