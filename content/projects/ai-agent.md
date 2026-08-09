@@ -1,4 +1,5 @@
 ---
+
 title: "AI Agent"
 description: "A production-oriented AI coding assistant designed to understand codebases, reason about engineering tasks, and execute development workflows through modern agentic tooling."
 date: 2026-07-10
@@ -15,13 +16,15 @@ technologies:
     - LangChain
     - CLI
     - Git
-  tags:
+tags:
     - Artificial Intelligence
     - AI Agents
     - Developer Tooling
     - Python
     - LLM
     - Automation
+---
+
 ---
 
 ## Overview

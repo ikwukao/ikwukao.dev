@@ -10,21 +10,20 @@ status: "Completed"
 github: "https://github.com/ikwukao/pokedexcli"
 demo: ""
 technologies:
-
-* Go
-* REST API
-* HTTP
-* JSON
-* CLI
-* Caching
-* Git
-  tags:
-* Go
-* Backend
-* APIs
-* CLI
-* Caching
-* Boot.dev
+  - Go
+  - REST API
+  - HTTP
+  - JSON
+  - CLI
+  - Caching
+  - Git
+tags:
+  - Go
+  - Backend
+  - APIs
+  - CLI
+  - Caching
+  - Boot.dev
 
 ---
 

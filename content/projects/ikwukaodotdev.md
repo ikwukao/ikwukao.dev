@@ -10,21 +10,20 @@ status: "Active"
 github: "https://github.com/ikwukao/ikwukao.dev"
 demo: "https://ikwukao.dev/"
 technologies:
-
-* Hugo
-* Go
-* Tailwind CSS
-* HTML
-* CSS
-* JavaScript
-* Git
-  tags:
-* Web Development
-* Hugo
-* Portfolio
-* Frontend
-* Developer Experience
-* Technical Writing
+  - Hugo
+  - Go
+  - Tailwind CSS
+  - HTML
+  - CSS
+  - JavaScript
+  - Git
+tags:
+  - Web Development
+  - Hugo
+  - Portfolio
+  - Frontend
+  - Developer Experience
+  - Technical Writing
 
 ---
 

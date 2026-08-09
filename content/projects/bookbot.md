@@ -10,18 +10,17 @@ status: "Completed"
 github: "https://github.com/ikwukao/bookbot"
 demo: ""
 technologies:
-
-* Python
-* CLI
-* Text Processing
-* File I/O
-* Git
-  tags:
-* Python
-* CLI
-* Text Processing
-* File Processing
-* Boot.dev
+   - Python
+   - CLI
+   - Text Processing
+   - File I/O
+   - Git
+tags:
+   - Python
+   - CLI
+   - Text Processing
+   - File Processing
+   - Boot.dev
 
 ---
 

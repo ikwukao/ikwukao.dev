@@ -8,24 +8,21 @@ draft: false
 featured: false
 status: "Completed"
 github: "https://github.com/ikwukao/static-site-generator"
-demo: ""
+demo: "https://ikwukao.github.io/static-site-generator/"
 technologies:
-
-* Python
-* Markdown
-* HTML
-* Parsing
-* Testing
-* Git
-  tags:
-* Python
-* Backend
-* Parsing
-* Static Sites
-* HTML
-* Boot.dev
-
----
+   - Python
+   - Markdown
+   - HTML
+   - Parsing
+   - Testing
+   - Git
+tags:
+   - Python
+   - Backend
+   - Parsing
+   - Static Sites
+   - HTML
+   - Boot.dev
 
 ---
 

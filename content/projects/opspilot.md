@@ -10,23 +10,20 @@ status: "Active"
 github: "https://github.com/ikwukao/opspilot"
 demo: ""
 technologies:
-
-* Go
-* Python
-* Bash
-* Docker
-* Kubernetes
-* Linux
-* Git
-  tags:
-* DevOps
-* Backend
-* Automation
-* Cloud Native
-* Infrastructure
-* Developer Productivity
-
----
+    - Go
+    - Python
+    - Bash
+    - Docker
+    - Kubernetes
+    - Linux
+    - Git
+tags:
+    - DevOps
+    - Backend
+    - Automation
+    - Cloud Native
+    - Infrastructure
+    - Developer Productivity
 
 ---
 
