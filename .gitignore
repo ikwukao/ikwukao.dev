@@ -24,3 +24,6 @@ node_modules
 
 # JetBrains
 .idea/
+
+# Articles Draft
+content/draft/
