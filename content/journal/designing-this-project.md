@@ -4,7 +4,7 @@ title: "Designing This Portfolio as an Engineering Project"
 description: "The thinking behind building a portfolio that documents engineering work instead of simply displaying it."
 date: 2026-08-05
 draft: false
-featured: false
+featured: true
 tags:
   - Engineering
   - Architecture
