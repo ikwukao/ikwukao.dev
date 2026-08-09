@@ -1,55 +1,28 @@
-<section class="border-t border-white/10 border-b py-12">
-
-  <div class="mx-auto grid max-w-6xl gap-8 px-6 text-center md:grid-cols-3">
-
-    <div>
-
-      <p class="text-4xl font-bold text-emerald-400">
-
-        {{ len (where site.RegularPages "Section" "journal") }}
-
-      </p>
-
-      <p class="mt-2 text-zinc-500">
-
-        Articles
-
-      </p>
-
-    </div>
-
-    <div>
-
-      <p class="text-4xl font-bold text-emerald-400">
-
-        Go • Backend
-
-      </p>
-
-      <p class="mt-2 text-zinc-500">
-
-        Primary Topics
-
-      </p>
-
-    </div>
-
-    <div>
-
-      <p class="text-4xl font-bold text-emerald-400">
-
-        Engineering
-
-      </p>
-
-      <p class="mt-2 text-zinc-500">
-
-        Design Notes
-
-      </p>
-
-    </div>
-
+<div class="mt-16 grid gap-6 border-y border-white/10 py-10 sm:grid-cols-3">
+  <div>
+    <p class="text-3xl font-bold text-white">
+      {{ len (where site.RegularPages "Section" "journal") }}
+    </p>
+    <p class="mt-2 text-sm uppercase tracking-wider text-zinc-500">
+      Published Articles
+    </p>
   </div>
 
-</section>
+  <div>
+    <p class="text-3xl font-bold text-white">
+      Backend • Go
+    </p>
+    <p class="mt-2 text-sm uppercase tracking-wider text-zinc-500">
+      Primary Focus
+    </p>
+  </div>
+
+  <div>
+    <p class="text-3xl font-bold text-white">
+      Build • Learn • Document
+    </p>
+    <p class="mt-2 text-sm uppercase tracking-wider text-zinc-500">
+      Engineering Philosophy
+    </p>
+  </div>
+</div>

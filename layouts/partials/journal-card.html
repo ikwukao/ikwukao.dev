@@ -1,51 +1,48 @@
-<article class="group rounded-xl border border-white/10 bg-zinc-900/40 p-8 backdrop-blur transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40">
+<article class="group rounded-2xl border border-white/10 bg-white/[0.015] p-7 transition duration-300 hover:-translate-y-0.5 hover:border-emerald-500/30 hover:bg-white/[0.025] sm:p-8">
+  <div class="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
+    <div class="max-w-3xl">
+      <div class="flex flex-wrap items-center gap-x-3 gap-y-2 text-xs font-medium uppercase tracking-[0.15em] text-zinc-500">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">
+          {{ .Date.Format "January 2, 2006" }}
+        </time>
+        <span aria-hidden="true">•</span>
+        <span>
+          {{ .ReadingTime }} min read
+        </span>
+      </div>
 
-  <p class="text-sm uppercase tracking-wider text-zinc-500">
-    {{ .Date.Format "January 2, 2006" }} • {{ .ReadingTime }} min read
-  </p>
+      <h2 class="mt-4 text-2xl font-bold tracking-tight text-white sm:text-3xl">
+        <a href="{{ .RelPermalink }}" class="transition-colors hover:text-emerald-400">
+          {{ .Title }}
+        </a>
+      </h2>
 
-  <h3 class="mt-4 text-2xl font-bold transition group-hover:text-emerald-400">
+      <p class="mt-5 leading-8 text-zinc-400">
+        {{ with .Description }}
+          {{ . }}
+        {{ else }}
+          {{ .Summary }}
+        {{ end }}
+      </p>
 
-    <a href="{{ .RelPermalink }}">
-      {{ .Title }}
-    </a>
+      {{ with .Params.tags }}
+        <div class="mt-7 flex flex-wrap gap-2">
+          {{ range . }}
+            <span class="rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1 text-xs font-medium text-emerald-300">
+              {{ . }}
+            </span>
+          {{ end }}
+        </div>
+      {{ end }}
+    </div>
 
-  </h3>
-
-  <p class="mt-5 leading-8 text-zinc-400">
-
-    {{ with .Description }}
-      {{ . }}
-    {{ else }}
-      {{ .Summary }}
-    {{ end }}
-
-  </p>
-
-  {{ with .Params.tags }}
-
-  <div class="mt-6 flex flex-wrap gap-2">
-
-    {{ range . }}
-
-      <span class="rounded-full border border-white/10 bg-zinc-800/60 px-3 py-1 text-xs uppercase tracking-wide text-zinc-300">
-
-        {{ . }}
-
+    <a href="{{ .RelPermalink }}"
+       aria-label="Read {{ .Title }}"
+       class="inline-flex shrink-0 items-center font-medium text-emerald-400 transition group-hover:text-emerald-300">
+      Read Article
+      <span class="ml-2 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+        →
       </span>
-
-    {{ end }}
-
+    </a>
   </div>
-
-  {{ end }}
-
-  <a
-    href="{{ .RelPermalink }}"
-    class="mt-8 inline-flex text-emerald-400 transition hover:text-emerald-300">
-
-    Read Article →
-
-  </a>
-
 </article>
