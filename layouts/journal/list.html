@@ -1,7 +1,17 @@
 {{ define "main" }}
 
-{{ partial "journal-hero.html" . }}
-{{ partial "journal-stats.html" . }}
-{{ partial "journal-list.html" . }}
+<section class="py-28">
+
+  <div class="mx-auto max-w-6xl px-6">
+
+    {{ partial "journal-hero.html" . }}
+
+    {{ partial "journal-stats.html" . }}
+
+    {{ partial "journal-list.html" . }}
+
+  </div>
+
+</section>
 
 {{ end }}
