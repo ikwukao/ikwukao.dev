@@ -1,6 +1,6 @@
 ---
 
-title: "ikwukao.dev"
+title: "IkwukaoDotDev"
 description: "A production-minded personal engineering portfolio built with Hugo and Tailwind CSS to present backend systems, distributed-systems work, infrastructure projects, and technical writing."
 summary: "A custom engineering portfolio focused on communicating technical work, engineering direction, and systems-building experience."
 date: 2026-08-02
