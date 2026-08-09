@@ -6,12 +6,11 @@ date: 2026-08-05
 draft: false
 featured: false
 tags:
-
-* Engineering
-* Architecture
-* Go
-* Backend
-* Portfolio
+  - Engineering
+  - Architecture
+  - Go
+  - Backend
+  - Portfolio
 
 ---
 

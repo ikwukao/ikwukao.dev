@@ -6,12 +6,11 @@ date: 2026-08-04
 draft: false
 featured: true
 tags:
-
-* DevOps
-* Go
-* Python
-* Cloud Native
-* Developer Tooling
+  - DevOps
+  - Go
+  - Python
+  - Cloud Native
+  - Developer Tooling
 
 ---
 
