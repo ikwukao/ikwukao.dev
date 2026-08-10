@@ -14,7 +14,7 @@ tags:
   - Software Design
   - Developer Tooling
   - Backend Engineering
-  categories:
+categories:
   - Backend Engineering
   - Go
 

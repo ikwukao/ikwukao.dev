@@ -14,7 +14,7 @@ tags:
   - Performance
   - Backend Engineering
   - API Design
-  categories:
+categories:
   - Backend Engineering
   - Go
 

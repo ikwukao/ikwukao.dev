@@ -14,7 +14,7 @@ tags:
   - Backend Engineering
   - API Design
   - Developer Tooling
-  categories:
+categories:
   - Backend Engineering
   - Go
 

@@ -15,7 +15,7 @@ tags:
   - Caching
   - Testing
   - Developer Tooling
-  categories:
+categories:
   - Backend Engineering
   - Engineering Journal
 

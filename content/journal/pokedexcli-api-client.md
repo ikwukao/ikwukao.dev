@@ -6,7 +6,7 @@ date: 2026-08-09
 draft: false
 tags:
 
-   -Go
+  - Go
   - Golang
   - REST API
   - HTTP
@@ -14,7 +14,7 @@ tags:
   - PokedexCLI
   - Backend Engineering
   - Networking
-  categories:
+categories:
   - Backend Engineering
   - Go
 
