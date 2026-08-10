@@ -1,100 +1,85 @@
-{{ partial "section-header.html" (dict
-  "title" "Let's Connect"
-  "description" "Whether you're hiring, building, investing, or looking to collaborate, I'd be glad to hear from you."
-) }}
+<section class="border-t border-white/10 py-28">
+  <div class="mx-auto max-w-6xl px-6">
 
-<div class="mt-14 grid gap-6 md:grid-cols-2">
+    {{ partial "section-header.html" (dict
+      "title" "Let's Connect"
+      "description" "Whether you're hiring, building, investing, or exploring collaboration, I'd be glad to hear from you."
+    ) }}
 
-  <!-- Email -->
+    <div class="mx-auto mt-14 grid max-w-5xl gap-6 md:grid-cols-2">
 
-  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
+      <!-- Email -->
+      <article class="group rounded-2xl border border-emerald-500/20 bg-zinc-950/60 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-zinc-950/80">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+              Primary Channel
+            </p>
+            <h3 class="mt-4 text-2xl font-semibold tracking-tight text-white">
+              Email
+            </h3>
+          </div>
+          <span class="text-2xl text-emerald-400 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+            →
+          </span>
+        </div>
 
-    <h3 class="text-xl font-semibold text-white">
-      Email
-    </h3>
+        <p class="mt-5 max-w-md text-base leading-7 text-zinc-400">
+          The best channel for backend engineering opportunities, consulting engagements, partnerships, and professional conversations.
+        </p>
 
-    <p class="mt-4 leading-7 text-zinc-400">
-      The best channel for job opportunities, consulting engagements,
-      partnerships, and professional conversations.
-    </p>
+        <a href="mailto:{{ site.Params.email }}" class="mt-8 inline-flex items-center text-sm font-semibold text-emerald-400 transition hover:text-emerald-300">
+          {{ site.Params.email }}
+          <span class="ml-2" aria-hidden="true">→</span>
+        </a>
+      </article>
 
-    <a
-      href="mailto:{{ site.Params.email }}"
-      class="mt-6 inline-flex items-center gap-2 font-medium text-emerald-400 transition hover:text-emerald-300">
+      <!-- GitHub -->
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/25 hover:bg-zinc-950/70">
+        <div class="flex items-start justify-between gap-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+              Engineering Work
+            </p>
+            <h3 class="mt-4 text-2xl font-semibold tracking-tight text-white">
+              GitHub
+            </h3>
+          </div>
+          <span class="text-2xl text-zinc-500 transition-all duration-300 group-hover:translate-x-1 group-hover:text-emerald-400" aria-hidden="true">
+            ↗
+          </span>
+        </div>
 
-      {{ site.Params.email }} →
+        <p class="mt-5 max-w-md text-base leading-7 text-zinc-400">
+          Explore backend systems, distributed-systems work, infrastructure, developer tooling, experiments, and technical documentation.
+        </p>
 
-    </a>
-
-  </article>
-
-  <!-- GitHub -->
-
-  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
-
-    <h3 class="text-xl font-semibold text-white">
-      GitHub
-    </h3>
-
-    <p class="mt-4 leading-7 text-zinc-400">
-      Explore production projects, engineering experiments,
-      open-source contributions, and technical documentation.
-    </p>
-
-    <a
-      href="{{ site.Params.github }}"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-6 inline-flex items-center gap-2 font-medium text-emerald-400 transition hover:text-emerald-300">
-
-      github.com/ikwukao →
-
-    </a>
-
-  </article>
-
-  <!-- Website -->
-
-  <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-lg hover:shadow-emerald-500/5">
-
-    <h3 class="text-xl font-semibold text-white">
-      Portfolio
-    </h3>
-
-    <p class="mt-4 leading-7 text-zinc-400">
-      Browse my engineering journal, portfolio, technical skills,
-      backend projects, and development roadmap.
-    </p>
-
-    <a
-      href="{{ site.BaseURL }}"
-      class="mt-6 inline-flex items-center gap-2 font-medium text-emerald-400 transition hover:text-emerald-300">
-
-      ikwukao.dev →
-
-    </a>
-
-  </article>
-
-  <!-- Availability -->
-
-  <article class="rounded-2xl border border-emerald-500/20 bg-emerald-500/5 p-8">
-
-    <h3 class="text-xl font-semibold text-white">
-      Availability
-    </h3>
-
-    <p class="mt-4 leading-7 text-zinc-300">
-      Currently open to remote Backend Engineering, Distributed Systems,
-      Platform Engineering, Site Reliability Engineering (SRE), and Cloud DevOps opportunities.
-    </p>
-
-    <div class="mt-6 inline-flex rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-sm font-medium text-emerald-300">
-
-      Typically replies within 24–48 hours
+        <a href="{{ site.Params.github }}" target="_blank" rel="noopener noreferrer" class="mt-8 inline-flex items-center text-sm font-semibold text-zinc-300 transition hover:text-emerald-400">
+          github.com/ikwukao
+          <span class="ml-2" aria-hidden="true">↗</span>
+        </a>
+      </article>
 
     </div>
 
-  </article>
+    <!-- Availability -->
+    <div class="mx-auto mt-8 max-w-5xl rounded-2xl border border-white/10 bg-white/[0.02] px-6 py-5 sm:px-8">
+      <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+        <div>
+          <p class="text-sm font-semibold text-white">
+            Currently open to opportunities
+          </p>
+          <p class="mt-1 text-sm leading-6 text-zinc-500">
+            Backend Engineering · Distributed Systems · Platform Engineering · Cloud Infrastructure
+          </p>
+        </div>
 
-</div>
+        <span class="inline-flex w-fit items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/5 px-3 py-1.5 text-xs font-medium text-emerald-300">
+          <span class="h-1.5 w-1.5 rounded-full bg-emerald-400"></span>
+          Available
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,25 +1,31 @@
-<div class="text-center">
-  <p class="text-sm font-semibold uppercase tracking-[0.22em] text-emerald-400">
-    Let's build something useful
-  </p>
-  
-  <h2 id="contact-cta-title" class="mt-5 text-3xl font-bold tracking-tight text-white sm:text-4xl">
-    Have an interesting engineering problem?
-  </h2>
-  
-  <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
-    I'm open to conversations about backend engineering, distributed systems, platform engineering, and cloud-native software.
-  </p>
-  
-  <div class="mt-10 flex flex-wrap justify-center gap-4">
-    <a href="mailto:{{ site.Params.email }}" class="btn-primary" aria-label="Start a conversation with Ikwuka Okoye">
-      Start a Conversation <span aria-hidden="true">→</span>
-    </a>
-    
-    {{ with site.Params.github }}
-      <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn-secondary" aria-label="View Ikwuka Okoye's GitHub profile">
-        View GitHub <span aria-hidden="true">↗</span>
+<section class="border-t border-white/10 py-28">
+  <div class="mx-auto max-w-4xl px-6 text-center">
+
+    <p class="text-xs font-semibold uppercase tracking-[0.22em] text-emerald-400">
+      Start a Conversation
+    </p>
+
+    <h2 class="mt-5 text-4xl font-bold tracking-tight text-white sm:text-5xl">
+      Have an interesting engineering problem?
+    </h2>
+
+    <p class="mx-auto mt-6 max-w-2xl text-lg leading-8 text-zinc-400">
+      Whether you're building a backend platform, scaling distributed systems, or solving a difficult infrastructure problem, I'd be glad to hear what you're working on.
+    </p>
+
+    <div class="mt-10 flex flex-wrap justify-center gap-4">
+      <a href="mailto:{{ site.Params.email }}" class="btn-primary">
+        Start a Conversation
+        <span class="ml-2" aria-hidden="true">→</span>
       </a>
-    {{ end }}
+
+      {{ with site.Params.github }}
+        <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="btn-secondary">
+          View GitHub
+          <span class="ml-2" aria-hidden="true">↗</span>
+        </a>
+      {{ end }}
+    </div>
+
   </div>
-</div>
+</section>
