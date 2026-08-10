@@ -1,210 +1,236 @@
 summary:
-  title: Professional Summary
-
+  title: Engineering Expertise
   description: >
-    I build reliable backend services, distributed systems, cloud-native
-    infrastructure, and developer tooling with a focus on maintainability,
-    performance, and clean architecture.
+    I build reliable backend systems with Go, with a focus on distributed
+    systems, scalable infrastructure, platform engineering, and production
+    reliability. My engineering approach emphasizes clear architecture,
+    concurrency, observability, automation, and systems that remain
+    maintainable as they grow.
 
 categories:
-
-  - title: Backend Engineering
-
+  - title: Go Backend Engineering
     icon: backend
-
-    description: Designing scalable APIs and backend services.
-
+    description: >
+      Building reliable, maintainable backend services and APIs with Go,
+      emphasizing concurrency, performance, clean architecture, and
+      production-ready engineering practices.
     skills:
-
-      - name: Go (Golang)
+      - name: Go
         level: Advanced
-
-      - name: Python
-        level: Advanced
-
-      - name: DSA
-        level: Intermediate
-
-      - name: Gin
-        level: Intermediate
-
-      - name: REST APIs
-        level: Advanced
-
       - name: net/http
         level: Intermediate
-
-      - name: SQL/NoSQL
+      - name: Gin
+        level: Intermediate
+      - name: REST APIs
         level: Advanced
-
-      - name: RabbitMQ
+      - name: gRPC
         level: Intermediate
-
-      - name: TCP/IP
+      - name: Protocol Buffers
         level: Intermediate
-
-      - name: Authentication
-        level: Intermediate
-
-      - name: Authorization
-        level: Intermediate
-
-      - name: Web Security
-        level: Advanced
-
-  - title: Distributed Systems
-
-    icon: distributed
-
-    description: Building reliable distributed software.
-
-    skills:
-
-      - name: Microservices
-        level: Intermediate
-
-      - name: Goroutines
-        level: Intermediate
-
-      - name: gRPC/Protobuf
-        level: Intermediate
-
-      - name: NATS
-        level: Intermediate
-
-      - name: Apache Kafka
-        level: Intermediate
-
       - name: Concurrency
         level: Intermediate
-
-      - name: Mutex/sync Package
+      - name: Goroutines
         level: Intermediate
-
+      - name: Channels
+        level: Intermediate
+      - name: Mutex & sync
+        level: Intermediate
+      - name: Context
+        level: Intermediate
       - name: Graceful Shutdown
         level: Intermediate
-
-      - name: Circuit Breaker
-        level: Intermediate
-
-      - name: Raft Consensus
-        level: Intermediate
-
-
-  - title: Cloud & DevOps
-
-    icon: cloud
-
-    description: Infrastructure, automation, and deployment.
-
-    skills:
-
-      - name: Docker
-        level: Advanced
-
-      - name: Kubernetes
-        level: Intermediate
-
-      - name: Linux
-        level: Advanced
-
-      - name: Terraform
-        level: Intermediate
-
-      - name: Prometheus
-        level: Intermediate
-
-      - name: Grafana
-        level: Intermediate
-
-      - name: OpenTelemetry
-        level: Intermediate
-
-      - name: Helm
-        level: Intermediate
-
-      - name: GitHub Actions
-        level: Intermediate
-
-      - name: AWS
-        level: Intermediate
-
-      - name: GCP
-        level: Intermediate
-
-
-  - title: Databases
-
-    icon: database
-
-    description: Data storage and persistence.
-
-    skills:
-
-      - name: PostgreSQL
-        level: Intermediate
-
-      - name: SQLite
-        level: Advanced
-
-      - name: Redis
-        level: Beginner
-
-      - name: MongoDB
-        level: Beginner
-      
-      - name: CockroachDB
-        level: Beginner
-
-      - name: bbolt
-        level: Beginner
-
-  - title: Developer Tools
-
-    icon: tools
-
-    description: Daily engineering workflow.
-
-    skills:
-
-      - name: Git
-        level: Advanced
-
-      - name: Bash/Zsh
-        level: Advanced
-
-      - name: Neovim/Vim
-        level: Advanced
-
-      - name: Goland
-        level: Advanced
-
-      - name: VS Code
-        level: Advanced
-
-      - name: PyCharm
-        level: Advanced
-
-
-  - title: Software Engineering
-
-    icon: engineering
-
-    description: Engineering principles and practices.
-
-    skills:
-
       - name: Clean Architecture
         level: Intermediate
+      - name: System Design
+        level: Intermediate
+      - name: API Security
+        level: Intermediate
 
+  - title: Distributed Systems
+    icon: distributed
+    description: >
+      Designing and understanding distributed software around reliability,
+      concurrency, communication, fault tolerance, consistency, and
+      scalable service architecture.
+    skills:
+      - name: Distributed Systems
+        level: Intermediate
+      - name: Microservices
+        level: Intermediate
+      - name: Event-Driven Architecture
+        level: Intermediate
+      - name: Message Queues
+        level: Intermediate
+      - name: RabbitMQ
+        level: Intermediate
+      - name: Apache Kafka
+        level: Intermediate
+      - name: NATS
+        level: Intermediate
+      - name: gRPC
+        level: Intermediate
+      - name: Service Communication
+        level: Intermediate
+      - name: Circuit Breakers
+        level: Intermediate
+      - name: Fault Tolerance
+        level: Intermediate
+      - name: Graceful Degradation
+        level: Intermediate
+      - name: Raft Consensus
+        level: Intermediate
+      - name: TCP/IP
+        level: Intermediate
+      - name: Distributed Coordination
+        level: Intermediate
+
+  - title: Platform Engineering
+    icon: cloud
+    description: >
+      Building the infrastructure, automation, deployment workflows, and
+      operational foundations required to run reliable software at scale.
+    skills:
+      - name: Linux
+        level: Advanced
+      - name: Docker
+        level: Advanced
+      - name: Kubernetes
+        level: Intermediate
+      - name: Helm
+        level: Intermediate
+      - name: Terraform
+        level: Intermediate
+      - name: Infrastructure as Code
+        level: Intermediate
+      - name: GitHub Actions
+        level: Intermediate
+      - name: CI/CD
+        level: Intermediate
+      - name: AWS
+        level: Intermediate
+      - name: Google Cloud
+        level: Intermediate
+      - name: Cloud-Native Architecture
+        level: Intermediate
+      - name: Platform Automation
+        level: Intermediate
+      - name: Deployment Automation
+        level: Intermediate
+      - name: Configuration Management
+        level: Intermediate
+
+  - title: Observability & Reliability
+    icon: engineering
+    description: >
+      Instrumenting and operating backend systems so performance, failures,
+      and system behavior can be understood in production.
+    skills:
+      - name: Prometheus
+        level: Intermediate
+      - name: Grafana
+        level: Intermediate
+      - name: OpenTelemetry
+        level: Intermediate
+      - name: Metrics
+        level: Intermediate
+      - name: Logging
+        level: Intermediate
+      - name: Distributed Tracing
+        level: Intermediate
+      - name: Health Checks
+        level: Intermediate
+      - name: Performance Analysis
+        level: Beginner
+      - name: Reliability Engineering
+        level: Beginner
+      - name: Incident Debugging
+        level: Beginner
+
+  - title: Data & Persistence
+    icon: database
+    description: >
+      Working with relational, key-value, document, and embedded databases
+      to support reliable application state and data-intensive services.
+    skills:
+      - name: SQL
+        level: Advanced
+      - name: PostgreSQL
+        level: Intermediate
+      - name: SQLite
+        level: Advanced
+      - name: Redis
+        level: Beginner
+      - name: MongoDB
+        level: Beginner
+      - name: CockroachDB
+        level: Beginner
+      - name: bbolt
+        level: Beginner
+      - name: Database Design
+        level: Intermediate
+      - name: Data Modeling
+        level: Intermediate
+      - name: Transactions
+        level: Intermediate
+      - name: Indexing
+        level: Intermediate
+
+  - title: Engineering Practices
+    icon: tools
+    description: >
+      The development practices and tools I use to keep engineering work
+      reproducible, testable, maintainable, and efficient.
+    skills:
+      - name: Git
+        level: Advanced
+      - name: Bash
+        level: Advanced
+      - name: Zsh
+        level: Advanced
+      - name: Neovim
+        level: Advanced
+      - name: Vim
+        level: Advanced
+      - name: GoLand
+        level: Advanced
+      - name: VS Code
+        level: Advanced
+      - name: PyCharm
+        level: Advanced
       - name: Testing
         level: Intermediate
-
+      - name: Debugging
+        level: Intermediate
       - name: Documentation
         level: Advanced
-
       - name: Automation
         level: Intermediate
+      - name: Data Structures & Algorithms
+        level: Intermediate
+      - name: Object-Oriented Programming
+        level: Intermediate
 
-      - name: Performance
-        level: Beginner
+  - title: Supporting Backend Technologies
+    icon: backend
+    description: >
+      Additional technologies that complement my primary Go backend and
+      distributed-systems focus.
+    skills:
+      - name: Python
+        level: Advanced
+      - name: FastAPI
+        level: Intermediate
+      - name: Flask
+        level: Intermediate
+      - name: Authentication
+        level: Intermediate
+      - name: Authorization
+        level: Intermediate
+      - name: Web Security
+        level: Advanced
+      - name: API Design
+        level: Advanced
+      - name: JSON
+        level: Advanced
+      - name: YAML
+        level: Advanced
