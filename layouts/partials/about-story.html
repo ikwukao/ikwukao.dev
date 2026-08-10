@@ -1,40 +1,49 @@
 <section class="border-t border-white/10 py-28">
-
-  <div class="mx-auto max-w-5xl px-6">
+  <div class="mx-auto max-w-6xl px-6">
 
     {{ partial "section-header.html" (dict
-      "title" "My Journey"
-      "description" "How I arrived at backend engineering."
+      "title" "The Journey"
+      "description" "From securing systems to engineering the systems themselves."
     ) }}
 
-    <div class="mt-14 space-y-8 text-lg leading-8 text-zinc-400">
+    <div class="mt-16 grid gap-12 lg:grid-cols-[0.7fr_1.3fr] lg:gap-20">
 
-      <p>
+      <div>
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
+          Background
+        </p>
 
-        My journey into software engineering began with cybersecurity, where I
-        developed a strong appreciation for system reliability, infrastructure,
-        and problem-solving under real-world constraints.
+        <p class="mt-5 text-3xl font-semibold leading-tight tracking-tight text-white">
+          Security taught me to think about failure.
+          Engineering taught me to design for it.
+        </p>
+      </div>
 
-      </p>
+      <div class="space-y-7 text-lg leading-8 text-zinc-400">
 
-      <p>
+        <p>
+          My engineering journey began in cybersecurity, where I learned to
+          think deeply about systems, failure modes, infrastructure, and the
+          consequences of poor design.
+        </p>
 
-        As my interests evolved, I shifted toward backend engineering and
-        distributed systems—fields that combine software design, scalability,
-        automation, and infrastructure.
+        <p>
+          That perspective naturally pulled me toward backend engineering and
+          distributed systems. I became increasingly interested in what happens
+          beneath the interface — how services communicate, how data moves,
+          how systems recover, and how infrastructure supports reliable
+          software.
+        </p>
 
-      </p>
+        <p>
+          Today, I focus on building backend services, distributed systems,
+          developer tooling, and cloud-native infrastructure with Go and the
+          broader systems engineering ecosystem.
+        </p>
 
-      <p>
-
-        Today, I focus on building backend applications, distributed services,
-        developer tools, and cloud-native solutions while continuously learning
-        modern software architecture and systems engineering.
-
-      </p>
+      </div>
 
     </div>
 
   </div>
-
 </section>

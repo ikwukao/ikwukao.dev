@@ -1,44 +1,74 @@
 <section class="border-t border-white/10 py-28">
-
   <div class="mx-auto max-w-6xl px-6">
 
     {{ partial "section-header.html" (dict
       "title" "Current Focus"
-      "description" "Areas I'm actively studying and building."
+      "description" "The areas where I'm investing the most engineering depth right now."
     ) }}
 
-    <div class="mt-12 flex flex-wrap gap-4">
+    <div class="mt-16 grid gap-5 md:grid-cols-2">
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        Go
-      </span>
+      <article class="rounded-2xl border border-emerald-500/20 bg-emerald-500/[0.03] p-8">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
+          01 · Backend
+        </p>
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        Distributed Systems
-      </span>
+        <h3 class="mt-5 text-2xl font-semibold text-white">
+          Go Backend Engineering
+        </h3>
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        Backend Architecture
-      </span>
+        <p class="mt-4 leading-7 text-zinc-400">
+          APIs, concurrency, networking, service architecture, performance,
+          testing, and production-oriented Go systems.
+        </p>
+      </article>
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        Docker
-      </span>
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/30 p-8">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
+          02 · Systems
+        </p>
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        Kubernetes
-      </span>
+        <h3 class="mt-5 text-2xl font-semibold text-white">
+          Distributed Systems
+        </h3>
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        PostgreSQL
-      </span>
+        <p class="mt-4 leading-7 text-zinc-400">
+          Reliability, communication, concurrency, event-driven architecture,
+          fault tolerance, and system design.
+        </p>
+      </article>
 
-      <span class="rounded-full border border-emerald-500/30 bg-emerald-500/10 px-5 py-2 text-emerald-400">
-        Cloud Native
-      </span>
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/30 p-8">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
+          03 · Infrastructure
+        </p>
+
+        <h3 class="mt-5 text-2xl font-semibold text-white">
+          Platform Engineering
+        </h3>
+
+        <p class="mt-4 leading-7 text-zinc-400">
+          Linux, Docker, Kubernetes, infrastructure as code, CI/CD,
+          observability, and cloud-native deployment.
+        </p>
+      </article>
+
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/30 p-8">
+        <p class="text-sm font-medium uppercase tracking-[0.2em] text-emerald-400">
+          04 · Tooling
+        </p>
+
+        <h3 class="mt-5 text-2xl font-semibold text-white">
+          Developer Infrastructure
+        </h3>
+
+        <p class="mt-4 leading-7 text-zinc-400">
+          Building tools and automation that improve developer workflows,
+          operational visibility, and engineering productivity.
+        </p>
+      </article>
 
     </div>
 
   </div>
-
 </section>
