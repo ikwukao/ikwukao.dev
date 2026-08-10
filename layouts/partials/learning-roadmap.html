@@ -1,149 +1,145 @@
-<section class="border-t border-white/10 py-28">
-
-  <div class="mx-auto max-w-6xl px-6">
-
+<section class="py-28">
+  <div class="mx-auto max-w-7xl px-6">
     {{ partial "section-header.html" (dict
-      "title" "Engineering Growth Roadmap"
-      "description" "Technologies and engineering disciplines I'm actively investing in to deepen my expertise across distributed systems, platform engineering, cloud-native infrastructure, and modern enterprise full-stack development."
+      "title" "Engineering Growth"
+      "description" "A deliberate learning path focused on becoming a stronger backend and distributed-systems engineer."
     ) }}
 
-    <div class="mt-14 grid gap-8 lg:grid-cols-2">
-
-      <!-- Current Focus -->
-
-      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8">
-
-        <h3 class="text-xl font-semibold text-white">
-
-          Current Focus
-
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
+      <!-- Now -->
+      <article class="relative rounded-2xl border border-emerald-500/30 bg-zinc-950/50 p-8">
+        <div class="mb-8 flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+            01 · Now
+          </span>
+          <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight text-white">
+          Deepening the Core
         </h3>
-
-        <ul class="mt-8 space-y-4 text-zinc-300">
-
-          <li>✓ Advanced Distributed Systems</li>
-
-          <li>✓ Backend Architecture & System Design</li>
-
-          <li>✓ Platform Engineering</li>
-
-          <li>✓ Cloud-native Infrastructure</li>
-
-          <li>✓ Kubernetes & GitOps</li>
-
-          <li>✓ AWS Cloud Engineering</li>
-
-          <li>✓ Infrastructure as Code (Terraform)</li>
-
-          <li>✓ CI/CD & GitHub Actions</li>
-
-          <li>✓ Observability (Prometheus, Grafana & OpenTelemetry)</li>
-
-          <li>✓ High-Performance Go Engineering</li>
-
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Strengthening the systems and infrastructure fundamentals that underpin reliable production software.
+        </p>
+        <ul class="mt-8 space-y-4">
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+            Advanced Distributed Systems
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+            Backend Architecture & System Design
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+            High-Performance Go Engineering
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+            Cloud-native Infrastructure
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+            Kubernetes & GitOps
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400"></span>
+            Observability & Production Reliability
+          </li>
         </ul>
-
       </article>
 
-      <!-- Next Stage -->
-
-      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-8">
-
-        <h3 class="text-xl font-semibold text-white">
-
-          Next Stage
-
+      <!-- Next -->
+      <article class="relative rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:border-emerald-500/20">
+        <div class="mb-8 flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            02 · Next
+          </span>
+          <span class="h-2 w-2 rounded-full bg-zinc-600"></span>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight text-white">
+          Expanding the Systems View
         </h3>
-
-        <ul class="mt-8 space-y-4 text-zinc-300">
-
-          <li>○ Enterprise Full-Stack Engineering</li>
-
-          <li>○ LLM Platform Engineering</li>
-
-          <li>○ AI Infrastructure Backend Engineering</li>
-
-          <li>○ Automation Architecture</li>
-
-          <li>○ Rust Systems Programming</li>
-
-          <li>○ Elixir Distributed Systems</li>
-
-          <li>○ Event-Driven Architecture</li>
-
-          <li>○ Service Mesh</li>
-
-          <li>○ eBPF & Linux Internals</li>
-
-          <li>○ Advanced Networking & Security</li>
-
-          <li>○ AI-Powered Web Applications</li>
-
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Moving beyond individual services toward platforms, automation, and larger distributed architectures.
+        </p>
+        <ul class="mt-8 space-y-4">
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Platform Engineering
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Advanced CI/CD & Automation
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Infrastructure as Code
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Event-driven Architecture
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Advanced Networking & Security
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Enterprise Software Engineering
+          </li>
         </ul>
-
       </article>
 
+      <!-- Frontier -->
+      <article class="relative rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:border-emerald-500/20">
+        <div class="mb-8 flex items-center justify-between">
+          <span class="text-xs font-semibold uppercase tracking-[0.2em] text-zinc-500">
+            03 · Frontier
+          </span>
+          <span class="h-2 w-2 rounded-full bg-zinc-600"></span>
+        </div>
+        <h3 class="text-2xl font-semibold tracking-tight text-white">
+          Exploring the Frontier
+        </h3>
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Exploring deeper systems programming and infrastructure technologies that broaden how I reason about complex software.
+        </p>
+        <ul class="mt-8 space-y-4">
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Rust Systems Programming
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            eBPF & Linux Internals
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Service Mesh & Distributed Networking
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            LLM Platform Engineering
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            AI Infrastructure
+          </li>
+          <li class="flex gap-3 text-sm leading-6 text-zinc-300">
+            <span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-zinc-600"></span>
+            Elixir & Distributed Systems
+          </li>
+        </ul>
+      </article>
     </div>
 
-    <!-- Professional Certifications -->
-
-    <div class="mt-24">
-
-      {{ partial "section-header.html" (dict
-        "title" "Professional Certifications"
-        "description" "Industry-recognized certifications that complement my engineering expertise and continuous professional development."
-      ) }}
-
-      <div class="mt-12 grid gap-6 md:grid-cols-2">
-
-        <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-6">
-
-          <h3 class="text-lg font-semibold text-white">
-
-            Achieved
-
-          </h3>
-
-          <ul class="mt-6 space-y-4 text-zinc-300">
-
-            <li>✓ ISC2 Certified in Cybersecurity (CC)</li>
-
-            <li>✓ Google Cybersecurity Professional Certificate</li>
-
-            <li>✓ Fortinet Certified Fundamentals in Cybersecurity</li>
-
-          </ul>
-
-        </article>
-
-        <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-6">
-
-          <h3 class="text-lg font-semibold text-white">
-
-            In Progress
-
-          </h3>
-
-          <ul class="mt-6 space-y-4 text-zinc-300">
-
-            <li>○ Certified Kubernetes Application Developer (CKAD)</li>
-
-            <li>○ AWS Certified Developer – Associate</li>
-
-            <li>○ AWS Certified Solutions Architect – Associate</li>
-
-            <li>○ HashiCorp Certified: Terraform Associate</li>
-
-            <li>○ Certified Kubernetes Administrator (CKA)</li>
-
-          </ul>
-
-        </article>
-
-      </div>
-
+    <div class="mt-10 border-l-2 border-emerald-500/30 pl-6">
+      <p class="text-sm font-medium text-zinc-300">
+        The goal isn't to collect technologies.
+      </p>
+      <p class="mt-2 max-w-3xl text-sm leading-7 text-zinc-500">
+        It's to develop the depth required to design, operate, and improve reliable systems as their complexity grows.
+      </p>
     </div>
-
   </div>
-
 </section>

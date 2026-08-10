@@ -1,40 +1,68 @@
-<section class="border-t border-white/10 py-28">
-
-  <div class="mx-auto max-w-5xl px-6">
+<section class="py-28">
+  <div class="mx-auto max-w-7xl px-6">
 
     {{ partial "section-header.html" (dict
       "title" "Engineering Principles"
-      "description" "The principles that guide how I design, build, and maintain software."
+      "description" "The principles that guide how I design, build, and maintain reliable software."
     ) }}
 
     <div class="mt-14 grid gap-6 md:grid-cols-2">
 
-      <article class="rounded-xl border border-white/10 p-6">
-        Reliability over cleverness.
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:bg-zinc-950/70">
+        <h3 class="text-lg font-semibold tracking-tight text-white">
+          Reliability over cleverness.
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-zinc-500">
+          Prefer predictable, resilient systems over unnecessary complexity or clever abstractions.
+        </p>
       </article>
 
-      <article class="rounded-xl border border-white/10 p-6">
-        Simplicity scales.
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:bg-zinc-950/70">
+        <h3 class="text-lg font-semibold tracking-tight text-white">
+          Simplicity scales.
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-zinc-500">
+          Keep systems understandable so they remain easier to operate, extend, and debug as they grow.
+        </p>
       </article>
 
-      <article class="rounded-xl border border-white/10 p-6">
-        Automate repetitive work.
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:bg-zinc-950/70">
+        <h3 class="text-lg font-semibold tracking-tight text-white">
+          Automate repetitive work.
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-zinc-500">
+          Turn repeatable engineering tasks into reliable automation that reduces friction and human error.
+        </p>
       </article>
 
-      <article class="rounded-xl border border-white/10 p-6">
-        Measure before optimizing.
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:bg-zinc-950/70">
+        <h3 class="text-lg font-semibold tracking-tight text-white">
+          Measure before optimizing.
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-zinc-500">
+          Use observability, profiling, and evidence to identify real bottlenecks before changing the system.
+        </p>
       </article>
 
-      <article class="rounded-xl border border-white/10 p-6">
-        Design for maintainability.
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:bg-zinc-950/70">
+        <h3 class="text-lg font-semibold tracking-tight text-white">
+          Design for maintainability.
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-zinc-500">
+          Write software that another engineer can understand, operate, test, and safely change.
+        </p>
       </article>
 
-      <article class="rounded-xl border border-white/10 p-6">
-        Documentation is part of engineering.
+      <article class="group rounded-2xl border border-white/10 bg-zinc-950/40 p-8 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/30 hover:bg-zinc-950/70">
+        <h3 class="text-lg font-semibold tracking-tight text-white">
+          Documentation is part of engineering.
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-zinc-500">
+          Capture important decisions, system behavior, and operational knowledge as part of the engineering process.
+        </p>
       </article>
 
     </div>
 
   </div>
-
 </section>

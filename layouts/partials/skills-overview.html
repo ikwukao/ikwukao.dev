@@ -1,69 +1,56 @@
-<section class="border-y border-white/10 py-14">
+<section class="py-28">
 
-  <div class="mx-auto grid max-w-6xl gap-8 px-6 text-center md:grid-cols-4">
+  <div class="mx-auto max-w-7xl px-6">
 
-    <div>
+    {{ partial "section-header.html" (dict
+      "title" "Engineering Foundation"
+      "description" "The technical foundation behind the systems, infrastructure, and developer tooling I build."
+    ) }}
 
-      <p class="text-4xl font-bold text-emerald-400">
+    <div class="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
 
-        {{ len hugo.Data.skills.categories }}
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-6">
+        <p class="text-2xl font-bold text-emerald-400">
+          Go
+        </p>
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Primary backend language
+        </p>
+      </article>
 
-      </p>
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-6">
+        <p class="text-2xl font-bold text-white">
+          Distributed Systems
+        </p>
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Reliability, concurrency, and scalable architecture
+        </p>
+      </article>
 
-      <p class="mt-2 text-zinc-500">
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-6">
+        <p class="text-2xl font-bold text-white">
+          Cloud Native
+        </p>
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Containers, orchestration, infrastructure, and observability
+        </p>
+      </article>
 
-        Skill Areas
-
-      </p>
-
-    </div>
-
-    <div>
-
-      <p class="text-4xl font-bold text-emerald-400">
-
-        Go
-
-      </p>
-
-      <p class="mt-2 text-zinc-500">
-
-        Primary Language
-
-      </p>
-
-    </div>
-
-    <div>
-
-      <p class="text-4xl font-bold text-emerald-400">
-
-        Linux
-
-      </p>
-
-      <p class="mt-2 text-zinc-500">
-
-        Daily Environment
-
-      </p>
+      <article class="rounded-2xl border border-white/10 bg-zinc-950/40 p-6">
+        <p class="text-2xl font-bold text-white">
+          Engineering
+        </p>
+        <p class="mt-3 text-sm leading-6 text-zinc-500">
+          Maintainability, performance, testing, and clean architecture
+        </p>
+      </article>
 
     </div>
 
-    <div>
-
-      <p class="text-4xl font-bold text-emerald-400">
-
-        Cloud
-
+    <div class="mt-12 max-w-4xl">
+      <p class="text-lg leading-8 text-zinc-300">
+        {{ hugo.Data.skills.summary.description }}
       </p>
-
-      <p class="mt-2 text-zinc-500">
-
-        Infrastructure
-
-      </p>
-
     </div>
 
   </div>
