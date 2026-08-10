@@ -3,14 +3,6 @@ title: "Resume"
 description: "Professional experience, technical skills, and engineering focus."
 ---
 
-## Resume
-
-A downloadable version of my resume is available below.
-
-[Download Resume](/static/resume/resume.pdf)
-
----
-
 ## Core Skills
 
 ### Languages

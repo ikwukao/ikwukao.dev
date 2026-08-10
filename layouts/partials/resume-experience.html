@@ -1,44 +1,185 @@
-<section class="border-t border-white/10 py-28">
-
-  <div class="mx-auto max-w-6xl px-6">
+<section class="border-b border-white/5">
+  <div class="mx-auto max-w-7xl px-6 py-24 sm:py-28 lg:px-8 lg:py-32">
 
     {{ partial "section-header.html" (dict
       "title" "Professional Background"
-      "description" "Experience, education, and certifications."
+      "description" "Experience, education, and professional development that shape how I approach engineering."
     ) }}
 
-    <div class="mt-14 grid gap-8 lg:grid-cols-2">
+    <div class="mt-14 grid gap-16 lg:grid-cols-[1.35fr_0.65fr]">
 
-      <div class="rounded-xl border border-white/10 p-8">
+      <!-- Professional Experience -->
 
-        <h3 class="text-2xl font-semibold text-white">Professional Experience</h3>
+      <div>
 
-        <ul class="mt-6 space-y-5 text-zinc-400">
-          <li><strong class="text-white">Nurse Practitioner</strong><br>Olaedo Pharmacy · 2023–Present</li>
-          <li><strong class="text-white">InfoSec & AI Systems Officer</strong><br>Enyi & AI Co. Ltd · 2026–2026</li>
-          <li><strong class="text-white">Technical Support Specialist</strong><br>Digital Brains ICT Academy · 2021–2023</li>
-          <li><strong class="text-white">Mechanical Technician</strong><br>Chris Reliable Foods Ltd · 2016–2018</li>
-        </ul>
+        <div class="mb-8 flex items-center gap-3">
+          <div class="h-px w-8 bg-emerald-500/60"></div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
+            Professional Experience
+          </h3>
+        </div>
+
+        <div class="space-y-10">
+
+          <article class="relative border-l border-white/10 pl-7">
+
+            <div class="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-emerald-400 ring-4 ring-zinc-950"></div>
+
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+              <h4 class="text-xl font-semibold tracking-tight text-white">
+                Nurse Practitioner
+              </h4>
+
+              <span class="text-sm text-zinc-500">
+                2023 — Present
+              </span>
+            </div>
+
+            <p class="mt-1 text-sm font-medium text-emerald-400">
+              Olaedo Pharmacy
+            </p>
+
+          </article>
+
+          <article class="relative border-l border-white/10 pl-7">
+
+            <div class="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-zinc-600 ring-4 ring-zinc-950"></div>
+
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+              <h4 class="text-xl font-semibold tracking-tight text-white">
+                InfoSec & AI Systems Officer
+              </h4>
+
+              <span class="text-sm text-zinc-500">
+                2026
+              </span>
+            </div>
+
+            <p class="mt-1 text-sm font-medium text-emerald-400">
+              Enyi & AI Co. Ltd
+            </p>
+
+          </article>
+
+          <article class="relative border-l border-white/10 pl-7">
+
+            <div class="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-zinc-600 ring-4 ring-zinc-950"></div>
+
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+              <h4 class="text-xl font-semibold tracking-tight text-white">
+                Technical Support Specialist
+              </h4>
+
+              <span class="text-sm text-zinc-500">
+                2021 — 2023
+              </span>
+            </div>
+
+            <p class="mt-1 text-sm font-medium text-emerald-400">
+              Digital Brains ICT Academy
+            </p>
+
+          </article>
+
+          <article class="relative border-l border-white/10 pl-7">
+
+            <div class="absolute -left-[5px] top-2 h-2 w-2 rounded-full bg-zinc-600 ring-4 ring-zinc-950"></div>
+
+            <div class="flex flex-col gap-2 sm:flex-row sm:items-baseline sm:justify-between">
+              <h4 class="text-xl font-semibold tracking-tight text-white">
+                Mechanical Technician
+              </h4>
+
+              <span class="text-sm text-zinc-500">
+                2016 — 2018
+              </span>
+            </div>
+
+            <p class="mt-1 text-sm font-medium text-emerald-400">
+              Chris Reliable Foods Ltd
+            </p>
+
+          </article>
+
+        </div>
 
       </div>
 
-      <div class="rounded-xl border border-white/10 p-8">
+      <!-- Education & Certifications -->
 
-        <h3 class="text-2xl font-semibold text-white">Education & Certifications</h3>
+      <div>
 
-        <ul class="mt-6 space-y-5 text-zinc-400">
-          <li>B.Sc. Computer Science — University of the People (3.6/4.0 GPA)</li>
-          <li>Backend Developer & DevOps Engineering Paths — Boot.dev</li>
-          <li>ISC2 Certified in Cybersecurity (CC)</li>
-          <li>Google Cybersecurity Professional Certificate</li>
-          <li>Fortinet Certified Fundamentals in Cybersecurity</li>
-          <li>Currently pursuing CKAD and AWS Certified Developer – Associate</li>
-        </ul>
+        <div class="mb-8 flex items-center gap-3">
+          <div class="h-px w-8 bg-emerald-500/60"></div>
+          <h3 class="text-sm font-semibold uppercase tracking-[0.2em] text-emerald-400">
+            Education & Certifications
+          </h3>
+        </div>
+
+        <div class="space-y-5">
+
+          <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-5">
+            <h4 class="font-semibold text-white">
+              B.Sc. Computer Science
+            </h4>
+
+            <p class="mt-1 text-sm text-zinc-400">
+              University of the People
+            </p>
+
+            <p class="mt-2 text-xs text-zinc-600">
+              GPA 3.6 / 4.0
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-5">
+            <h4 class="font-semibold text-white">
+              Backend Developer & DevOps Engineering Paths
+            </h4>
+
+            <p class="mt-1 text-sm text-zinc-400">
+              Boot.dev
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-5">
+            <h4 class="font-semibold text-white">
+              ISC2 Certified in Cybersecurity
+            </h4>
+
+            <p class="mt-1 text-sm text-zinc-400">
+              CC
+            </p>
+          </article>
+
+          <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-5">
+            <h4 class="font-semibold text-white">
+              Google Cybersecurity Professional Certificate
+            </h4>
+          </article>
+
+          <article class="rounded-xl border border-white/10 bg-zinc-950/40 p-5">
+            <h4 class="font-semibold text-white">
+              Fortinet Certified Fundamentals in Cybersecurity
+            </h4>
+          </article>
+
+          <article class="rounded-xl border border-emerald-500/10 bg-emerald-500/[0.025] p-5">
+            <h4 class="font-semibold text-white">
+              Currently Pursuing
+            </h4>
+
+            <p class="mt-2 text-sm leading-6 text-zinc-400">
+              Certified Kubernetes Application Developer (CKAD) and
+              AWS Certified Developer – Associate.
+            </p>
+          </article>
+
+        </div>
 
       </div>
 
     </div>
 
   </div>
-
 </section>

@@ -1,20 +1,62 @@
-<section class="border-t border-white/10 py-28">
-
-  <div class="mx-auto max-w-6xl px-6">
-
+<section class="py-28">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
     {{ partial "section-header.html" (dict
-      "title" "Featured Engineering Projects"
-      "description" "Selected projects demonstrating backend engineering and distributed systems expertise."
+      "title" "Selected Engineering Work"
+      "description" "A focused selection of projects demonstrating backend engineering, distributed systems, platform engineering, and infrastructure capabilities."
     ) }}
 
-    <div class="mt-14 grid gap-8">
-
+    <div class="mt-14 grid gap-6 lg:grid-cols-3">
       {{ range first 3 (where (where site.RegularPages "Section" "projects") ".Params.featured" true) }}
-        {{ partial "project-card.html" . }}
-      {{ end }}
+        <article class="group flex h-full flex-col rounded-2xl border border-white/10 bg-zinc-950/40 p-7 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/25 hover:bg-zinc-950/70">
+          <div class="flex items-start justify-between gap-5">
+            <div class="min-w-0">
+              <p class="mb-3 text-xs font-medium uppercase tracking-[0.18em] text-emerald-400">
+                Engineering Project
+              </p>
+              <h3 class="text-xl font-semibold tracking-tight text-white">
+                {{ .Title }}
+              </h3>
+            </div>
+            <span class="shrink-0 text-lg text-zinc-600 transition-all duration-300 group-hover:translate-x-1 group-hover:text-emerald-400" aria-hidden="true">
+              →
+            </span>
+          </div>
 
+          {{ with .Params.description }}
+            <p class="mt-4 text-sm leading-6 text-zinc-400">
+              {{ . }}
+            </p>
+          {{ end }}
+
+          {{ with .Params.technologies }}
+            <div class="mt-6 flex flex-wrap gap-2">
+              {{ range . }}
+                <span class="rounded-md border border-white/10 bg-white/[0.025] px-2.5 py-1.5 text-xs font-medium text-zinc-400 transition-colors duration-200 group-hover:border-white/15 group-hover:text-zinc-300">
+                  {{ . }}
+                </span>
+              {{ end }}
+            </div>
+          {{ end }}
+
+          <div class="mt-auto pt-8">
+            <a href="{{ .RelPermalink }}" class="inline-flex items-center text-sm font-semibold text-emerald-400 transition-colors hover:text-emerald-300">
+              View Project
+              <span class="ml-1 transition-transform duration-300 group-hover:translate-x-1" aria-hidden="true">
+                →
+              </span>
+            </a>
+          </div>
+        </article>
+      {{ end }}
     </div>
 
+    <div class="mt-10 text-center">
+      <a href="/projects/" class="inline-flex items-center text-sm font-semibold text-zinc-400 transition-colors hover:text-emerald-400">
+        Explore all engineering projects
+        <span class="ml-2 transition-transform duration-300" aria-hidden="true">
+          →
+        </span>
+      </a>
+    </div>
   </div>
-
 </section>
