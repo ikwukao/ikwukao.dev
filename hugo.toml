@@ -14,7 +14,7 @@ priority = 0.8
 filename = "sitemap.xml"
 
 [outputs]
-home = ["HTML", "RSS"]
+home = ["HTML", "RSS", "JSON"]
 
 [params]
 author = "Ikwuka Okoye"
