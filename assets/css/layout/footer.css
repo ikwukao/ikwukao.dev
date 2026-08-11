@@ -1,23 +1,29 @@
 footer {
   border-top: 1px solid rgb(255 255 255 / 0.08);
+  background: linear-gradient(180deg, rgb(9 9 11 / 0.96) 0%, rgb(3 3 5 / 1) 100%);
 }
 
 footer a {
-  transition:
-    color var(--transition),
-    opacity var(--transition);
+  transition: color var(--transition), opacity var(--transition), transform var(--transition), border-color var(--transition), background-color var(--transition);
 }
 
-footer a:hover {
-  color: var(--accent);
+footer a:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+  border-radius: 0.5rem;
 }
 
 footer svg {
-  transition:
-    transform var(--transition),
-    color var(--transition);
+  transition: transform var(--transition), color var(--transition);
 }
 
 footer a:hover svg {
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  footer a,
+  footer svg {
+    transition: none;
+  }
 }
