@@ -4,8 +4,7 @@
 
 [build.environment]
   HUGO_VERSION = "0.164.0"
-  NODE_VERSION = "18.19.1"
-  NPM_VERSION = "9.2.0"
+  NODE_VERSION = "22"
 
 [[headers]]
   for = "/*"
@@ -13,4 +12,3 @@
     X-Frame-Options = "DENY"
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
-
