@@ -1,75 +1,60 @@
 {{ define "main" }}
+<section class="relative flex min-h-[80vh] items-center overflow-hidden">
+  <div class="hero-bg"></div>
 
-<section class="relative flex min-h-[calc(100vh-5rem)] items-center overflow-hidden px-5 py-20 sm:px-6 lg:px-8">
-  <div class="hero-bg absolute inset-0" aria-hidden="true"></div>
+  <div class="mx-auto w-full max-w-4xl px-6 py-20 text-center">
+    <!-- Error Label -->
+    <p class="logo mb-6 text-xl font-bold text-emerald-500" aria-label="500 error">
+      >_ 500
+    </p>
 
-  <div class="relative mx-auto w-full max-w-3xl text-center">
-
-    <div class="mx-auto flex h-20 w-20 items-center justify-center rounded-2xl border border-emerald-500/20 bg-emerald-500/5 text-2xl font-bold text-emerald-400 shadow-lg shadow-emerald-500/5 sm:h-24 sm:w-24 sm:text-3xl">
-      500
-    </div>
-
-    <p class="mt-8 text-sm font-semibold uppercase tracking-[0.25em] text-emerald-400">
+    <p class="mb-6 text-sm font-medium uppercase tracking-[0.25em] text-emerald-400">
       Internal Server Error
     </p>
 
-    <h1 class="mt-4 text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-      Something went wrong.
+    <!-- Heading -->
+    <h1 class="text-5xl font-bold tracking-tight text-white md:text-7xl">
+      Something Went Wrong.
     </h1>
 
-    <p class="mx-auto mt-6 max-w-2xl text-base leading-8 text-zinc-400 sm:text-lg">
-      The server encountered an unexpected problem while processing your
-      request. The issue may be temporary, so please try again or continue
-      exploring the site.
+    <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
+      The server encountered an unexpected problem while processing
+      your request. Please try again or return to the homepage.
     </p>
 
-    <div class="mt-10 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
-
-      <a
-        href="/"
-        class="btn-primary inline-flex min-h-11 items-center justify-center px-6">
-        Return Home
+    <!-- Actions -->
+    <div class="mt-12 flex flex-wrap justify-center gap-4">
+      <a href="/" class="btn-primary" aria-label="Return to homepage">
+        ← Back Home
       </a>
-
-      <a
-        href="/projects/"
-        class="btn-secondary inline-flex min-h-11 items-center justify-center rounded-md border border-white/10 px-6 text-sm font-medium text-zinc-300 transition-colors duration-200 hover:border-emerald-500/40 hover:text-emerald-400">
-        Explore Projects
+      <a href="/contact/" class="btn-secondary" aria-label="Go to contact page">
+        Get in Touch
       </a>
-
     </div>
 
-    <div class="mt-14 border-t border-white/10 pt-8">
-
-      <p class="text-sm text-zinc-500">
-        Looking for something specific?
-      </p>
-
-      <div class="mt-4 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 text-sm">
-
-        <a
-          href="/journal/"
-          class="text-zinc-400 transition-colors duration-200 hover:text-emerald-400">
-          Engineering Journal
-        </a>
-
-        <a
-          href="/about/"
-          class="text-zinc-400 transition-colors duration-200 hover:text-emerald-400">
-          About
-        </a>
-
-        <a
-          href="/contact/"
-          class="text-zinc-400 transition-colors duration-200 hover:text-emerald-400">
-          Contact
-        </a>
-
+    <!-- Terminal -->
+    <div class="mx-auto mt-16 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 text-left shadow-2xl" aria-label="Terminal server error output">
+      <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
+        <span class="text-xs font-medium uppercase tracking-widest text-zinc-500">
+          terminal
+        </span>
+        <span class="font-mono text-xs text-zinc-600">
+          bash
+        </span>
       </div>
 
-    </div>
+      <pre class="overflow-x-auto p-6 font-mono text-sm leading-8 text-emerald-400"><code>$ request --process
+Processing request...
+Error: Internal server error
 
+$ systemctl status
+service: unavailable
+status: 500
+recovery: in progress
+
+$ retry
+<span class="terminal-cursor"></span></code></pre>
+    </div>
   </div>
 </section>
-
 {{ end }}
