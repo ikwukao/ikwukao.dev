@@ -1,87 +1,62 @@
 {{ define "main" }}
-
 <section class="relative flex min-h-[80vh] items-center overflow-hidden">
-
   <div class="hero-bg"></div>
 
-  <div class="mx-auto max-w-4xl px-6 text-center">
-
-    <p class="logo mb-6 text-xl font-bold text-emerald-500">
-
+  <div class="mx-auto w-full max-w-4xl px-6 py-20 text-center">
+    <!-- Error Label -->
+    <p class="logo mb-6 text-xl font-bold text-emerald-500" aria-label="404 error">
       >_ 404
-
     </p>
 
-    <p class="mb-6 text-sm uppercase tracking-[0.25em] text-emerald-400">
-
+    <p class="mb-6 text-sm font-medium uppercase tracking-[0.25em] text-emerald-400">
       Page Not Found
-
     </p>
 
+    <!-- Heading -->
     <h1 class="text-5xl font-bold tracking-tight text-white md:text-7xl">
-
       Lost in the Terminal?
-
     </h1>
 
     <p class="mx-auto mt-8 max-w-2xl text-lg leading-8 text-zinc-400">
-
       The page you're looking for doesn't exist, may have been moved,
       or the URL might be incorrect.
-
     </p>
 
+    <!-- Actions -->
     <div class="mt-12 flex flex-wrap justify-center gap-4">
-
-      <a
-        href="/"
-        class="btn-primary">
-
+      <a href="/" class="btn-primary" aria-label="Return to homepage">
         ← Back Home
-
       </a>
-
-      <a
-        href="/projects/"
-        class="btn-secondary">
-
+      <a href="/projects/" class="btn-secondary" aria-label="View projects">
         View Projects
-
       </a>
-
     </div>
 
-    <div class="mx-auto mt-16 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-zinc-950">
-
-      <div class="border-b border-white/10 px-5 py-3 text-left text-xs uppercase tracking-widest text-zinc-500">
-
-        terminal
-
+    <!-- Terminal -->
+    <div class="mx-auto mt-16 max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-zinc-950 text-left shadow-2xl" aria-label="Terminal error output">
+      <div class="flex items-center justify-between border-b border-white/10 px-5 py-3">
+        <span class="text-xs font-medium uppercase tracking-widest text-zinc-500">
+          terminal
+        </span>
+        <span class="font-mono text-xs text-zinc-600">
+          bash
+        </span>
       </div>
 
-<pre class="overflow-x-auto p-6 font-mono text-sm leading-8 text-emerald-400"><code>$ find /page
+      <pre class="overflow-x-auto p-6 font-mono text-sm leading-8 text-emerald-400"><code>$ find /page
+Error: No such file or directory
 
-Error:
-No such file or directory
+$ cd /
+$ ls
+home/
+projects/
+about/
+contact/
 
-$ pwd
-
-/home/ikwukao
-
-$ suggestion
-
-cd /
-
-open homepage
-
-status: ready
-<span class="terminal-cursor"></span>
-</code></pre>
-
+$ status
+404 — resource not found
+system: ready <span class="terminal-cursor"></span></code></pre>
     </div>
-
   </div>
-
 </section>
-
 {{ end }}
