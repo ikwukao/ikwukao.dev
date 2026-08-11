@@ -6,6 +6,7 @@
 [![Hugo](https://img.shields.io/badge/Hugo-Static%20Site-FF4088?style=for-the-badge\&logo=hugo)](https://gohugo.io/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38BDF8?style=for-the-badge\&logo=tailwindcss)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/916bdadd-4508-43ae-8240-7b86e2e98e6f/deploy-status)](https://app.netlify.com/projects/ikwukao/deploys)
 
 ---
 
