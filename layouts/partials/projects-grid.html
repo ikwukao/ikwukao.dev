@@ -1,5 +1,4 @@
 <section class="border-t border-white/10 py-28">
-
   <div class="mx-auto max-w-6xl px-6">
 
     {{ partial "section-header.html" (dict
@@ -7,24 +6,20 @@
       "description" "Explore engineering projects covering backend development, distributed systems, DevOps, cloud infrastructure, and developer tooling."
     ) }}
 
-    <div class="mt-14 grid gap-8 lg:grid-cols-2">
+    <div class="mt-14 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
 
       {{ range .RegularPages.ByWeight }}
-
         {{ partial "project-card.html" . }}
-
       {{ else }}
 
-        <div class="rounded-2xl border border-dashed border-white/10 p-12 text-center">
-
-          <h3 class="text-xl font-semibold text-white">
+        <div class="md:col-span-2 xl:col-span-3 rounded-2xl border border-white/10 bg-zinc-950/40 px-6 py-12 text-center">
+          <h2 class="text-xl font-semibold text-white">
             Projects Coming Soon
-          </h3>
+          </h2>
 
-          <p class="mt-4 text-zinc-400">
+          <p class="mx-auto mt-3 max-w-lg leading-7 text-zinc-500">
             New engineering projects and technical case studies will appear here as they are published.
           </p>
-
         </div>
 
       {{ end }}
@@ -32,5 +27,4 @@
     </div>
 
   </div>
-
 </section>
