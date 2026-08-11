@@ -6,6 +6,7 @@ defaultContentLanguage = "en"
 [languages.en]
 label = "English"
 locale = "en-US"
+languageName = "en-US"
 weight = 1
 
 [sitemap]
@@ -15,6 +16,7 @@ filename = "sitemap.xml"
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
+section = ["HTML", "RSS"]
 
 [params]
 author = "Ikwuka Okoye"
@@ -25,25 +27,31 @@ tagline = "Building reliable backend systems, distributed platforms, and cloud-n
 repository = "https://github.com/ikwukao/ikwukao.dev"
 copyright = "2026 © Ikwuka Okoye"
 
+# Global Open Graph / Image Assets Assets Fallback
 images = ["images/og-image.png"]
 
+# Communication & Network Coordinates
 email = "ikwukao@proton.me"
 github = "https://github.com/ikwukao"
 twitter = "https://x.com/ikwukao_"
 whatsapp = "https://wa.me/2347078080356"
 linkedin = ""
 
-# Primary professional specialties.
+# Twitter Ecosystem Verification Parameter Mapping
+twitterSite = "@ikwukao_"
+twitterCreator = "@ikwukao_"
+
+# Primary professional specialties (Mapped out cleanly to avoid structure collision)
 specialties = [
   "Golang Backend Engineering",
   "Distributed Systems Engineering",
   "Platform Engineering",
   "Site Reliability Engineering",
   "Backend Engineering (AI Infrastructure)",
-  "Cloud DevOps Engineering",
+  "Cloud DevOps Engineering"
 ]
 
-# Core technical expertise.
+# Core technical expertise configuration space map for ingestion templates
 skills = [
   "Go",
   "Golang",
@@ -69,52 +77,53 @@ skills = [
   "GitHub Actions",
   "Prometheus",
   "Grafana",
-  "OpenTelemetry",
+  "OpenTelemetry"
 ]
 
 [markup]
-
-[markup.highlight]
-style = "github-dark"
-lineNos = false
-noClasses = false
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true # Allows seamless rendering of strict custom architectural layouts inside MD
+  [markup.highlight]
+    style = "github-dark"
+    lineNos = false
+    noClasses = false
 
 [minify]
-disableCSS = false
-disableHTML = false
-disableJS = false
-disableJSON = false
-disableSVG = false
-disableXML = false
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
 
 [menu]
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 10
 
-[[menu.main]]
-name = "Projects"
-url = "/projects/"
-weight = 10
+  [[menu.main]]
+    name = "Journal"
+    url = "/journal/"
+    weight = 20
 
-[[menu.main]]
-name = "Journal"
-url = "/journal/"
-weight = 20
+  [[menu.main]]
+    name = "Skills"
+    url = "/skills/"
+    weight = 25
 
-[[menu.main]]
-name = "Skills"
-url = "/skills/"
-weight = 25
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 30
 
-[[menu.main]]
-name = "About"
-url = "/about/"
-weight = 30
+  [[menu.main]]
+    name = "Resume"
+    url = "/resume/"
+    weight = 40
 
-[[menu.main]]
-name = "Resume"
-url = "/resume/"
-weight = 40
-
-[[menu.main]]
-name = "Contact"
-url = "/contact/"
-weight = 50
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 50
