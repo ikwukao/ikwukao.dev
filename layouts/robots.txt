@@ -1,4 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /search/
+Disallow: /tags/
+Disallow: /categories/
 
+# Explicitly declare your structural endpoint mapping
 Sitemap: {{ "sitemap.xml" | absURL }}
