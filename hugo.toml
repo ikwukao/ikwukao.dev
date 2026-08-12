@@ -10,9 +10,10 @@ languageName = "en-US"
 weight = 1
 
 [sitemap]
-changefreq = "weekly"
-priority = 0.8
-filename = "sitemap.xml"
+  changefreq = "weekly"
+  priority = 0.8
+  filename = "sitemap.xml"
+  disabled = false
 
 [outputs]
 home = ["HTML", "RSS", "JSON"]
