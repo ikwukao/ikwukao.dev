@@ -1,53 +1,49 @@
 # ikwukao.dev
 
 ![Banner](static/images/banner.png)
-**A modern, high-performance portfolio built with Hugo to showcase distributed systems, backend engineering, DevOps projects, and technical writing**
 
-[![Hugo](https://img.shields.io/badge/Hugo-Static%20Site-FF4088?style=for-the-badge\&logo=hugo)](https://gohugo.io/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38BDF8?style=for-the-badge\&logo=tailwindcss)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+**Personal engineering portfolio and technical journal focused on backend engineering, distributed systems, platform engineering, and cloud-native infrastructure.**
+
+[![Hugo](https://img.shields.io/badge/Hugo-0.164.0-FF4088?style=for-the-badge&logo=hugo)](https://gohugo.io/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-06B6D4?style=for-the-badge&logo=tailwindcss)](https://tailwindcss.com/)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/916bdadd-4508-43ae-8240-7b86e2e98e6f/deploy-status)](https://app.netlify.com/projects/ikwukao/deploys)
+[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
+**Live site:** [https://ikwukao.dev/](https://ikwukao.dev/)
 
 ---
 
 ## Overview
 
-**ikwukao.dev** is my personal engineering portfolio and technical blog.
+**ikwukao.dev** is my personal portfolio and engineering journal, built to document projects, technical work, and lessons learned while building reliable software systems.
 
-Rather than serving as a simple résumé website, this project is designed to showcase how I approach software engineering—from system design and backend architecture to DevOps practices, technical writing, and open-source development.
-
-The website emphasizes simplicity, performance, accessibility, and maintainability while providing a central hub for my projects, articles, and professional experience.
+The site prioritizes performance, accessibility, simplicity, and maintainability.
 
 ---
 
 ## Motivation
 
-A portfolio should demonstrate engineering quality—not just visual design.
+The project exists to:
 
-This project was created to:
-
-* Showcase production-quality backend and distributed systems projects.
-* Document my engineering journey through technical articles.
-* Present my experience with Go, Python, Linux, cloud technologies, and DevOps.
-* Serve as a continuously evolving engineering product built with modern development practices.
-* Demonstrate clean architecture, automation, documentation, and maintainable code.
+* Showcase backend and distributed-systems engineering work.
+* Document practical engineering through technical writing.
+* Present projects across Go, Python, DevOps, and cloud-native technologies.
+* Maintain a fast, accessible, and production-oriented personal web presence.
 
 ---
 
 ## Features
 
-* ⚡ Built with Hugo for exceptional performance
-* 🎨 Terminal-inspired minimalist interface
-* 🌙 Dark-first design
-* 📱 Fully responsive
-* ♿ Accessibility-focused
-* 🔍 SEO optimized
-* 📝 Markdown-powered content
-* 🚀 Automated deployment with GitHub Actions
-* 📚 Technical blog
-* 🛠️ Project showcase
-* 📄 Online résumé
-* 📬 Contact page
+* Hugo-powered static site
+* Responsive, terminal-inspired design
+* Dark-first interface
+* Markdown-based content
+* Technical engineering journal
+* Project portfolio
+* Contact and professional information
+* SEO and Open Graph metadata
+* RSS and JSON feeds
+* Automated deployment
 
 ---
 
@@ -58,7 +54,7 @@ This project was created to:
 | Static Site Generator | Hugo            |
 | Styling               | Tailwind CSS v4 |
 | Content               | Markdown        |
-| Deployment            | GitHub Pages    |
+| Deployment            | Netlify         |
 | Automation            | GitHub Actions  |
 | Version Control       | Git & GitHub    |
 
@@ -139,22 +135,6 @@ hugo server --environment production
 
 ---
 
-## Roadmap
-
-* [x] Initialize Hugo project
-* [ ] Integrate Tailwind CSS v4
-* [ ] Build reusable layouts
-* [ ] Create homepage
-* [ ] Add project showcase
-* [ ] Publish technical articles
-* [ ] Add résumé page
-* [ ] Configure SEO
-* [ ] Deploy with GitHub Actions
-* [ ] Launch on GitHub Pages
-* [ ] Connect custom domain
-
----
-
 ## Design Principles
 
 This project follows a few guiding principles:
@@ -190,13 +170,14 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ---
 
-## Connect With Me
+## Connect
 
-* GitHub: **@ikwukao**
-* Website: **<https://ikwukao.dev>** *(coming soon)*
+* **Website**: [https://ikwukao.dev](https://ikwukao.dev)
+* **GitHub**: [https://github.com/ikwukao](https://github.com/ikwukao)
+* **X**: [https://x.com/ikwukao_](https://x.com/ikwukao_)
 
 ---
 
-**Built with ❤️, Go, Python, Linux, and an obsession for reliable software engineering.**
+**Built with ❤️. Focused on reliable backend systems, distributed platforms, and cloud-native infrastructure.**
 
 ---
