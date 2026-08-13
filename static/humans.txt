@@ -7,7 +7,6 @@ Website: https://ikwukao.dev
 Email: ikwukao@proton.me
 GitHub: https://github.com/ikwukao
 X: https://x.com/ikwukao_
-WhatsApp: https://wa.me/2347078080356
 
 /* SITE */
 
@@ -23,7 +22,7 @@ Built with:
 - GitHub
 
 Hosting:
-- GitHub Pages
+- Netlify
 
 Source:
 https://github.com/ikwukao/ikwukao.dev
