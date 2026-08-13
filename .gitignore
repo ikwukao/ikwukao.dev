@@ -27,3 +27,6 @@ node_modules
 
 # Articles Draft
 content/draft/
+
+# Google Analytics
+google_analytics_data.md
