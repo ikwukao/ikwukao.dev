@@ -64,14 +64,14 @@
   )
 
   (dict
-    "@type" (typeIf .IsHome "ProfilePage" "WebPage")
+    "@type" (cond .IsHome "ProfilePage" "WebPage")
     "@id" $pageID
     "url" $pageURL
     "name" $pageTitle
     "description" $pageDescription
     "isPartOf" (dict "@id" $websiteID)
     "about" (dict "@id" $personID)
-    "mainEntity" (typeIf .IsHome (dict "@id" $personID) nil)
+    "mainEntity" (cond .IsHome (dict "@id" $personID) nil)
     "inLanguage" (site.Language.Lang | default "en")
   )
 -}}
