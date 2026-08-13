@@ -1,4 +1,4 @@
-<header class="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur-xl">
+<header class="sticky top-0 z-50 border-b border-white/10 bg-black/85 backdrop-blur-xl">
 
   <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6">
 
@@ -9,17 +9,18 @@
       aria-label="Go to homepage"
       class="group flex items-center gap-3">
 
-      <span class="logo text-2xl font-bold text-emerald-500 transition-colors group-hover:text-emerald-400">
+      <span
+        class="logo text-2xl font-bold tracking-tight text-emerald-500 transition-colors duration-200 group-hover:text-emerald-400">
         >_
       </span>
 
-      <div>
+      <div class="leading-tight">
 
-        <p class="font-semibold tracking-tight text-white">
+        <p class="font-bold tracking-tight text-white">
           ikwukao
         </p>
 
-        <p class="hidden text-xs text-zinc-500 md:block">
+        <p class="mt-1 hidden text-xs font-semibold tracking-wide text-zinc-500 md:block">
           Golang Backend • Distributed Systems
         </p>
 
@@ -41,11 +42,12 @@
 
           <a
             href="{{ .URL }}"
-            class="relative text-sm font-medium transition-colors duration-200
+            class="relative inline-flex py-2 text-sm font-bold tracking-wide transition-colors duration-200
+            after:absolute after:bottom-0 after:left-0 after:h-px after:w-full after:origin-left after:scale-x-0 after:bg-emerald-400 after:transition-transform after:duration-200 hover:after:scale-x-100
             {{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
-              text-emerald-400
+              text-emerald-400 after:scale-x-100
             {{ else }}
-              text-zinc-300 hover:text-white
+              text-zinc-200 hover:text-white
             {{ end }}">
 
             {{ .Name }}
@@ -64,26 +66,26 @@
 
     <div class="hidden items-center gap-3 lg:flex">
 
-    <a
-      href="/search/"
-      aria-label="Search the website"
-      class="hidden items-center gap-2 rounded-xl border border-white/10 px-4 py-2 text-sm text-zinc-300 transition hover:border-emerald-500/40 hover:text-emerald-400 lg:inline-flex">
+      <a
+        href="/search/"
+        aria-label="Search the website"
+        class="inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/[0.02] px-4 py-2 text-sm font-bold text-zinc-200 transition-all duration-200 hover:border-emerald-500/40 hover:bg-emerald-500/5 hover:text-emerald-400">
 
-      {{ partial "icon.html" (dict
-        "set" "icons/brands"
-        "name" "search"
-        "class" "h-4 w-4") }}
+        {{ partial "icon.html" (dict
+          "set" "icons/brands"
+          "name" "search"
+          "class" "h-4 w-4") }}
 
-      <span>Search</span>
+        <span>Search</span>
 
-    </a>
+      </a>
 
       <a
         href="{{ site.Params.github }}"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub Profile"
-        class="rounded-xl bg-emerald-500 px-4 py-2 text-sm font-medium text-black transition hover:bg-emerald-400">
+        class="rounded-xl bg-emerald-500 px-5 py-2 text-sm font-bold text-black shadow-lg shadow-emerald-500/10 transition-all duration-200 hover:bg-emerald-400 hover:shadow-emerald-400/20">
 
         GitHub
 
@@ -99,7 +101,7 @@
       aria-label="Toggle navigation"
       aria-controls="mobile-menu"
       aria-expanded="false"
-      class="rounded-xl border border-white/10 p-3 transition hover:border-emerald-500 hover:text-emerald-400 lg:hidden">
+      class="rounded-xl border border-white/10 p-3 font-bold text-zinc-200 transition-all duration-200 hover:border-emerald-500/50 hover:bg-emerald-500/5 hover:text-emerald-400 lg:hidden">
 
       ☰
 
@@ -111,7 +113,7 @@
 
   <div
     id="mobile-menu"
-    class="hidden border-t border-white/10 bg-zinc-950 lg:hidden">
+    class="hidden border-t border-white/10 bg-zinc-950/95 backdrop-blur-xl lg:hidden">
 
     <nav
       aria-label="Mobile Navigation"
@@ -121,7 +123,7 @@
 
       <a
         href="{{ .URL }}"
-        class="border-b border-white/5 py-4 text-zinc-300 transition hover:text-emerald-400">
+        class="border-b border-white/5 py-4 text-sm font-bold tracking-wide text-zinc-200 transition-colors duration-200 hover:text-emerald-400">
 
         {{ .Name }}
 
@@ -131,7 +133,7 @@
 
       <a
         href="/search/"
-        class="border-b border-white/5 py-4 text-zinc-300 transition hover:text-emerald-400">
+        class="border-b border-white/5 py-4 text-sm font-bold tracking-wide text-zinc-200 transition-colors duration-200 hover:text-emerald-400">
 
         Search
 
@@ -141,7 +143,7 @@
         href="{{ site.Params.github }}"
         target="_blank"
         rel="noopener noreferrer"
-        class="py-4 text-zinc-300 transition hover:text-emerald-400">
+        class="py-4 text-sm font-bold tracking-wide text-zinc-200 transition-colors duration-200 hover:text-emerald-400">
 
         GitHub
 
