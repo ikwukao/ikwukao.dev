@@ -3,10 +3,10 @@ title = "Ikwuka Okoye"
 enableRobotsTXT = true
 defaultContentLanguage = "en"
 
+
 [languages.en]
 label = "English"
 locale = "en-US"
-languageName = "en-US"
 weight = 1
 
 [sitemap]
