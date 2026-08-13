@@ -1,85 +1,291 @@
 {{- $description := .Description | default site.Params.description -}}
+{{- $author := site.Params.author | default site.Title -}}
+
+{{/* ---------------------------------------------------------------
+     PAGE TITLE
+     --------------------------------------------------------------- */}}
 
 {{- $pageTitle := site.Title -}}
+
 {{- if .IsHome -}}
   {{- $pageTitle = printf "%s | %s" site.Params.profession site.Title -}}
 {{- else if .Title -}}
   {{- $pageTitle = printf "%s | %s" .Title site.Title -}}
 {{- end -}}
 
+{{/* ---------------------------------------------------------------
+     CANONICAL URL
+     Always use Hugo's absolute permalink.
+     --------------------------------------------------------------- */}}
+
 {{- $canonical := .Permalink -}}
 
-{{/* Force Absolute URLs and dimensions for 100% OG Scraper Hits */}}
-{{- $ogImage := "images/og-image.png" | absURL -}}
+{{/* ---------------------------------------------------------------
+     SOCIAL / OPEN GRAPH IMAGE
+     Keep this as a root-relative static asset and convert it to an
+     absolute production URL for crawlers.
+     --------------------------------------------------------------- */}}
+
+{{- $ogImagePath := "images/og-image.png" -}}
+{{- $ogImage := $ogImagePath | absURL -}}
+
 {{- $ogImageWidth := "1200" -}}
 {{- $ogImageHeight := "630" -}}
 {{- $ogImageType := "image/png" -}}
+{{- $ogImageAlt := printf "%s — %s" $author site.Params.profession -}}
 
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{/* Base SEO */}}
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1">
+
+<meta
+  name="description"
+  content="{{ $description }}">
+
+<meta
+  name="author"
+  content="{{ $author }}">
+
+<meta
+  name="robots"
+  content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+<meta
+  name="referrer"
+  content="strict-origin-when-cross-origin">
+
+<meta
+  name="format-detection"
+  content="telephone=no">
+
 <title>{{ $pageTitle }}</title>
-<meta name="description" content="{{ $description }}">
-<meta name="author" content="{{ site.Params.author }}">
-<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
-<link rel="canonical" href="{{ $canonical }}">
 
-{{/* Theme & Ecosystem UI */}}
-<meta name="theme-color" content="#050505">
-<meta name="color-scheme" content="dark">
-<meta name="apple-mobile-web-app-title" content="{{ site.Title }}">
-<meta name="application-name" content="{{ site.Title }}">
+<link
+  rel="canonical"
+  href="{{ $canonical }}">
 
-{{/* Open Graph / Facebook / LinkedIn / WhatsApp / Discord / Slack */}}
-<meta property="og:type" content="{{ if .IsHome }}website{{ else }}article{{ end }}">
-<meta property="og:site_name" content="{{ site.Title }}">
-<meta property="og:title" content="{{ $pageTitle }}">
-<meta property="og:description" content="{{ $description }}">
-<meta property="og:url" content="{{ $canonical }}">
-<meta property="og:locale" content="{{ site.Language.Locale | default "en_US" }}">
+<link
+  rel="alternate"
+  hreflang="{{ site.Language.Lang }}"
+  href="{{ $canonical }}">
 
-{{/* Crucial dimensions prevent instant parsing failure on WhatsApp/iMessage */}}
-<meta property="og:image" content="{{ $ogImage }}">
-<meta property="og:image:secure_url" content="{{ $ogImage }}">
-<meta property="og:image:type" content="{{ $ogImageType }}">
-<meta property="og:image:width" content="{{ $ogImageWidth }}">
-<meta property="og:image:height" content="{{ $ogImageHeight }}">
-<meta property="og:image:alt" content="{{ site.Params.author }} — {{ site.Params.profession }}">
+{{/* ---------------------------------------------------------------
+     THEME / APPLICATION
+     --------------------------------------------------------------- */}}
 
-{{/* Twitter / X Meta */}}
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="{{ $pageTitle }}">
-<meta name="twitter:description" content="{{ $description }}">
-<meta name="twitter:image" content="{{ $ogImage }}">
-<meta name="twitter:image:alt" content="{{ site.Params.author }} — {{ site.Params.profession }}">
-{{ with site.Params.twitterSite }}<meta name="twitter:site" content="{{ . }}">{{ end }}
-{{ with site.Params.twitterCreator }}<meta name="twitter:creator" content="{{ . }}">{{ end }}
+<meta
+  name="theme-color"
+  content="#050505">
 
-{{/* Comprehensive Favicons */}}
-<link rel="icon" type="image/png" href="{{ "favicon-96x96.png" | absURL }}" sizes="96x96">
-<link rel="icon" type="image/svg+xml" href="{{ "favicon.svg" | absURL }}">
-<link rel="shortcut icon" href="{{ "favicon.ico" | absURL }}">
-<link rel="apple-touch-icon" sizes="180x180" href="{{ "apple-touch-icon.png" | absURL }}">
-<link rel="manifest" href="{{ "site.webmanifest" | absURL }}">
-<link rel="sitemap" type="application/xml" href="{{ "sitemap.xml" | absURL }}">
+<meta
+  name="color-scheme"
+  content="dark">
 
-{{/* Syndication RSS */}}
-{{ with .OutputFormats.Get "RSS" }}
-<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ .Permalink }}">
+<meta
+  name="application-name"
+  content="{{ site.Title }}">
+
+<meta
+  name="apple-mobile-web-app-title"
+  content="{{ site.Title }}">
+
+<meta
+  name="apple-mobile-web-app-capable"
+  content="yes">
+
+<meta
+  name="mobile-web-app-capable"
+  content="yes">
+
+{{/* ---------------------------------------------------------------
+     OPEN GRAPH
+     Supported by Facebook, LinkedIn, WhatsApp, Discord, Slack,
+     Telegram and many other link-preview systems.
+     --------------------------------------------------------------- */}}
+
+<meta
+  property="og:type"
+  content="{{ if .IsHome }}website{{ else if eq .Type "journal" }}article{{ else }}website{{ end }}">
+
+<meta
+  property="og:site_name"
+  content="{{ site.Title }}">
+
+<meta
+  property="og:title"
+  content="{{ $pageTitle }}">
+
+<meta
+  property="og:description"
+  content="{{ $description }}">
+
+<meta
+  property="og:url"
+  content="{{ $canonical }}">
+
+<meta
+  property="og:locale"
+  content="{{ site.Language.Locale | default "en_US" }}">
+
+<meta
+  property="og:image"
+  content="{{ $ogImage }}">
+
+<meta
+  property="og:image:url"
+  content="{{ $ogImage }}">
+
+<meta
+  property="og:image:secure_url"
+  content="{{ $ogImage }}">
+
+<meta
+  property="og:image:type"
+  content="{{ $ogImageType }}">
+
+<meta
+  property="og:image:width"
+  content="{{ $ogImageWidth }}">
+
+<meta
+  property="og:image:height"
+  content="{{ $ogImageHeight }}">
+
+<meta
+  property="og:image:alt"
+  content="{{ $ogImageAlt }}">
+
+{{/* ---------------------------------------------------------------
+     ARTICLE METADATA
+     Only emit this for actual article/journal pages.
+     --------------------------------------------------------------- */}}
+
+{{- if eq .Type "journal" -}}
+
+  {{ with .Date }}
+  <meta
+    property="article:published_time"
+    content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ end }}
+
+  {{ with .Lastmod }}
+  <meta
+    property="article:modified_time"
+    content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ end }}
+
+  <meta
+    property="article:author"
+    content="{{ $author }}">
+
+{{- end -}}
+
+{{/* ---------------------------------------------------------------
+     X / TWITTER CARD
+     --------------------------------------------------------------- */}}
+
+<meta
+  name="twitter:card"
+  content="summary_large_image">
+
+<meta
+  name="twitter:title"
+  content="{{ $pageTitle }}">
+
+<meta
+  name="twitter:description"
+  content="{{ $description }}">
+
+<meta
+  name="twitter:image"
+  content="{{ $ogImage }}">
+
+<meta
+  name="twitter:image:alt"
+  content="{{ $ogImageAlt }}">
+
+{{ with site.Params.twitterSite }}
+<meta
+  name="twitter:site"
+  content="{{ . }}">
 {{ end }}
 
-{{/* Performance & Connection Pre-hinting */}}
-<link rel="preconnect" href="https://github.com" crossorigin>
-<link rel="dns-prefetch" href="https://github.com">
-<link rel="preconnect" href="https://x.com" crossorigin>
-<link rel="dns-prefetch" href="https://x.com">
+{{ with site.Params.twitterCreator }}
+<meta
+  name="twitter:creator"
+  content="{{ . }}">
+{{ end }}
 
-{{/* Schema Structured Data Markup */}}
+{{/* ---------------------------------------------------------------
+     FAVICONS / WEB APP MANIFEST
+     --------------------------------------------------------------- */}}
+
+<link
+  rel="icon"
+  type="image/svg+xml"
+  href="{{ "favicon.svg" | absURL }}">
+
+<link
+  rel="icon"
+  type="image/png"
+  sizes="96x96"
+  href="{{ "favicon-96x96.png" | absURL }}">
+
+<link
+  rel="shortcut icon"
+  href="{{ "favicon.ico" | absURL }}">
+
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="{{ "apple-touch-icon.png" | absURL }}">
+
+<link
+  rel="manifest"
+  href="{{ "site.webmanifest" | absURL }}">
+
+{{/* ---------------------------------------------------------------
+     SITEMAP
+     --------------------------------------------------------------- */}}
+
+<link
+  rel="sitemap"
+  type="application/xml"
+  href="{{ "sitemap.xml" | absURL }}">
+
+{{/* ---------------------------------------------------------------
+     RSS
+     --------------------------------------------------------------- */}}
+
+{{ with .OutputFormats.Get "RSS" }}
+<link
+  rel="alternate"
+  type="application/rss+xml"
+  title="{{ site.Title }} RSS"
+  href="{{ .Permalink }}">
+{{ end }}
+
+{{/* ---------------------------------------------------------------
+     STRUCTURED DATA
+     --------------------------------------------------------------- */}}
+
 {{ partial "schema.html" . }}
 
-{{/* Production Styles Asset Pipeline */}}
+{{/* ---------------------------------------------------------------
+     STYLES
+     --------------------------------------------------------------- */}}
+
 {{ with resources.Get "css/main.css" }}
-  {{ $css := . | css.TailwindCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}" crossorigin="anonymous">
+
+  {{- $css := . | css.TailwindCSS | minify | fingerprint -}}
+
+  <link
+    rel="stylesheet"
+    href="{{ $css.RelPermalink }}"
+    integrity="{{ $css.Data.Integrity }}"
+    crossorigin="anonymous">
+
 {{ end }}
+ 
