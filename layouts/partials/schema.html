@@ -1,3 +1,6 @@
+{{- $siteURL := site.Home.Permalink -}}
+{{- $pageURL := .Permalink -}}
+
 {{- $pageTitle := site.Title -}}
 {{- if .IsHome -}}
   {{- $pageTitle = printf "%s | %s" site.Title site.Params.profession -}}
@@ -6,32 +9,56 @@
 {{- end -}}
 
 {{- $pageDescription := .Description | default site.Params.description -}}
-{{- $siteURL := site.Home.Permalink | absURL -}}
-{{- $pageURL := .Permalink | absURL -}}
 
 {{- $personID := printf "%s#person" $siteURL -}}
 {{- $websiteID := printf "%s#website" $siteURL -}}
 {{- $pageID := printf "%s#webpage" $pageURL -}}
 
 {{- $sameAs := slice -}}
-{{- with site.Params.github }}{{ $sameAs = $sameAs | append . }}{{ end -}}
-{{- with site.Params.twitter }}{{ $sameAs = $sameAs | append . }}{{ end -}}
-{{- with site.Params.linkedin }}{{ $sameAs = $sameAs | append . }}{{ end -}}
+
+{{- with site.Params.github -}}
+  {{- $sameAs = $sameAs | append . -}}
+{{- end -}}
+
+{{- with site.Params.linkedin -}}
+  {{- $sameAs = $sameAs | append . -}}
+{{- end -}}
+
+{{- with site.Params.twitter -}}
+  {{- $sameAs = $sameAs | append . -}}
+{{- end -}}
 
 {{- $knowsAbout := slice
-  "Go" "Golang" "Backend Engineering" "Distributed Systems"
-  "Systems Engineering" "Platform Engineering" "Cloud-Native Engineering"
-  "DevOps" "Site Reliability Engineering" "Developer Infrastructure"
-  "Backend APIs" "Microservices" "REST APIs" "gRPC" "Docker"
-  "Kubernetes" "Terraform" "AWS" "Google Cloud" "Linux"
-  "PostgreSQL" "Redis" "Observability" "Developer Tooling"
+  "Go"
+  "Golang"
+  "Backend Engineering"
+  "Distributed Systems"
+  "Systems Engineering"
+  "Platform Engineering"
+  "Cloud-Native Engineering"
+  "DevOps"
+  "Site Reliability Engineering"
+  "Developer Infrastructure"
+  "Backend APIs"
+  "Microservices"
+  "REST APIs"
+  "gRPC"
+  "Docker"
+  "Kubernetes"
+  "Terraform"
+  "AWS"
+  "Google Cloud"
+  "Linux"
+  "PostgreSQL"
+  "Redis"
+  "Observability"
+  "Developer Tooling"
 -}}
 
-{{- /* Resolve the absolute URL safely using the Hugo pipeline format */ -}}
-{{- $ogImageURL := "images/og-image.png" | absURL -}}
+{{- $ogImageURL := printf "%simages/og-image.png" $siteURL -}}
 
-{{- /* Core Graph Construction */ -}}
 {{- $graph := slice
+
   (dict
     "@type" "Person"
     "@id" $personID
@@ -59,7 +86,9 @@
     "url" $siteURL
     "name" site.Title
     "description" site.Params.description
-    "publisher" (dict "@id" $personID)
+    "publisher" (dict
+      "@id" $personID
+    )
     "inLanguage" (site.Language.Lang | default "en")
   )
 
@@ -69,27 +98,36 @@
     "url" $pageURL
     "name" $pageTitle
     "description" $pageDescription
-    "isPartOf" (dict "@id" $websiteID)
-    "about" (dict "@id" $personID)
-    "mainEntity" (cond .IsHome (dict "@id" $personID) nil)
+    "isPartOf" (dict
+      "@id" $websiteID
+    )
+    "about" (dict
+      "@id" $personID
+    )
+    "mainEntity" (dict
+      "@id" $personID
+    )
     "inLanguage" (site.Language.Lang | default "en")
   )
 -}}
 
-{{- /* Breadcrumb Construction for Inner Section Pages */ -}}
 {{- if and (not .IsHome) (gt (len .Ancestors) 0) -}}
+
   {{- $items := slice -}}
   {{- $position := 1 -}}
 
   {{- range .Ancestors.Reverse -}}
     {{- if ne .RelPermalink "/" -}}
+
       {{- $items = $items | append (dict
         "@type" "ListItem"
         "position" $position
         "name" .LinkTitle
-        "item" (.Permalink | absURL)
+        "item" .Permalink
       ) -}}
+
       {{- $position = add $position 1 -}}
+
     {{- end -}}
   {{- end -}}
 
@@ -97,7 +135,7 @@
     "@type" "ListItem"
     "position" $position
     "name" .LinkTitle
-    "item" ($pageURL | absURL)
+    "item" $pageURL
   ) -}}
 
   {{- $graph = $graph | append (dict
@@ -105,14 +143,14 @@
     "@id" (printf "%s#breadcrumb" $pageURL)
     "itemListElement" $items
   ) -}}
+
 {{- end -}}
 
-{{- /* Render out structured data blocks cleanly */ -}}
 <script type="application/ld+json">
-{{ dict
+{{- dict
   "@context" "https://schema.org"
   "@graph" $graph
   | jsonify
   | safeJS
-}}
+-}}
 </script>
