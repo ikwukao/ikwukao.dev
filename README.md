@@ -55,7 +55,6 @@ The project exists to:
 | Styling               | Tailwind CSS v4 |
 | Content               | Markdown        |
 | Deployment            | Netlify         |
-| Automation            | GitHub Actions  |
 | Version Control       | Git & GitHub    |
 
 ---
